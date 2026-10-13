@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Pricing & Insurance Plans - AllergiQ Clinic</title>
+  <meta name="description" content="Transparent pricing for allergy skin prick testing, custom sublingual drops, and immunotherapy shot maintenance programs. Covered by major insurances.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-shield-virus"></i></div>
+        <div>
+          <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+          <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse">
+        <i class="fas fa-bars fa-lg text-primary"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMainCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="index.html">
+                  <span class="fw-semibold d-block">Home 1 - Clinical Landing</span>
+                  <small class="text-muted">Allergy Relief & Diagnostics</small>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="home-2.html">
+                  <span class="fw-semibold d-block">Home 2 - Immunotherapy SaaS</span>
+                  <small class="text-muted">Digital Shot Schedules & Telehealth</small>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL"><span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span></button>
+          <a href="login.html" class="btn btn-light-soft btn-sm d-none d-sm-inline-flex"><i class="fas fa-user-circle me-1"></i> Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-hero-section" style="background-image: url('https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container text-center">
+      <div class="badge-tag mb-2"><i class="fas fa-tag"></i> Honest & Transparent</div>
+      <h1 class="mb-2">Testing & Immunotherapy Pricing</h1>
+      <p class="text-muted mx-auto max-w-700" style="font-size: 1.15rem;">
+        Clear, predictable costs with direct insurance billing, HSA/FSA eligibility, and flexible self-pay options.
+      </p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0 mt-3">
+          <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Pricing Cards Section -->
+  <section class="py-5">
+    <div class="container" style="max-width: 1140px;">
+      <div class="row g-4 align-items-stretch">
+        <!-- Plan 1: Diagnostic Skin Prick -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card d-flex flex-column h-100">
+            <h4 class="mb-1">Diagnostic Skin Prick</h4>
+            <p class="text-muted small mb-0" style="min-height: 42px;">50+ airborne &amp; environmental allergens tested in 20 minutes</p>
+            <div class="pricing-price my-3" style="font-size: 2.3rem;">
+              $180 <span class="period">/ one-time</span>
+            </div>
+            <ul class="pricing-features flex-grow-1 my-3">
+              <li><i class="fas fa-check text-success"></i> 20-minute rapid allergy diagnostic test results</li>
+              <li><i class="fas fa-check text-success"></i> 50+ Pollens, pet dander, molds &amp; trees</li>
+              <li><i class="fas fa-check text-success"></i> Board-certified MD allergist consult included</li>
+              <li><i class="fas fa-check text-success"></i> Covered by most insurance</li>
+              <li class="disabled"><i class="fas fa-times"></i> Immunotherapy serums included</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+              Book Skin Test
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 2: Allergy Shots (SCIT - Featured) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card featured d-flex flex-column h-100">
+            <span class="popular-badge">Clinical Standard</span>
+            <h4 class="mb-1">Allergy Shots (SCIT)</h4>
+            <p class="text-muted small mb-0" style="min-height: 42px;">Comprehensive in-clinic subcutaneous injection protocol</p>
+            <div class="pricing-price text-primary my-3" style="font-size: 2.3rem;">
+              $129 <span class="period">/ month</span>
+            </div>
+            <ul class="pricing-features flex-grow-1 my-3">
+              <li><i class="fas fa-check text-success"></i> Weekly in-clinic desensitization doses</li>
+              <li><i class="fas fa-check text-success"></i> Custom compounded antigen extract vials</li>
+              <li><i class="fas fa-check text-success"></i> Direct nurse supervision &amp; observation</li>
+              <li><i class="fas fa-check text-success"></i> Portal dose escalation tracking</li>
+              <li><i class="fas fa-check text-success"></i> Low typical insurance copays ($15-$30)</li>
+            </ul>
+            <button class="btn btn-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+              Start SCIT Shots
+            </button>
+          </div>
+        </div>
+
+        <!-- Plan 3: Sublingual Drops (SLIT) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card d-flex flex-column h-100">
+            <h4 class="mb-1">Sublingual Drops (SLIT)</h4>
+            <p class="text-muted small mb-0" style="min-height: 42px;">Needle-free daily oral desensitization drops shipped to door</p>
+            <div class="pricing-price my-3" style="font-size: 2.3rem;">
+              $79 <span class="period">/ month</span>
+            </div>
+            <ul class="pricing-features flex-grow-1 my-3">
+              <li><i class="fas fa-check text-success"></i> Quarterly antigen drops shipped to door</li>
+              <li><i class="fas fa-check text-success"></i> Needle-free oral liquid administration</li>
+              <li><i class="fas fa-check text-success"></i> Mobile app dose tracking &amp; reminders</li>
+              <li><i class="fas fa-check text-success"></i> Unlimited telehealth messaging</li>
+              <li><i class="fas fa-check text-success"></i> HSA / FSA approved reimbursement</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+              Choose SLIT Drops
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Insurance Calculator Widget -->
+  <section class="py-5" style="background-color: var(--bg-surface-subtle);">
+    <div class="container">
+      <div class="card-custom p-4 p-lg-5 shadow-xl border-primary">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <div class="badge-tag"><i class="fas fa-calculator"></i> Estimate Your Out-Of-Pocket</div>
+            <h3 class="mb-2">Insurance & Coverage Estimator</h3>
+            <p class="text-muted mb-4">Select your primary health insurance provider to view estimated procedure coverage and typical copay brackets.</p>
+            <div class="mb-3">
+              <label class="form-label">Select Insurance Provider</label>
+              <select class="form-select" id="insuranceSelect" onchange="
+                const val = this.value;
+                const coverage = document.getElementById('calcCoverage');
+                const copay = document.getElementById('calcCopay');
+                if (val === 'bcbs') { coverage.textContent = '80% - 100% In-Network'; copay.textContent = '$20 - $35 Copay'; }
+                else if (val === 'aetna') { coverage.textContent = '85% - 100% In-Network'; copay.textContent = '$15 - $30 Copay'; }
+                else if (val === 'medicare') { coverage.textContent = '80% Medicare Part B'; copay.textContent = '$0 with Supplement'; }
+                else { coverage.textContent = '75% - 90% In-Network'; copay.textContent = '$25 - $40 Copay'; }
+              ">
+                <option value="bcbs">BlueCross BlueShield (PPO / EPO)</option>
+                <option value="aetna">Aetna Healthcare</option>
+                <option value="cigna">Cigna Health Plans</option>
+                <option value="united">UnitedHealthcare (Choice Plus / Options)</option>
+                <option value="medicare">Medicare Part B & Advantage</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="p-4 rounded-3 text-center bg-card border">
+              <div class="small text-muted text-uppercase fw-bold mb-1">Estimated Testing Coverage</div>
+              <div class="h2 text-success fw-bold mb-3" id="calcCoverage">80% - 100% In-Network</div>
+              <div class="small text-muted text-uppercase fw-bold mb-1">Estimated In-Clinic Shot Copay</div>
+              <div class="h3 text-primary fw-bold mb-3" id="calcCopay">$20 - $35 Copay</div>
+              <small class="text-muted d-block mb-3">* Exact deductibles subject to verification by our billing team.</small>
+              <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                Verify My Insurance Free
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 1: 5-Year Financial Comparison: Immunotherapy vs Lifelong OTC Symptom Masking -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-title text-center mb-5">
+        <div class="badge-tag"><i class="fas fa-chart-pie"></i> Long-Term Value</div>
+        <h2>5-Year Financial Breakdown: Cure vs Band-Aid</h2>
+        <p class="text-muted mx-auto max-w-700">
+          How investing in precision desensitization saves an average of $8,400+ over 5 years compared to endless antihistamines, nasal sprays, and lost workplace productivity.
+        </p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table-custom text-center align-middle">
+          <thead>
+            <tr>
+              <th class="text-start" style="width: 30%;">Expense Category</th>
+              <th style="width: 35%; background: rgba(239, 68, 68, 0.08); color: #dc2626;">Endless OTC Symptom Masking</th>
+              <th style="width: 35%; background: rgba(5, 150, 105, 0.08); color: var(--success);">AllergiQ Desensitization Protocol</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-start fw-bold">Daily Antihistamines & Decongestants</td>
+              <td class="text-danger">$1,800 <small class="text-muted">($30/mo x 60 mos)</small></td>
+              <td class="text-success fw-bold">$0 <small class="text-muted">(Phased out by Year 2)</small></td>
+            </tr>
+            <tr>
+              <td class="text-start fw-bold">Prescription Steroid Inhalers & Sprays</td>
+              <td class="text-danger">$3,600 <small class="text-muted">($60/mo copays)</small></td>
+              <td class="text-success fw-bold">$0 <small class="text-muted">(Airway hypersensitivity resolved)</small></td>
+            </tr>
+            <tr>
+              <td class="text-start fw-bold">Urgent Care & Sinus Infection Visits</td>
+              <td class="text-danger">$1,500 <small class="text-muted">(2-3 flare-ups / year)</small></td>
+              <td class="text-success fw-bold">$0 <small class="text-muted">(Chronic sinusitis cleared)</small></td>
+            </tr>
+            <tr>
+              <td class="text-start fw-bold">Lost Productivity & Sick Days</td>
+              <td class="text-danger">$3,500 <small class="text-muted">(Estimated 10 lost workdays)</small></td>
+              <td class="text-success fw-bold">$0 <small class="text-muted">(Full daytime vitality restored)</small></td>
+            </tr>
+            <tr>
+              <td class="text-start fw-bold">Desensitization Serums & Dosing</td>
+              <td class="text-muted">$0 (No lasting cure)</td>
+              <td class="text-success fw-bold">$1,980 <small class="text-muted">(Build-up & 3-yr maintenance)</small></td>
+            </tr>
+            <tr style="font-size: 1.15rem; font-weight: 800; border-top: 2px solid var(--border-color);">
+              <td class="text-start">5-Year Net Out-of-Pocket</td>
+              <td class="text-danger">$10,400+ <small class="d-block text-muted fw-normal" style="font-size: 0.8rem;">Continues forever</small></td>
+              <td class="text-success">$1,980 <small class="d-block text-muted fw-normal" style="font-size: 0.8rem;">Permanent lifelong relief</small></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 2: HSA & FSA Step-by-Step Guide with Official Medical CPT Billing Codes -->
+  <section class="py-5" style="background-color: var(--bg-surface-subtle);">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="badge-tag"><i class="fas fa-file-invoice-dollar"></i> Tax-Free Healthcare</div>
+          <h2 class="mb-3">100% HSA & FSA Approved with Itemized Superbills</h2>
+          <p class="text-muted mb-4">
+            Every test, sublingual dropper, and immunotherapy shot at AllergiQ qualifies under IRS Section 213(d) for pre-tax Health Savings Accounts (HSA) and Flexible Spending Accounts (FSA).
+          </p>
+
+          <div class="d-flex flex-column gap-3 mb-4">
+            <div class="d-flex gap-3">
+              <div class="feature-card-icon" style="width: 44px; height: 44px; font-size: 1.1rem;"><i class="fas fa-receipt"></i></div>
+              <div>
+                <h6 class="mb-1">Automated 1-Click Itemized Superbills</h6>
+                <small class="text-muted">Instant downloadable receipts with NPI, Tax ID, and ICD-10 diagnostic codes ready for your benefits provider.</small>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="feature-card-icon" style="width: 44px; height: 44px; font-size: 1.1rem;"><i class="fas fa-credit-card"></i></div>
+              <div>
+                <h6 class="mb-1">Direct HSA/FSA Debit Card Swipe</h6>
+                <small class="text-muted">Use your employer benefit Mastercard/Visa directly at checkout with 0% transaction fees.</small>
+              </div>
+            </div>
+            <div class="d-flex gap-3">
+              <div class="feature-card-icon" style="width: 44px; height: 44px; font-size: 1.1rem;"><i class="fas fa-hand-holding-medical"></i></div>
+              <div>
+                <h6 class="mb-1">Flexible 0% Interest Installment Plans</h6>
+                <small class="text-muted">Spread testing or family packages over 3, 6, or 12 monthly installments with CareCredit & Affirm.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card-custom p-4 border-primary">
+            <h5 class="mb-3"><i class="fas fa-code text-primary me-2"></i>Official Medical CPT Reimbursement Reference</h5>
+            <div class="table-responsive">
+              <table class="table-custom small">
+                <thead>
+                  <tr>
+                    <th>CPT Code</th>
+                    <th>Clinical Description</th>
+                    <th>Typical Coverage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold text-primary">95004</td>
+                    <td>Percutaneous Skin Prick Testing (Per allergen)</td>
+                    <td><span class="badge bg-success">Covered (80-100%)</span></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-primary">95165</td>
+                    <td>Sterile Antigen Formulation & Compounding</td>
+                    <td><span class="badge bg-success">Covered (85-100%)</span></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-primary">95117</td>
+                    <td>Immunotherapy Injection (Multiple antigens)</td>
+                    <td><span class="badge bg-success">Covered ($15-$30 copay)</span></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold text-primary">95076</td>
+                    <td>Ingestion Challenge (Initial 120 minutes)</td>
+                    <td><span class="badge bg-success">Covered (In-Network)</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 3: Corporate, School & Sports Organization Screening Packages -->
+  <section class="py-5">
+    <div class="container" style="max-width: 1000px;">
+      <div class="section-title text-center mb-5">
+        <div class="badge-tag"><i class="fas fa-building"></i> Group Wellness Programs</div>
+        <h2>Corporate, School & Athletic Team Screening Packages</h2>
+        <p class="text-muted mx-auto max-w-700">
+          Tailored on-site and remote allergy wellness initiatives for corporate employers, K-12 school districts, sports academies, and culinary hospitality teams.
+        </p>
+      </div>
+
+      <div class="row g-4 align-items-stretch pt-2">
+        <!-- Group Tier 1 -->
+        <div class="col-lg-4">
+          <div class="card-custom p-4 h-100 border text-center d-flex flex-column">
+            <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-briefcase"></i></div>
+            <h4 style="font-size: 1rem; white-space: nowrap; line-height: 1.3;">Corporate Workplace Wellness</h4>
+            <p class="text-muted small">Reduce employee absenteeism due to spring pollen flares and chronic fatigue.</p>
+            <div class="h3 text-primary fw-bold mb-3">$45 <small class="text-muted fs-6">/ employee</small></div>
+            <ul class="pricing-features text-start mb-4 flex-grow-1">
+              <li><i class="fas fa-check text-success"></i> On-site Mobile Nurse Testing Day</li>
+              <li><i class="fas fa-check text-success"></i> Executive health biometric summary</li>
+              <li><i class="fas fa-check text-success"></i> Ergonomic workplace air-filtration advisory</li>
+              <li><i class="fas fa-check text-success"></i> Direct billing to corporate wellness fund</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100 mt-auto" onclick="window.showToast('Corporate wellness coordinator will contact your HR department.', 'success');">Inquire for Employers</button>
+          </div>
+        </div>
+
+        <!-- Group Tier 2 (Featured) -->
+        <div class="col-lg-4">
+          <div class="card-custom p-4 h-100 border-primary text-center shadow-lg position-relative d-flex flex-column" style="background: radial-gradient(circle at top, var(--primary-light), transparent 80%); overflow: visible !important;">
+            <span class="position-absolute top-0 start-50 translate-middle badge shadow px-3 py-2 text-white" style="background: var(--primary-gradient); border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; z-index: 10; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45); border: 2px solid var(--bg-card); white-space: nowrap;">
+              <i class="fas fa-star me-1 text-warning"></i> Most Popular
+            </span>
+            <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-school"></i></div>
+            <h4 style="font-size: 1rem; white-space: nowrap; line-height: 1.3;">K-12 School &amp; Camp Safety</h4>
+            <p class="text-muted small">Complete anaphylaxis risk containment for teachers, nurses, and cafeterias.</p>
+            <div class="h3 text-primary fw-bold mb-3">$750 <small class="text-muted fs-6">/ school year</small></div>
+            <ul class="pricing-features text-start mb-4 flex-grow-1">
+              <li><i class="fas fa-check text-success"></i> School nurse anaphylaxis drill certification</li>
+              <li><i class="fas fa-check text-success"></i> Custom Allergy Action Plans (AAP) for students</li>
+              <li><i class="fas fa-check text-success"></i> Unassigned EpiPen protocol compliance</li>
+              <li><i class="fas fa-check text-success"></i> 24/7 Pediatric allergist on-call support</li>
+            </ul>
+            <button class="btn btn-primary w-100 mt-auto" onclick="window.showToast('School health compliance packet requested.', 'success');">Request School Packet</button>
+          </div>
+        </div>
+
+        <!-- Group Tier 3 -->
+        <div class="col-lg-4">
+          <div class="card-custom p-4 h-100 border text-center d-flex flex-column">
+            <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-utensils"></i></div>
+            <h4 style="font-size: 1rem; white-space: nowrap; line-height: 1.3;">Hospitality &amp; Restaurant Audit</h4>
+            <p class="text-muted small">Cross-contact prevention certification and allergen menu validation.</p>
+            <div class="h3 text-primary fw-bold mb-3">$490 <small class="text-muted fs-6">/ location</small></div>
+            <ul class="pricing-features text-start mb-4 flex-grow-1">
+              <li><i class="fas fa-check text-success"></i> FDA Big 9 Allergen kitchen inspection</li>
+              <li><i class="fas fa-check text-success"></i> Staff food allergy safety certification</li>
+              <li><i class="fas fa-check text-success"></i> AllergiQ 'Safe Dining' window seal</li>
+              <li><i class="fas fa-check text-success"></i> Digital menu allergen filter widget</li>
+            </ul>
+            <button class="btn btn-outline-primary w-100 mt-auto" onclick="window.showToast('Kitchen safety audit representative will reach out.', 'info');">Book Kitchen Audit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW SECTION 4: AllergiQ 100% Desensitization Adherence Guarantee & Price Lock Promise -->
+  <section class="py-5" style="background: radial-gradient(circle at top right, var(--primary-light), transparent 70%); border-top: 1px solid var(--border-color);">
+    <div class="container text-center">
+      <div class="badge-tag mb-3"><i class="fas fa-shield-alt"></i> Patient-First Commitment</div>
+      <h2 class="mb-3">Our 100% Price Lock & Clinical Guarantee</h2>
+      <p class="text-muted mx-auto max-w-700 mb-4" style="font-size: 1.15rem;">
+        Your immunotherapy subscription rate is locked for the entire duration of your 3 to 5-year protocol. No hidden price hikes, no surprise facility fees, and free serum dose reformulations if your sensitivity profile shifts.
+      </p>
+
+      <div class="row g-4 justify-content-center text-start max-w-900 mx-auto mb-4">
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <i class="fas fa-lock text-primary fa-2x"></i>
+            <div>
+              <div class="fw-bold">Locked Monthly Rates</div>
+              <small class="text-muted">Guaranteed price stability for 5 full years.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <i class="fas fa-redo text-success fa-2x"></i>
+            <div>
+              <div class="fw-bold">Free Antigen Adjustments</div>
+              <small class="text-muted">Free reformulations if seasonal triggers mutate.</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-center gap-3">
+            <i class="fas fa-user-md text-info fa-2x"></i>
+            <div>
+              <div class="fw-bold">Physician Continuity</div>
+              <small class="text-muted">Direct ongoing review by your designated MD.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Col 1: Brand & Accreditation -->
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <div class="logo-icon">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <div>
+              <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+              <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+            </div>
+          </a>
+          <p class="mb-3">
+            AllergiQ is a specialized center of excellence for precision allergy diagnostics, sublingual immunotherapy, and lifelong allergic asthma relief.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="footer-credential-pill"><i class="fas fa-shield-virus text-info"></i> CLIA & AAAAI Accredited</span>
+            <span class="footer-credential-pill"><i class="fas fa-lock text-success"></i> HIPAA Encrypted EHR</span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (Matches strict nav) -->
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Clinical)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Immunotherapy)</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> About Us</a></li>
+            <li><a href="doctors.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Our Doctors</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> All Services</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pricing Plans</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Contact Clinic</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="col-6 col-lg-3">
+          <h5>Clinical Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Informed & Contact -->
+        <div class="col-lg-3">
+          <h5>Stay Updated</h5>
+          <p class="small mb-3">Weekly local pollen alerts and clinical immunology bulletins.</p>
+          <form class="footer-newsletter-box mb-4" onsubmit="event.preventDefault(); window.showToast('Subscribed to Pollen & Clinical Alerts!', 'success'); this.reset();">
+            <input type="email" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required aria-label="Email address">
+            <button type="submit">Join</button>
+          </form>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> <span>742 Evergreen Medical Center, Suite 400</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:8004562553">(800) 456-2553</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:care@allergiq-clinic.com">care@allergiq-clinic.com</a></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+           2026 AllergiQ Clinic Template. Licensed clinical health & precision immunotherapy.
+        </div>
+        <div class="d-flex gap-4 small">
+          <a href="#privacyPolicyModal" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <a href="#hipaaModal" data-bs-toggle="modal" data-bs-target="#hipaaModal" class="text-white-50 text-decoration-none">HIPAA Compliance</a>
+          <a href="#ehrPortalModal" data-bs-toggle="modal" data-bs-target="#ehrPortalModal" class="text-white-50 text-decoration-none">Patient EHR Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="bookAppointmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header"><h4 class="modal-title">Schedule Testing</h4><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+        <form class="appointment-booking-form">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">Name <span class="text-danger">*</span></label><input type="text" class="form-control" name="name" placeholder="Your Name" minlength="2" pattern="(?=.*[a-zA-Z].*[a-zA-Z])[a-zA-Z\s'.-]{2,}" title="Please enter at least 2 letters for the name" required></div>
+              <div class="col-md-6"><label class="form-label">Email Address <span class="text-danger">*</span></label><input type="email" class="form-control" name="email" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required></div>
+              <div class="col-md-6"><label class="form-label">Phone Number <span class="text-danger">*</span></label><input type="tel" class="form-control" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" title="Please enter a valid 10-digit phone number" required></div>
+              <div class="col-md-6"><label class="form-label">Date</label><input type="date" class="form-control" required></div>
+              <div class="col-md-6"><label class="form-label">Plan / Procedure</label><select class="form-select"><option>Diagnostic Skin Prick ($180)</option><option>Sublingual Drops ($79/mo)</option><option>Allergy Shots ($129/mo)</option></select></div>
+            </div>
+          </div>
+          <div class="modal-footer"><button type="submit" class="btn btn-primary">Schedule Now</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

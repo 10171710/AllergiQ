@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Coming Soon - AllergiQ Advanced Immunotherapy Institute</title>
+  <meta name="description" content="We are launching our next-generation digital allergy testing and biologic therapy platform. Subscribe for early VIP access.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="d-flex flex-column justify-content-between min-vh-100" style="background: radial-gradient(circle at top right, var(--primary-light), transparent 60%);">
+
+  <!-- Top Simple Nav -->
+  <header class="navbar-custom py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-shield-virus"></i></div>
+        <div>
+          <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+          <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn-theme-toggle" type="button" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="btn-rtl-toggle" type="button" aria-label="Toggle RTL"><span class="rtl-label fw-bold" style="font-size: 0.75rem;">RTL</span></button>
+        <a href="index.html" class="btn btn-primary btn-sm"><i class="fas fa-home me-1"></i> Visit Clinic Site</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Countdown Content -->
+  <main class="py-5">
+    <div class="container text-center">
+      <div class="badge-tag mb-3"><i class="fas fa-rocket"></i> Launching Soon</div>
+      <h1 class="display-4 fw-bold mb-3">The Future of Digital Allergy Care is Almost Here</h1>
+      <p class="text-muted mx-auto mb-5 max-w-700" style="font-size: 1.2rem;">
+        We are finalizing our national at-home finger-prick blood diagnostic testing network and automated sublingual drop compounding laboratory.
+      </p>
+
+      <!-- Countdown Timer Box -->
+      <div class="row justify-content-center g-3 mb-5" id="countdownTimer">
+        <div class="col-6 col-sm-3 col-md-2">
+          <div class="card-custom p-3 text-center shadow-lg border-primary">
+            <div class="h1 fw-bold text-primary mb-0" id="cdDays">42</div>
+            <small class="text-muted text-uppercase fw-semibold">Days</small>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-2">
+          <div class="card-custom p-3 text-center shadow-lg border-primary">
+            <div class="h1 fw-bold text-primary mb-0" id="cdHours">18</div>
+            <small class="text-muted text-uppercase fw-semibold">Hours</small>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-2">
+          <div class="card-custom p-3 text-center shadow-lg border-primary">
+            <div class="h1 fw-bold text-primary mb-0" id="cdMinutes">34</div>
+            <small class="text-muted text-uppercase fw-semibold">Minutes</small>
+          </div>
+        </div>
+        <div class="col-6 col-sm-3 col-md-2">
+          <div class="card-custom p-3 text-center shadow-lg border-primary">
+            <div class="h1 fw-bold text-primary mb-0" id="cdSeconds">50</div>
+            <small class="text-muted text-uppercase fw-semibold">Seconds</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Notification Form -->
+      <div class="card-custom p-4 p-sm-5 mx-auto shadow-xl mb-5" style="max-width: 580px;">
+        <h4 class="mb-2">Get Early VIP Testing Invitation</h4>
+        <p class="small text-muted mb-4">Be the first to test our at-home blood panels with free physician consultation.</p>
+        <form onsubmit="event.preventDefault(); window.showToast('Thank you! You have been added to our VIP priority invite list.', 'success'); this.reset();">
+          <div class="input-group">
+            <input type="email" class="form-control form-control-lg" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required>
+            <button type="submit" class="btn btn-primary btn-lg px-4">
+              <i class="fas fa-bell me-1"></i> Notify Me
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- NEW SECTION 1: What's Coming in AllergiQ 2.0 Feature Matrix -->
+      <div class="text-start mt-5 pt-4 border-top">
+        <div class="text-center mb-5">
+          <div class="badge-tag"><i class="fas fa-microchip"></i> Next-Gen Pipeline</div>
+          <h2>What to Expect in the AllergiQ 2.0 Platform</h2>
+          <p class="text-muted mx-auto max-w-700">
+            Pioneering technology combining AI biomarker prediction, smart Bluetooth auto-injectors, and personalized mucosal biology.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom p-4 h-100 border text-center">
+              <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-dna"></i></div>
+              <h5>At-Home Fingerprick IgE</h5>
+              <p class="text-muted small mb-0">CLIA-certified dry-blood spot card screening 295 molecular component allergens from 3 drops of capillary blood.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom p-4 h-100 border text-center">
+              <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-satellite-dish"></i></div>
+              <h5>AI Pollen Plume Forecast</h5>
+              <p class="text-muted small mb-0">Hyper-local aerodynamic dispersion modeling alerting you 48 hours before specific tree or weed pollen waves hit your ZIP code.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom p-4 h-100 border text-center">
+              <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-capsules"></i></div>
+              <h5>Gut-Mucosa Synbiotics</h5>
+              <p class="text-muted small mb-0">Targeted Clostridia and Bifidobacteria oral synbiotics proven to amplify regulatory T-cell suppression during food immunotherapy.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card-custom p-4 h-100 border text-center">
+              <div class="feature-card-icon mx-auto mb-3"><i class="fas fa-mobile-alt"></i></div>
+              <h5>Smart Bluetooth Auto-Cap</h5>
+              <p class="text-muted small mb-0">Connected vial caps automatically logging your daily sublingual drop count and temperature stability to your EHR.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW SECTION 2: Academic & Clinical Research Partners -->
+      <div class="mt-5 pt-4">
+        <h6 class="text-muted text-uppercase fw-bold text-center mb-4" style="letter-spacing: 0.1em; font-size: 0.8rem;">
+          In Collaboration with Premier Immunology Research Centers
+        </h6>
+        <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap text-muted opacity-75">
+          <div class="fw-bold fs-5"><i class="fas fa-university me-2"></i>Stanford Immunology</div>
+          <div class="fw-bold fs-5"><i class="fas fa-hospital me-2"></i>Johns Hopkins Asthma</div>
+          <div class="fw-bold fs-5"><i class="fas fa-certificate me-2"></i>AAAAI Research</div>
+          <div class="fw-bold fs-5"><i class="fas fa-flask me-2"></i>EAACI Molecular Lab</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-4 text-center border-top">
+    <div class="container text-muted small">
+      © 2026 AllergiQ Clinic & Research Institute. All rights reserved. • Helpline: <a href="tel:8004562553" class="text-decoration-none text-muted fw-semibold">(800) 456-2553</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Simple live second ticker
+    setInterval(() => {
+      const secEl = document.getElementById('cdSeconds');
+      if (secEl) {
+        let sec = parseInt(secEl.textContent, 10);
+        sec = sec > 0 ? sec - 1 : 59;
+        secEl.textContent = sec < 10 ? '0' + sec : sec;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

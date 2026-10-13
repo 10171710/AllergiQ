@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Admin Login � Provider EHR | AllergiQ Clinic</title>
+  <meta name="description" content="Restricted administrative and EHR access for AllergiQ clinical staff, physicians, and laboratory coordinators.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="auth-page">
+
+  <!-- Ambient Glow Orbs -->
+  <div class="auth-ambient-orb-1" aria-hidden="true"></div>
+  <div class="auth-ambient-orb-2" aria-hidden="true"></div>
+
+  <!-- Minimal Top Bar Controls (No Site Header) -->
+  <header class="auth-topbar">
+    <div class="d-flex align-items-center gap-2 ms-auto auth-topbar-controls">
+      <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Toggle Theme">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL">
+        <span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Centered Login Container Section (No other sections, No site footer) -->
+  <main class="auth-main" id="main">
+    <div class="auth-container-centered">
+      <div class="auth-card-centered" style="border-color: rgba(2, 132, 199, 0.35);">
+
+        <!-- Centered Brand Logo & Header -->
+        <div class="text-center auth-brand-header">
+          <a class="navbar-brand d-inline-flex align-items-center gap-2 mb-3 text-decoration-none" href="index.html">
+            <div class="logo-icon"><i class="fas fa-user-shield"></i></div>
+            <div class="text-start">
+              <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+              <div class="brand-subtitle" style="font-size: 0.65rem; letter-spacing: 1px;">CLINIC &amp; IMMUNOTHERAPY</div>
+            </div>
+          </a>
+          <h1 class="h3 mb-1" id="authHeaderTitle">Admin Login</h1>
+          <p class="auth-sub small text-muted mb-0" id="authHeaderSub">Restricted administrative access for physicians, nurses &amp; clinic staff.</p>
+        </div>
+
+        <!-- Segmented Tab Switcher (Customer Login vs Admin Login) -->
+        <div class="auth-tabs" role="tablist">
+          <a href="login.html" class="auth-tab-btn text-decoration-none" id="tabCustomerBtn">
+            <i class="fas fa-user-circle me-1"></i> Customer Login
+          </a>
+          <button type="button" class="auth-tab-btn active" id="tabAdminBtn">
+            <i class="fas fa-shield-alt me-1"></i> Admin Login
+          </button>
+        </div>
+
+        <!-- STAFF / ADMIN SIGN IN FORM -->
+        <form id="adminLoginForm">
+          <div class="mb-3">
+            <label class="form-label small fw-semibold" for="adminEmail">
+              Staff Email or Provider NPI <span class="text-danger">*</span>
+            </label>
+            <div class="input-icon-group">
+              <i class="fas fa-user-shield input-icon"></i>
+              <input type="text" class="form-control" id="adminEmail" name="adminEmail" required
+                     placeholder="admin@allergiq-clinic.com" autocomplete="username">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label class="form-label small fw-semibold mb-0" for="adminPassword">
+                Master Security Key / Password <span class="text-danger">*</span>
+              </label>
+              <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none text-primary" data-bs-toggle="modal" data-bs-target="#forgotModal">
+                Forgot password?
+              </button>
+            </div>
+            <div class="input-icon-group has-toggle">
+              <i class="fas fa-key input-icon"></i>
+              <input type="password" class="form-control" id="adminPassword" name="adminPassword" required
+                     placeholder="Enter administrative password" autocomplete="current-password">
+              <button type="button" class="pw-toggle" data-pw-toggle="#adminPassword" aria-label="Show password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="adminRemember" checked>
+            <label class="form-check-label small text-muted" for="adminRemember">
+              Trust this clinical workstation (2FA Remembered)
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-lg w-100 fw-bold shadow-sm" id="adminSubmitBtn">
+            <i class="fas fa-lock me-2"></i> Sign In to Admin EHR Portal
+          </button>
+        </form>
+
+        <!-- CREATE STAFF ACCOUNT (REGISTER) PANEL -->
+        <form id="registerForm" style="display: none;">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <h2 class="h5 mb-0" id="registerPanelTitle">Create your staff account</h2>
+            <button type="button" class="btn btn-link btn-sm p-0 text-decoration-none" id="backToLoginBtn">
+              <i class="fas fa-arrow-left me-1"></i> Back to login
+            </button>
+          </div>
+          <p class="small text-muted mb-3" id="registerPanelSub">Set up a staff profile for clinical dashboard access.</p>
+
+          <div class="mb-3">
+            <label class="form-label small fw-semibold" for="registerName">Full Name <span class="text-danger">*</span></label>
+            <div class="input-icon-group">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" class="form-control" id="registerName" required placeholder="Dr. Jane Smith" autocomplete="name">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small fw-semibold" for="registerEmail">Staff Email <span class="text-danger">*</span> <span class="text-muted fw-normal">(must end with @gmail.com)</span></label>
+            <div class="input-icon-group">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" class="form-control" id="registerEmail" required placeholder="you@gmail.com" autocomplete="email">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label small fw-semibold" for="registerPassword">Create Password <span class="text-danger">*</span></label>
+            <div class="input-icon-group has-toggle">
+              <i class="fas fa-lock input-icon"></i>
+              <input type="password" class="form-control" id="registerPassword" required minlength="6" placeholder="At least 6 characters" autocomplete="new-password">
+              <button type="button" class="pw-toggle" data-pw-toggle="#registerPassword" aria-label="Show password">
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-secondary btn-lg w-100 fw-bold shadow-sm">
+            <i class="fas fa-user-plus me-2"></i> Create Staff Account
+          </button>
+        </form>
+
+        <!-- Footnote Links -->
+        <div class="auth-footnote">
+          <p class="mb-2">
+            New staff member? <a href="#" id="linkCreateAccount">Create an account</a>
+          </p>
+          <p class="mb-0">
+            <a href="login.html" class="d-inline-flex align-items-center gap-1">
+              <i class="fas fa-user-circle text-primary"></i> Looking for client portal? Customer login
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FORGOT PASSWORD MODAL -->
+  <div class="modal fade" id="forgotModal" tabindex="-1" aria-labelledby="forgotModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="forgotModalLabel">Reset staff password</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="forgotSuccessBox" class="alert alert-success d-none mb-3">
+            <i class="fas fa-check-circle me-1"></i> A password reset token has been dispatched to your institutional email.
+          </div>
+          <form id="forgotForm">
+            <p class="text-muted small">
+              Enter your clinical provider email or staff NPI to request an encrypted reset token.
+            </p>
+            <div class="mb-3">
+              <label class="form-label small fw-semibold" for="forgotEmail">Staff Email Address <span class="text-danger">*</span></label>
+              <div class="input-icon-group">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" class="form-control" id="forgotEmail" name="forgotEmail" required placeholder="admin@allergiq-clinic.com">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+              <i class="fas fa-paper-plane me-1"></i> Send Reset Link
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const STORAGE_KEY = 'allergiq_accounts_v1';
+
+      const adminForm = document.getElementById('adminLoginForm');
+      const registerForm = document.getElementById('registerForm');
+      const backToLoginBtn = document.getElementById('backToLoginBtn');
+      const createAccountLink = document.getElementById('linkCreateAccount');
+      const registerName = document.getElementById('registerName');
+      const registerEmail = document.getElementById('registerEmail');
+      const registerPassword = document.getElementById('registerPassword');
+
+      function loadAccounts() {
+        try {
+          const raw = JSON.parse(localStorage.getItem(STORAGE_KEY));
+          if (raw && Array.isArray(raw.customer) && Array.isArray(raw.admin)) return raw;
+        } catch (e) {}
+        return { customer: [], admin: [] };
+      }
+      function saveAccounts(accounts) {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(accounts)); } catch (e) {}
+      }
+
+      function showError(msg) {
+        if (window.showToast) window.showToast(msg, 'error');
+      }
+      function showSuccess(msg) {
+        if (window.showToast) window.showToast(msg, 'success');
+      }
+
+      // Password Toggle
+      document.querySelectorAll('.pw-toggle').forEach(toggleBtn => {
+        toggleBtn.addEventListener('click', () => {
+          const targetInput = document.querySelector(toggleBtn.getAttribute('data-pw-toggle'));
+          if (targetInput) {
+            const isPassword = targetInput.type === 'password';
+            targetInput.type = isPassword ? 'text' : 'password';
+            const icon = toggleBtn.querySelector('i');
+            if (icon) icon.className = isPassword ? 'fas fa-eye-slash' : 'fas fa-eye';
+          }
+        });
+      });
+
+      // Registration view
+      createAccountLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        adminForm.style.display = 'none';
+        registerForm.style.display = 'block';
+        registerName.focus();
+      });
+      backToLoginBtn.addEventListener('click', () => {
+        registerForm.style.display = 'none';
+        adminForm.style.display = 'block';
+      });
+
+      // Create staff account
+      registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = registerName.value.trim();
+        const email = registerEmail.value.trim().toLowerCase();
+        const pw = registerPassword.value;
+        const accounts = loadAccounts();
+
+        if (accounts.admin.some(a => a.email === email)) {
+          showError('An account with this email already exists. Please sign in instead.');
+          return;
+        }
+
+        accounts.admin.push({ name: name, email: email, password: pw });
+        saveAccounts(accounts);
+        registerForm.reset();
+
+        // Back to login with the email prefilled
+        registerForm.style.display = 'none';
+        adminForm.style.display = 'block';
+        document.getElementById('adminEmail').value = email;
+        const pwEl = document.getElementById('adminPassword');
+        pwEl.value = '';
+        pwEl.focus();
+        if (window.showToast) {
+          window.showToast('Staff account created successfully! Please sign in.', 'success');
+        }
+      });
+
+      // Admin sign in (validates against stored staff accounts)
+      adminForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('adminEmail').value.trim().toLowerCase();
+        const pw = document.getElementById('adminPassword').value;
+        const accounts = loadAccounts();
+        const acct = accounts.admin.find(a => a.email === email);
+
+        if (!acct) { showError('No account found for this email. Please create an account first.'); return; }
+        if (acct.password !== pw) { showError('Incorrect password. Please try again.'); return; }
+
+        showSuccess(`Staff authentication successful! Welcome back, ${acct.name}.`);
+      });
+
+      // Forgot Password Form (stay on page)
+      const forgotForm = document.getElementById('forgotForm');
+      const forgotSuccessBox = document.getElementById('forgotSuccessBox');
+      forgotForm?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        forgotForm.classList.add('d-none');
+        forgotSuccessBox.classList.remove('d-none');
+        if (window.showToast) {
+          window.showToast('Password reset link sent to your institutional email.', 'success');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

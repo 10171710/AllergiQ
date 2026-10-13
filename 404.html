@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>404 - Page Not Found | AllergiQ Clinic</title>
+  <meta name="description" content="The page you are looking for does not exist. Explore our allergy testing services and immunotherapy programs.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+  <!-- Main Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-shield-virus"></i></div>
+        <div>
+          <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+          <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse">
+        <i class="fas fa-bars fa-lg text-primary"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMainCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="index.html">
+                  <span class="fw-semibold d-block">Home 1 - Clinical Landing</span>
+                  <small class="text-muted">Allergy Relief & Diagnostics</small>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="home-2.html">
+                  <span class="fw-semibold d-block">Home 2 - Immunotherapy SaaS</span>
+                  <small class="text-muted">Digital Shot Schedules & Telehealth</small>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="doctors.html">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Toggle Theme"><i class="fas fa-moon"></i></button>
+          <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL"><span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span></button>
+          <a href="login.html" class="btn btn-light-soft btn-sm d-none d-sm-inline-flex"><i class="fas fa-user-circle me-1"></i> Login</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 404 Error Content -->
+  <section class="py-5" style="background: radial-gradient(circle at top right, var(--primary-light), transparent 60%); min-height: calc(100vh - 250px); display: flex; align-items: center;">
+    <div class="container text-center py-5">
+      <div class="badge-tag bg-danger-subtle text-danger mb-3"><i class="fas fa-exclamation-triangle"></i> Error 404</div>
+      <h1 class="display-1 fw-bold text-primary mb-2" style="font-family: var(--font-heading); letter-spacing: -0.05em;">404</h1>
+      <h2 class="mb-3">Oops! Allergen / Page Not Found</h2>
+      <p class="text-muted mx-auto mb-4" style="max-width: 540px; font-size: 1.1rem;">
+        It looks like the clinical page or test result you requested has been filtered out of our system like unwanted airborne pollen.
+      </p>
+
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-home me-2"></i> Return to Homepage
+        </a>
+        <a href="services.html" class="btn btn-outline-primary btn-lg">
+          <i class="fas fa-stethoscope me-2"></i> Explore Services
+        </a>
+        <a href="contact.html" class="btn btn-light-soft btn-lg">
+          <i class="fas fa-envelope me-2"></i> Contact Clinic
+        </a>
+      </div>
+
+      <!-- Quick Search Box -->
+      <div class="card-custom p-4 mx-auto shadow-md mb-5" style="max-width: 500px;">
+        <h6 class="mb-2">Search Clinical Knowledge Base:</h6>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="e.g. skin prick test, allergy drops...">
+          <button class="btn btn-primary" onclick="window.location.href='services.html';">Search</button>
+        </div>
+      </div>
+
+      <!-- NEW SECTION 1: Quick Clinical Directory Hub -->
+      <div class="text-start mt-5">
+        <h5 class="text-center mb-4">Looking for One of Our Specialized Services?</h5>
+        <div class="row g-3 justify-content-center">
+          <div class="col-sm-6 col-md-4">
+            <a href="service-details.html" class="card-custom p-3 d-flex align-items-center gap-3 text-decoration-none h-100 hover-lift">
+              <div class="feature-card-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-hand-sparkles"></i></div>
+              <div>
+                <div class="fw-bold text-main">Skin Prick Testing</div>
+                <small class="text-muted">50+ Airborne & Food Triggers</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="service-details.html" class="card-custom p-3 d-flex align-items-center gap-3 text-decoration-none h-100 hover-lift">
+              <div class="feature-card-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-tint"></i></div>
+              <div>
+                <div class="fw-bold text-main">Sublingual Drops (SLIT)</div>
+                <small class="text-muted">At-Home Needle-Free Drops</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="service-details.html" class="card-custom p-3 d-flex align-items-center gap-3 text-decoration-none h-100 hover-lift">
+              <div class="feature-card-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-syringe"></i></div>
+              <div>
+                <div class="fw-bold text-main">Allergy Shots (SCIT)</div>
+                <small class="text-muted">In-Clinic Desensitization</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="services.html" class="card-custom p-3 d-flex align-items-center gap-3 text-decoration-none h-100 hover-lift">
+              <div class="feature-card-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-child"></i></div>
+              <div>
+                <div class="fw-bold text-main">Pediatric Allergy Care</div>
+                <small class="text-muted">Gentle Child Testing & Plans</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="pricing.html" class="card-custom p-3 d-flex align-items-center gap-3 text-decoration-none h-100 hover-lift">
+              <div class="feature-card-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-file-invoice-dollar"></i></div>
+              <div>
+                <div class="fw-bold text-main">Insurance & Pricing</div>
+                <small class="text-muted">HSA/FSA & In-Network Plans</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <a href="dashboard.html" class="card-custom p-3 d-flex align-items-center gap-3 text-decoration-none h-100 hover-lift">
+              <div class="feature-card-icon" style="width: 40px; height: 40px; font-size: 1rem;"><i class="fas fa-user-shield"></i></div>
+              <div>
+                <div class="fw-bold text-main">Patient EHR Portal</div>
+                <small class="text-muted">Shot Schedules & Lab PDFs</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEW SECTION 2: Emergency Warning Banner -->
+      <div class="alert alert-danger d-flex align-items-center justify-content-between flex-wrap gap-3 mt-5 text-start rounded-4 shadow-sm border-0" style="background: rgba(239, 68, 68, 0.12); color: #dc2626;">
+        <div class="d-flex align-items-center gap-3">
+          <i class="fas fa-exclamation-circle fa-2x"></i>
+          <div>
+            <div class="fw-bold">Experiencing An Acute Anaphylactic Emergency?</div>
+            <small>If you or someone else has throat tightness, wheezing, or facial swelling, administer an Epinephrine Auto-Injector (EpiPen) and dial 911 immediately.</small>
+          </div>
+        </div>
+        <a href="tel:911" class="btn btn-danger btn-sm px-4 fw-bold"><i class="fas fa-phone-alt me-1"></i> Call 911</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Col 1: Brand & Accreditation -->
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <div class="logo-icon">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <div>
+              <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+              <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+            </div>
+          </a>
+          <p class="mb-3">
+            AllergiQ is a specialized center of excellence for precision allergy diagnostics, sublingual immunotherapy, and lifelong allergic asthma relief.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="footer-credential-pill"><i class="fas fa-shield-virus text-info"></i> CLIA & AAAAI Accredited</span>
+            <span class="footer-credential-pill"><i class="fas fa-lock text-success"></i> HIPAA Encrypted EHR</span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (Matches strict nav) -->
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Clinical)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Immunotherapy)</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> About Us</a></li>
+            <li><a href="doctors.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Our Doctors</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> All Services</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pricing Plans</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Contact Clinic</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="col-6 col-lg-3">
+          <h5>Clinical Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Informed & Contact -->
+        <div class="col-lg-3">
+          <h5>Stay Updated</h5>
+          <p class="small mb-3">Weekly local pollen alerts and clinical immunology bulletins.</p>
+          <form class="footer-newsletter-box mb-4" onsubmit="event.preventDefault(); window.showToast('Subscribed to Pollen & Clinical Alerts!', 'success'); this.reset();">
+            <input type="email" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required aria-label="Email address">
+            <button type="submit">Join</button>
+          </form>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> <span>742 Evergreen Medical Center, Suite 400</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:8004562553">(800) 456-2553</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:care@allergiq-clinic.com">care@allergiq-clinic.com</a></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+          © 2026 AllergiQ Clinic Template. Licensed clinical health & precision immunotherapy.
+        </div>
+        <div class="d-flex gap-4 small">
+          <a href="#privacyPolicyModal" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <a href="#hipaaModal" data-bs-toggle="modal" data-bs-target="#hipaaModal" class="text-white-50 text-decoration-none">HIPAA Compliance</a>
+          <a href="#ehrPortalModal" data-bs-toggle="modal" data-bs-target="#ehrPortalModal" class="text-white-50 text-decoration-none">Patient EHR Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
