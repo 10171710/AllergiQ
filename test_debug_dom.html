@@ -1,0 +1,1767 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" dir="ltr"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>AllergiQ - Allergy Testing &amp; Immunotherapy Clinic</title>
+  <meta name="description" content="AllergiQ is a premier allergy testing and immunotherapy clinic providing precision skin prick diagnostics, sublingual drops, allergy shots, and pediatric care.">
+  <meta name="keywords" content="allergy clinic, allergy testing, immunotherapy, skin prick test, allergy shots, SCIT, SLIT, pollen allergy, food allergy testing">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+  <!-- =========================================================================
+       MAIN NAVIGATION BAR
+       Strict Menu Requirement:
+       - Home (Dropdown: Home 1 & Home 2)
+       - About (No dropdown)
+       - Services (No dropdown)
+       - Blog (No dropdown)
+       - Contact (No dropdown)
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+    <div class="container">
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon">
+          <i class="fas fa-shield-virus"></i>
+        </div>
+        <div>
+          <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+          <div class="brand-subtitle">CLINIC &amp; IMMUNOTHERAPY</div>
+        </div>
+      </a>
+
+      <!-- Mobile Actions (Login CTA & Toggler for <992px) -->
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <a href="login.html" class="btn btn-light-soft btn-sm mobile-login-btn" aria-label="Login to Patient Portal">
+          <i class="fas fa-user-circle me-1"></i> Login
+        </a>
+        <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars fa-lg text-primary"></i>
+        </button>
+      </div>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarMainCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <!-- Home Dropdown (Only Home has dropdown) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item active" href="index.html">
+                  <span class="fw-semibold d-block">Home 1 - Clinical Landing</span>
+                  <small class="text-muted">Allergy Relief &amp; Comprehensive Diagnostics</small>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="home-2.html">
+                  <span class="fw-semibold d-block">Home 2 - Immunotherapy SaaS</span>
+                  <small class="text-muted">Digital Shot Schedules &amp; Telehealth Niche</small>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- About (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+
+          <!-- Doctors (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="doctors.html">Doctors</a>
+          </li>
+
+          <!-- Services (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+
+          <!-- Pricing (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+
+          <!-- Blog (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <!-- Contact (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+          <!-- Dashboard (No Dropdown - Patient EHR) -->
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Action Controls: Theme Switcher, RTL Switcher, Portal & Appointment CTA -->
+        <div class="header-actions">
+          <!-- Dark/Light Mode Button -->
+          <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Toggle Theme" title="Switch to Light Mode">
+            <i class="fas fa-sun"></i>
+          </button>
+
+          <!-- RTL/LTR Switcher Button -->
+          <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Switch to RTL text direction" title="Switch to RTL">
+            <span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span>
+          </button>
+
+          <!-- Patient Portal Link -->
+          <a href="login.html" class="btn btn-light-soft btn-sm d-inline-flex align-items-center">
+            <i class="fas fa-user-circle me-1"></i> Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION - CLINICAL EXCELLENCE & QUICK BOOKING WIDGET
+       ========================================================================= -->
+  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&amp;fit=crop&amp;w=1920&amp;q=80');">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <!-- Hero Text Content -->
+        <div class="col-lg-7">
+          <div class="hero-content">
+            <div class="badge-tag">
+              <i class="fas fa-certificate text-primary"></i> Leading Allergy &amp; Immunology Specialists
+            </div>
+            <h1 class="hero-title">
+              Break Free from Allergies with <span class="text-gradient">Precision Diagnostics</span> &amp; Targeted Immunotherapy.
+            </h1>
+            <p class="hero-subtitle">
+              Experience long-term relief from seasonal allergies, allergic asthma, and food sensitivities. Our board-certified allergists provide 50+ allergen skin prick testing with same-day results and custom-formulated desensitization programs.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-4 hero-cta-group">
+              <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                <i class="fas fa-calendar-alt me-2"></i> Schedule Skin Testing
+              </button>
+              <a href="#symptomCheckerSection" class="btn btn-outline-primary btn-lg" aria-label="Try our free online allergy symptom checker">
+                <i class="fas fa-stethoscope me-2"></i> Free Symptom Checker
+              </a>
+            </div>
+
+            <!-- Trust / Credibility Badges -->
+            <ul class="hero-features-list">
+              <li><i class="fas fa-check-circle"></i> 20-Minute Rapid Skin Tests</li>
+              <li><i class="fas fa-check-circle"></i> SCIT Shots &amp; SLIT Sublingual Drops</li>
+              <li><i class="fas fa-check-circle"></i> 98% Patient Relief Rate</li>
+              <li><i class="fas fa-check-circle"></i> Covered by Major Insurances</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hero Media with Quick Appointment Card & Live Stats -->
+        <div class="col-lg-5">
+          <div class="hero-media-wrapper">
+
+            <!-- Main Hero Card: Quick Appointment Form -->
+            <div class="card-custom quick-booking-card p-4 shadow-xl border-primary-subtle" style="background: var(--bg-surface);">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <div>
+                  <h4 class="mb-1">Quick Consultation</h4>
+                  <small class="text-muted">Book your priority allergy evaluation</small>
+                </div>
+                <span class="badge bg-success-subtle text-success">Available Today</span>
+              </div>
+
+              <form class="appointment-booking-form">
+                <div class="mb-3">
+                  <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control" name="name" placeholder="e.g. Sarah Jenkins" minlength="2" pattern="(?=.*[a-zA-Z].*[a-zA-Z])[a-zA-Z\s'.-]{2,}" title="Please enter at least 2 letters for the name" required="required">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control" name="email" placeholder="e.g. sarah@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required="required">
+                </div>
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                    <input type="tel" class="form-control" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" title="Please enter a valid 10-digit phone number" required="required">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label">Preferred Date</label>
+                    <input type="date" class="form-control" required="">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="allergyConcernSelect">Primary Allergy Concern</label>
+                  <div class="dropdown custom-select-dropdown w-100 position-relative">
+                    <button class="form-select text-start d-flex align-items-center justify-content-between w-100" type="button" id="allergyConcernSelect" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span class="selected-text text-truncate">Select Testing Type</span>
+                    </button>
+                    <ul class="dropdown-menu w-100 shadow-lg p-1" aria-labelledby="allergyConcernSelect">
+                      <li><a class="dropdown-item py-2 active" href="#" data-value="">Select Testing Type</a></li>
+                      <li><a class="dropdown-item py-2" href="#" data-value="skin-prick">Comprehensive Skin Prick Test (50 Allergens)</a></li>
+                      <li><a class="dropdown-item py-2" href="#" data-value="immunotherapy">Immunotherapy / Allergy Shots (SCIT/SLIT)</a></li>
+                      <li><a class="dropdown-item py-2" href="#" data-value="food-allergy">Food Allergy &amp; Component Panel</a></li>
+                      <li><a class="dropdown-item py-2" href="#" data-value="pediatric">Pediatric Allergy Evaluation</a></li>
+                      <li><a class="dropdown-item py-2" href="#" data-value="asthma">Allergic Asthma &amp; Spirometry</a></li>
+                    </ul>
+                    <select name="testing_type" id="testingTypeSelect" class="visually-hidden" tabindex="-1" aria-hidden="true">
+                      <option value="">Select Testing Type</option>
+                      <option value="skin-prick">Comprehensive Skin Prick Test (50 Allergens)</option>
+                      <option value="immunotherapy">Immunotherapy / Allergy Shots (SCIT/SLIT)</option>
+                      <option value="food-allergy">Food Allergy &amp; Component Panel</option>
+                      <option value="pediatric">Pediatric Allergy Evaluation</option>
+                      <option value="asthma">Allergic Asthma &amp; Spirometry</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 py-2">
+                  <i class="fas fa-paper-plane me-2"></i> Confirm Instant Booking
+                </button>
+                <div class="text-center mt-2">
+                  <small class="text-muted"><i class="fas fa-lock me-1"></i> HIPAA Compliant &amp; 100% Confidential</small>
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       WHY CHOOSE ALLERGIQ VS GENERIC CARE
+       ========================================================================= -->
+  <section class="py-5 gold-standard-section" style="background-color: var(--bg-surface-subtle);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-shield-alt"></i> Clinical Advantage</div>
+        <h2 class="section-title">Why AllergiQ Is The Gold Standard In Allergy Relief</h2>
+        <p class="section-subtitle">Comparing general practitioner antihistamine prescriptions with our precision immunology protocols.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-md-6 col-lg-4">
+          <div class="gold-standard-card">
+            <div class="gold-standard-img-box">
+              <img src="assets/images/gold-standard-cleanroom.jpg" alt="On-Site CLIA Sterile Compounding Cleanroom" loading="lazy">
+            </div>
+            <div class="gold-standard-body">
+              <h4 class="gold-standard-title">CLIA Cleanroom Compounding</h4>
+              <p class="gold-standard-desc">Our sterile CLIA laboratory formulates custom extract vials in-house under strict laminar hoods, ensuring pure antigen compounding.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="gold-standard-card">
+            <div class="gold-standard-img-box">
+              <img src="assets/images/gold-standard-fellowship-md.jpg" alt="Board-Certified Fellowship Allergy Specialist" loading="lazy">
+            </div>
+            <div class="gold-standard-body">
+              <h4 class="gold-standard-title">AAAAI Fellowship MDs</h4>
+              <p class="gold-standard-desc">Every skin prick diagnostic test and dose escalation is designed and directly supervised by board-certified allergy specialists.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="gold-standard-card">
+            <div class="gold-standard-img-box">
+              <img src="assets/images/gold-standard-immunotherapy.jpg" alt="Targeted Allergy Immunotherapy &amp; IgG4 Reprogramming" loading="lazy">
+            </div>
+            <div class="gold-standard-body">
+              <h4 class="gold-standard-title">Targeted Immunotherapy</h4>
+              <p class="gold-standard-desc">Over-the-counter pills only block symptoms. Our targeted immunotherapy stimulates permanent IgG4 antibodies for lifelong tolerance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="gold-standard-card">
+            <div class="gold-standard-img-box">
+              <img src="assets/images/gold-standard-ehr-portal.jpg" alt="Integrated Digital EHR Patient Portal on Tablet" loading="lazy">
+            </div>
+            <div class="gold-standard-body">
+              <h4 class="gold-standard-title">Integrated EHR Portal</h4>
+              <p class="gold-standard-desc">Track your shot build-up phase, log local reactions, access component IgE lab reports, and message your dedicated clinic care team.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="gold-standard-card">
+            <div class="gold-standard-img-box">
+              <img src="assets/images/gold-standard-pediatric.jpg" alt="Gentle Pediatric Allergy Care &amp; Desensitization" loading="lazy">
+            </div>
+            <div class="gold-standard-body">
+              <h4 class="gold-standard-title">Pediatric Comfort Care</h4>
+              <p class="gold-standard-desc">Child-friendly scratch-free testing applicators, certified pediatric nurses, and gentle early childhood peanut desensitization plans.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="gold-standard-card">
+            <div class="gold-standard-img-box">
+              <img src="assets/images/gold-standard-insurance.jpg" alt="Direct Health Insurance Coverage &amp; Verification" loading="lazy">
+            </div>
+            <div class="gold-standard-body">
+              <h4 class="gold-standard-title">Direct Insurance Plans</h4>
+              <p class="gold-standard-desc">We work directly with major health insurance plans to verify full coverage for diagnostic testing and custom immunotherapy treatment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CLINIC STATS COUNTER
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="stats-banner">
+        <div class="row text-center g-4">
+          <div class="col-6 col-md-3 stat-item">
+            <h3><span class="counter-num" data-target="25" data-suffix="K+" data-duration="2000">0K+</span></h3>
+            <p>Patients Treated</p>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <h3><span class="counter-num" data-target="98.4" data-decimals="1" data-suffix="%" data-duration="2000">0.0%</span></h3>
+            <p>Desensitization Rate</p>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <h3><span class="counter-num" data-target="20" data-suffix=" Min" data-duration="1800">0 Min</span></h3>
+            <p>Skin Prick Test Time</p>
+          </div>
+          <div class="col-6 col-md-3 stat-item">
+            <h3><span class="counter-num" data-target="18" data-suffix="+" data-duration="1800">0+</span></h3>
+            <p>Board Certified Specialists</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: ALLERGEN ENCYCLOPEDIA & SEASONALITY MATRIX
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container" style="max-width: 1100px;">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-calendar-alt"></i> Seasonality Guide</div>
+        <h2 class="section-title">The Four Seasons of Airborne Allergens</h2>
+        <p class="section-subtitle">Identify when your trigger peaks throughout the calendar year and prepare your immune defense.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Spring -->
+        <div class="col-md-6 col-lg-3">
+          <div class="allergen-season-card p-0 overflow-hidden d-flex flex-column">
+            <div class="season-card-img">
+              <img src="https://images.pexels.com/photos/4087417/pexels-photo-4087417.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Allergy-protected woman beside spring blossoms releasing tree pollen" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="badge season-badge-spring mb-3 align-self-start">Spring (March - May)</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="fas fa-tree text-success fa-lg"></i>
+                <h5 class="mb-0">Tree Pollens</h5>
+              </div>
+              <p class="small text-muted mb-3">Oak, Birch, Cedar, Elm, and Ash trees release fine powdery pollen that travels hundreds of miles on windy spring days.</p>
+              <div class="border-top pt-2 mt-auto">
+                <small class="fw-bold d-block text-main mb-1">Key Symptoms:</small>
+                <small class="text-muted">Intense eye itching, morning sneezing fits, sinus pressure, nasal congestion.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summer -->
+        <div class="col-md-6 col-lg-3">
+          <div class="allergen-season-card p-0 overflow-hidden d-flex flex-column">
+            <div class="season-card-img">
+              <img src="https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Allergy clinic consultation for seasonal grass pollen allergy assessment" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="badge season-badge-summer mb-3 align-self-start">Summer (June - August)</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="fas fa-seedling text-warning fa-lg"></i>
+                <h5 class="mb-0">Grass Pollens</h5>
+              </div>
+              <p class="small text-muted mb-3">Timothy, Bermuda, Kentucky Bluegrass, and Orchard grasses thrive and pollinate during warm sunny afternoons.</p>
+              <div class="border-top pt-2 mt-auto">
+                <small class="fw-bold d-block text-main mb-1">Key Symptoms:</small>
+                <small class="text-muted">Thunderstorm asthma flare-ups, grass contact hives, throat tickle.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fall -->
+        <div class="col-md-6 col-lg-3">
+          <div class="allergen-season-card p-0 overflow-hidden d-flex flex-column">
+            <div class="season-card-img">
+              <img src="https://images.pexels.com/photos/8741786/pexels-photo-8741786.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Microscopic view of mold spores triggering autumn allergies" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="badge season-badge-fall mb-3 align-self-start">Fall (Sept - November)</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="fas fa-cannabis text-danger fa-lg"></i>
+                <h5 class="mb-0">Weed &amp; Molds</h5>
+              </div>
+              <p class="small text-muted mb-3">Ragweed plants release billions of pollen grains, while decaying autumn leaves trigger outdoor Alternaria mold spores.</p>
+              <div class="border-top pt-2 mt-auto">
+                <small class="fw-bold d-block text-main mb-1">Key Symptoms:</small>
+                <small class="text-muted">Post-nasal drip, chronic cough, fatigue, night-time wheezing.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Winter / Year Round -->
+        <div class="col-md-6 col-lg-3">
+          <div class="allergen-season-card p-0 overflow-hidden d-flex flex-column">
+            <div class="season-card-img">
+              <img src="https://images.pexels.com/photos/30425661/pexels-photo-30425661.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Allergy clinic respiratory monitoring to assess indoor dust mite and pet dander sensitivity" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <span class="badge season-badge-winter mb-3 align-self-start">Year-Round Indoor</span>
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="fas fa-home text-primary fa-lg"></i>
+                <h5 class="mb-0">Dust &amp; Dander</h5>
+              </div>
+              <p class="small text-muted mb-3">Dust mites in bedding, pet dander, and damp bathroom fungal spores trigger constant indoor allergies for sensitive individuals.</p>
+              <div class="border-top pt-2 mt-auto">
+                <small class="fw-bold d-block text-main mb-1">Key Symptoms:</small>
+                <small class="text-muted">Year-round nasal congestion, eczema patches, waking up stuffy.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CORE SERVICES SECTION
+       ========================================================================= -->
+  <section class="py-5" id="servicesSection">
+    <div class="container" style="max-width: 1100px;">
+      <div class="section-header text-center mb-4">
+        <div class="badge-tag"><i class="fas fa-stethoscope"></i> Clinical Services</div>
+        <h2 class="section-title mb-2">Comprehensive Allergy Diagnostics &amp; Immunotherapy</h2>
+        <p class="section-subtitle">
+          From painless pediatric prick testing to custom sublingual drops and allergen immunotherapy shots, our clinical offerings provide permanent immune reprogramming.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1: Skin Prick Diagnostics -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
+            <div class="service-card-img">
+              <a href="service-skin-prick.html" class="d-block w-100 h-100" aria-label="Skin Prick Diagnostics">
+                <img src="https://images.pexels.com/photos/6823478/pexels-photo-6823478.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Clinical skin prick allergy diagnostic testing on patient arm" class="w-100 h-100" loading="lazy">
+              </a>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-skin-prick.html" style="color: inherit; text-decoration: none;">Skin Prick Diagnostics</a>
+              </h4>
+              <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
+                The gold-standard test evaluating 50+ airborne and food allergens. Gentle, scratch-free applicators with visible results in 15 to 20 minutes.
+              </p>
+              <ul class="list-unstyled mb-3" style="font-size: 0.9rem; color: var(--text-main); min-height: 48px;">
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Immediate IgE wheal measurement</li>
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Pollen, dust mites, pet dander, molds</li>
+              </ul>
+              <a href="service-skin-prick.html" class="fw-bold text-primary mt-auto">
+                Learn Procedure Steps <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Subcutaneous Immunotherapy (SCIT) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
+            <div class="service-card-img">
+              <a href="service-scit.html" class="d-block w-100 h-100" aria-label="Allergy Shots (SCIT)">
+                <img src="https://images.pexels.com/photos/8413212/pexels-photo-8413212.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Targeted allergen immunotherapy injection and vial preparation" class="w-100 h-100" loading="lazy">
+              </a>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-scit.html" style="color: inherit; text-decoration: none;">Allergy Shots (SCIT)</a>
+              </h4>
+              <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
+                Targeted allergen immunotherapy injections formulated to your unique sensitivity profile. Builds lasting tolerance over 3 to 5 years.
+              </p>
+              <ul class="list-unstyled mb-3" style="font-size: 0.9rem; color: var(--text-main); min-height: 48px;">
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Build-up &amp; maintenance dosing</li>
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Trackable in Patient Portal</li>
+              </ul>
+              <a href="service-scit.html" class="fw-bold text-primary mt-auto">
+                View Shot Protocols <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Sublingual Immunotherapy (SLIT) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
+            <div class="service-card-img">
+              <a href="service-slit.html" class="d-block w-100 h-100" aria-label="Sublingual Allergy Drops (SLIT)">
+                <img src="https://images.pexels.com/photos/10819538/pexels-photo-10819538.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Sublingual allergy drops dispensed from a dropper" class="w-100 h-100" loading="lazy">
+              </a>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-slit.html" style="color: inherit; text-decoration: none;">Sublingual Allergy Drops (SLIT)</a>
+              </h4>
+              <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
+                Needle-free drops or dissolving tablets under the tongue. Convenient home-based immunotherapy for children and adults.
+              </p>
+              <ul class="list-unstyled mb-3" style="font-size: 0.9rem; color: var(--text-main); min-height: 48px;">
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Take comfortably at home</li>
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Zero needle anxiety for kids</li>
+              </ul>
+              <a href="service-slit.html" class="fw-bold text-primary mt-auto">
+                Explore Sublingual Drops <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Food Allergen & Patch Testing -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
+            <div class="service-card-img">
+              <a href="service-food-panels.html" class="d-block w-100 h-100" aria-label="Food Allergen &amp; Patch Testing">
+                <img src="assets/images/service-food-panels.jpg" alt="Molecular food allergy component diagnostic assay testing" class="w-100 h-100" loading="lazy">
+              </a>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-food-panels.html" style="color: inherit; text-decoration: none;">Food Allergen &amp; Patch Testing</a>
+              </h4>
+              <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
+                Component-resolved diagnostics for peanuts, tree nuts, dairy, seafood, gluten, 48-hour patch testing for dermatitis and chemical triggers.
+              </p>
+              <ul class="list-unstyled mb-3" style="font-size: 0.9rem; color: var(--text-main); min-height: 48px;">
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Oral food challenges under MD care</li>
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Comprehensive avoidance action plans</li>
+              </ul>
+              <a href="service-food-panels.html" class="fw-bold text-primary mt-auto">
+                Food Allergy Protocols <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: Pediatric Allergy Care -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
+            <div class="service-card-img">
+              <a href="service-pediatric.html" class="d-block w-100 h-100" aria-label="Pediatric Allergy Care">
+                <img src="https://images.pexels.com/photos/7447009/pexels-photo-7447009.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Pediatric allergist doctor consulting and examining young child in pediatric clinic" class="w-100 h-100" loading="lazy">
+              </a>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-pediatric.html" style="color: inherit; text-decoration: none;">Pediatric Allergy Care</a>
+              </h4>
+              <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
+                Child-friendly allergy specialists trained to deliver gentle prick diagnostics, eczema management, and childhood peanut desensitization.
+              </p>
+              <ul class="list-unstyled mb-3" style="font-size: 0.9rem; color: var(--text-main); min-height: 48px;">
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Tear-free applicators &amp; kid rewards</li>
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>School action plan paperwork</li>
+              </ul>
+              <a href="service-pediatric.html" class="fw-bold text-primary mt-auto">
+                Pediatric Care Details <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Pulmonary Spirometry & Asthma -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
+            <div class="service-card-img">
+              <a href="service-spirometry.html" class="d-block w-100 h-100" aria-label="Spirometry &amp; Asthma Testing">
+                <img src="https://images.pexels.com/photos/29702935/pexels-photo-29702935.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Pulmonary spirometry respiratory airway and asthma testing" class="w-100 h-100" loading="lazy">
+              </a>
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1">
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-spirometry.html" style="color: inherit; text-decoration: none;">Spirometry &amp; Asthma Testing</a>
+              </h4>
+              <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
+                Advanced lung function measurement evaluating airway responsiveness, exercise-induced asthma, and environmental allergic triggers.
+              </p>
+              <ul class="list-unstyled mb-3" style="font-size: 0.9rem; color: var(--text-main); min-height: 48px;">
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Instant FEV1 / FVC lung capacity curve</li>
+                <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Biologic therapy evaluation (Xolair/Dupixent)</li>
+              </ul>
+              <a href="service-spirometry.html" class="fw-bold text-primary mt-auto">
+                Asthma Diagnostics <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-outline-primary btn-lg">
+          <i class="fas fa-list-ul me-2"></i> View All Clinical Services &amp; Pricing
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: REAL PATIENT CASE STUDIES & OUTCOMES
+       ========================================================================= -->
+  <section class="py-5 case-studies-section" style="background-color: var(--bg-surface-subtle);" id="caseStudiesSection">
+    <div class="container" style="max-width: 1060px;">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-user-check"></i> Documented Outcomes</div>
+        <h2 class="section-title">Clinical Case Studies &amp; Proven Desensitization</h2>
+        <p class="section-subtitle">Real medical transformations achieved through AllergiQ's precision immunotherapy.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Case 1: Claire D. -->
+        <div class="col-md-4 d-flex">
+          <div class="case-study-card w-100 d-flex flex-column h-100">
+            <div class="case-study-img" style="height: 210px; width: 100%; overflow: hidden; position: relative;">
+              <img src="assets/images/case-study-claire.jpg" alt="Patient Claire D. - Aeroallergen SCIT Desensitization" class="w-100 h-100" style="object-fit: cover; object-position: center 25%;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1 case-study-body">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1 case-study-meta">
+                <span class="badge bg-primary">Aeroallergen SCIT</span>
+                <small class="text-muted text-nowrap">Age 32 • Female</small>
+              </div>
+              <h5 class="mb-2 case-study-title">Claire D. - Severe Spring Tree Pollen Asthma</h5>
+              <div class="mb-3 case-study-outcomes flex-grow-1">
+                <div class="mb-2"><span class="badge-before me-2">Before</span> Daily high-dose steroid inhalers &amp; outdoor confinement</div>
+                <div><span class="badge-after me-2">After 14 Mo</span> Zero rescue inhaler use; completed 10K marathon in April</div>
+              </div>
+              <small class="text-muted d-block border-top pt-2 mt-auto case-study-doctor"><strong>Supervising MD:</strong> Dr. Marcus Vance, MD</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2: Liam M. -->
+        <div class="col-md-4 d-flex">
+          <div class="case-study-card w-100 d-flex flex-column h-100">
+            <div class="case-study-img" style="height: 210px; width: 100%; overflow: hidden; position: relative;">
+              <img src="assets/images/case-study-liam.jpg" alt="Patient Liam M. - Pediatric SLIT Drops Desensitization with rescue cat" class="w-100 h-100" style="object-fit: cover; object-position: center 15%;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1 case-study-body">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1 case-study-meta">
+                <span class="badge bg-primary">Pediatric SLIT Drops</span>
+                <small class="text-muted text-nowrap">Age 8 • Male</small>
+              </div>
+              <h5 class="mb-2 case-study-title">Liam M. - Severe Cat Dander &amp; Eczema</h5>
+              <div class="mb-3 case-study-outcomes flex-grow-1">
+                <div class="mb-2"><span class="badge-before me-2">Before</span> Wheezing within 10 mins of entering homes with pets</div>
+                <div><span class="badge-after me-2">After 9 Mo</span> Family adopted rescue cat; skin clear with daily oral drops</div>
+              </div>
+              <small class="text-muted d-block border-top pt-2 mt-auto case-study-doctor"><strong>Supervising MD:</strong> Dr. Elena Rostova, MD</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 3: Robert K. -->
+        <div class="col-md-4 d-flex">
+          <div class="case-study-card w-100 d-flex flex-column h-100">
+            <div class="case-study-img" style="height: 210px; width: 100%; overflow: hidden; position: relative;">
+              <img src="assets/images/case-study-robert.jpg" alt="Patient Robert K. - Component Food OIT Peanut Desensitization" class="w-100 h-100" style="object-fit: cover; object-position: center 25%;" loading="lazy">
+            </div>
+            <div class="p-4 d-flex flex-column flex-grow-1 case-study-body">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1 case-study-meta">
+                <span class="badge bg-primary">Component Food OIT</span>
+                <small class="text-muted text-nowrap">Age 24 • Male</small>
+              </div>
+              <h5 class="mb-2 case-study-title">Robert K. - Anaphylactic Peanut Allergy</h5>
+              <div class="mb-3 case-study-outcomes flex-grow-1">
+                <div class="mb-2"><span class="badge-before me-2">Before</span> IgE Ara h 2 &gt; 100 kU/L; severe accidental ingestion terror</div>
+                <div><span class="badge-after me-2">After 18 Mo</span> Built tolerance to 8 whole peanuts bite-proof threshold</div>
+              </div>
+              <small class="text-muted d-block border-top pt-2 mt-auto case-study-doctor"><strong>Supervising MD:</strong> Dr. Amara Patel, MD</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       LIVE POLLEN & AIR QUALITY TRACKER WIDGET BANNER
+       ========================================================================= -->
+  <section class="py-4" style="background-color: var(--bg-surface-subtle); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="pollen-widget-card shadow-lg">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center gap-3">
+              <div style="font-size: 2.5rem; color: #facc15;">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div>
+                <h4 class="text-white mb-1">Live Allergen &amp; Pollen Index</h4>
+                <p class="text-white-50 mb-0" style="font-size: 0.9rem;">Real-time environmental aeroallergen telemetry</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center justify-content-between mb-1">
+              <span class="text-white fw-semibold" style="font-size: 0.9rem;">Current Pollen Severity:</span>
+              <span class="pollen-level-badge" id="pollenBadge">Moderate (65/100)</span>
+            </div>
+            <div class="pollen-gauge-bar">
+              <div class="pollen-gauge-fill" id="pollenBar" style="width: 65%;"></div>
+            </div>
+            <div class="d-flex justify-content-between text-white-50" style="font-size: 0.8rem;">
+              <span>Tree: <strong class="text-white" id="pollenTree">High (Oak)</strong></span>
+              <span>Grass: <strong class="text-white" id="pollenGrass">Low</strong></span>
+              <span>Weed: <strong class="text-white" id="pollenWeed">Moderate</strong></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2 gap-sm-3 justify-content-lg-end">
+              <select class="form-select w-auto pollen-city-select shadow-sm" id="pollenCitySelect" style="font-size: 0.9rem;">
+                <option value="new-york">New York, NY</option>
+                <option value="london">London, UK</option>
+                <option value="tokyo">Tokyo, JP</option>
+                <option value="dubai">Dubai, UAE</option>
+                <option value="sydney">Sydney, AU</option>
+              </select>
+              <a href="services.html" class="pollen-cta-btn">
+                Get Protected <i class="fas fa-arrow-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       INTERACTIVE SYMPTOM CHECKER TOOL
+       ========================================================================= -->
+  <section class="py-5" id="symptomCheckerSection">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="badge-tag"><i class="fas fa-robot"></i> Smart Clinical Assessment</div>
+          <h2 class="mb-3">Not Sure Which Allergy Test You Need?</h2>
+          <p class="mb-4">
+            Select the symptoms you are currently experiencing. Our clinical algorithm will recommend the ideal diagnostic panel and treatment pathway to discuss with your allergist.
+          </p>
+          <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-card border">
+            <img src="https://images.pexels.com/photos/19963166/pexels-photo-19963166.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=150" alt="Physician" class="rounded-circle" style="width: 48px; height: 48px; object-fit: cover; object-position: center 30%; flex-shrink: 0;">
+            <div>
+              <div class="fw-bold">Physician Reviewed</div>
+              <small class="text-muted">Algorithm aligned with AAAAI practice guidelines</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="symptom-checker-box">
+            <h4 class="mb-3">Select Your Current Symptoms:</h4>
+            
+            <div class="d-flex flex-wrap mb-4">
+              <button type="button" class="symptom-tag-btn" data-symptom="sneezing">
+                <i class="fas fa-wind"></i> Sneezing &amp; Congestion
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="itchy-eyes">
+                <i class="fas fa-eye"></i> Itchy, Watery Eyes
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="skin-rash">
+                <i class="fas fa-allergies"></i> Hives / Eczema / Skin Itch
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="wheezing">
+                <i class="fas fa-lungs"></i> Wheezing / Shortness of Breath
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="food">
+                <i class="fas fa-cookie-bite"></i> Lip Tingling / Food Reactions
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="pets">
+                <i class="fas fa-cat"></i> Flare-ups Around Pets
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="seasonal">
+                <i class="fas fa-tree"></i> Spring / Fall Seasonal Spikes
+              </button>
+              <button type="button" class="symptom-tag-btn" data-symptom="stomach">
+                <i class="fas fa-capsules"></i> Abdominal Pain After Meals
+              </button>
+            </div>
+
+            <button type="button" class="btn btn-primary w-100 py-3 fw-bold" id="btnCalculateSymptoms">
+              <i class="fas fa-calculator me-2"></i> Analyze Symptoms &amp; Recommend Test
+            </button>
+
+            <!-- Dynamic Result Card -->
+            <div class="quiz-result-card mt-4" id="symptomResultBox">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <span class="text-uppercase fw-bold text-primary" style="font-size: 0.8rem;">Clinical Recommendation</span>
+                <span class="badge bg-primary" id="resultSeverityBadge">Recommended Panel</span>
+              </div>
+              <h4 id="resultRecommendedTest" class="mb-2">Skin Prick Allergen Panel (40+ Triggers)</h4>
+              <p id="resultTestDescription" class="mb-3 text-muted">
+                Based on your symptom profile, an immediate skin prick evaluation will identify specific environmental and airborne antibody responses in 20 minutes.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-2 cta-button-group">
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                  <i class="fas fa-calendar-check me-1"></i> Book This Test Now
+                </button>
+                <a href="service-skin-prick.html" id="resultTestDetailsLink" class="btn btn-outline-primary btn-sm">Read Test Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       THE 4-STEP IMMUNOTHERAPY JOURNEY (TIMELINE)
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-road"></i> Treatment Protocol</div>
+        <h2 class="section-title">Your 4-Step Journey to Permanent Immunity</h2>
+        <p class="section-subtitle">
+          Unlike temporary antihistamines that merely mask symptoms, our immunotherapy desensitization protocol retrains your immune system for lifelong allergy freedom.
+        </p>
+      </div>
+
+      <div class="immunotherapy-timeline">
+        <!-- Step 1 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">1</div>
+          <div class="timeline-card">
+            <span class="badge bg-primary-subtle text-primary mb-2">Diagnostic Phase</span>
+            <h4>Comprehensive IgE Mapping</h4>
+            <p class="text-muted mb-0">
+              We perform precise skin prick and serum IgE tests to isolate the exact molecular proteins triggering your allergic reactions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">2</div>
+          <div class="timeline-card">
+            <span class="badge bg-primary-subtle text-primary mb-2">Formulation</span>
+            <h4>Custom Antigen Serum Compounding</h4>
+            <p class="text-muted mb-0">
+              Our accredited laboratory formulates an FDA-approved personalized antigen serum matched specifically to your exact allergy blueprint.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">3</div>
+          <div class="timeline-card">
+            <span class="badge bg-primary-subtle text-primary mb-2">Build-Up Phase (3-6 Months)</span>
+            <h4>Dose Escalation &amp; Schedule Tracking</h4>
+            <p class="text-muted mb-0">
+              Gradual introduction of micro-doses via weekly clinic shots or daily sublingual drops, monitored in your digital Patient Portal.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step">
+          <div class="timeline-badge">4</div>
+          <div class="timeline-card">
+            <span class="badge bg-primary-subtle text-primary mb-2">Maintenance Phase</span>
+            <h4>Long-Term Immune Tolerance</h4>
+            <p class="text-muted mb-0">
+              Your body shifts from producing inflammatory IgE to protective IgG4 blocking antibodies. Enjoy outdoors, pets, and seasons symptom-free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: CLINICAL TECHNOLOGY & LABORATORY EXCELLENCE
+       ========================================================================= -->
+  <section class="py-5" style="background-color: var(--bg-surface-subtle);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-microscope"></i> Medical Technology</div>
+        <h2 class="section-title">Hospital-Grade Laboratory Equipment</h2>
+        <p class="section-subtitle">Precision diagnostics powered by certified molecular analytical instrumentation.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="tech-spec-card text-center">
+            <div class="kpi-icon primary mx-auto mb-3"><i class="fas fa-dna"></i></div>
+            <h5>ImmunoCAP Bio-Assay</h5>
+            <p class="small text-muted mb-0">Quantitative specific IgE measurement detecting micro-titers as low as 0.10 kU/L for pinpoint food and venom accuracy.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="tech-spec-card text-center">
+            <div class="kpi-icon accent mx-auto mb-3"><i class="fas fa-wind"></i></div>
+            <h5>Digital Spirometer Pro</h5>
+            <p class="small text-muted mb-0">Ultrasonic flow sensor assessing airway obstruction (FEV1, FVC, FEF25-75) before and after bronchodilator challenge.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="tech-spec-card text-center">
+            <div class="kpi-icon success mx-auto mb-3"><i class="fas fa-snowflake"></i></div>
+            <h5>Cold-Chain Cleanroom</h5>
+            <p class="small text-muted mb-0">Temperature-monitored refrigerated cleanroom maintaining antigen extract stability at strict 2C to 8C standards.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="tech-spec-card text-center">
+            <div class="kpi-icon warning mx-auto mb-3"><i class="fas fa-th"></i></div>
+            <h5>Multi-Test II Applicators</h5>
+            <p class="small text-muted mb-0">Painless multi-head testing heads delivering uniform 0.05 mm epidermal pressure without bleeding or trauma.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       BOARD-CERTIFIED ALLERGISTS & DOCTORS
+       ========================================================================= -->
+  <section class="py-5 medical-board-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-user-md"></i> Expert Medical Board</div>
+        <h2 class="section-title">Meet Our Board-Certified Allergists</h2>
+        <p class="section-subtitle">
+          Fellowship-trained immunologists dedicated to providing empathetic, evidence-based care for adults and children.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Doctor 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Dr. Marcus Vance" class="doctor-img">
+              <div class="doctor-socials">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:care@allergiq-clinic.com" class="doctor-social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-specialty">Chief of Immunology</div>
+              <h5 class="mb-1">Dr. Marcus Vance, MD</h5>
+              <p class="small text-muted mb-3">Johns Hopkins Fellowship  16+ Yrs Exp</p>
+              <button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                Book with Dr. Vance
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.pexels.com/photos/5215024/pexels-photo-5215024.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Dr. Elena Rostova" class="doctor-img">
+              <div class="doctor-socials">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:care@allergiq-clinic.com" class="doctor-social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-specialty" style="margin-top: 0.35rem;">Pediatric Allergist</div>
+              <h5 class="mb-1">Dr. Elena Rostova, MD</h5>
+              <p class="small text-muted mb-3">Harvard Medical  Pediatric Allergy Lead</p>
+              <button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                Book with Dr. Rostova
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Dr. Julian Reed" class="doctor-img" style="object-position: center 5%;">
+              <div class="doctor-socials">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:care@allergiq-clinic.com" class="doctor-social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-specialty" style="margin-top: 0.35rem;">Immunotherapy Director</div>
+              <h5 class="mb-1">Dr. Julian Reed, FAAAAI</h5>
+              <p class="small text-muted mb-3">Stanford Medicine  SCIT Protocol Specialist</p>
+              <button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                Book with Dr. Reed
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Doctor 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="doctor-card">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=600" alt="Dr. Amara Patel" class="doctor-img" style="object-position: center 15%;">
+              <div class="doctor-socials">
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener" class="doctor-social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                <a href="mailto:care@allergiq-clinic.com" class="doctor-social-btn" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+            <div class="doctor-body">
+              <div class="doctor-specialty" style="margin-top: 0.35rem;">Food Allergy &amp; Asthma</div>
+              <h5 class="mb-1">Dr. Amara Patel, MD</h5>
+              <p class="small text-muted mb-3">Columbia University  Component Diagnostics</p>
+              <button class="btn btn-outline-primary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                Book with Dr. Patel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View Full Team Link -->
+      <div class="text-center mt-5">
+        <a href="doctors.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-user-md me-2"></i> View All 8 Board-Certified Specialists &amp; Full Bios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: INSURANCE & PAYMENT COVERAGE NETWORK
+       ========================================================================= -->
+  <section class="py-5" style="background-color: var(--bg-surface-subtle);">
+    <div class="container text-center">
+      <div class="badge-tag mb-2"><i class="fas fa-shield-alt"></i> In-Network Providers</div>
+      <h3 class="mb-2">We Accept Major Health Insurance Plans</h3>
+      <p class="text-muted mx-auto max-w-700 mb-4">
+        AllergiQ is in-network with leading commercial insurance carriers, Medicare Part B, and HSA/FSA health spending accounts.
+      </p>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="insurance-logo-box"><i class="fas fa-plus-square text-primary me-2"></i> BlueCross</div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="insurance-logo-box"><i class="fas fa-heart text-danger me-2"></i> Aetna</div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="insurance-logo-box"><i class="fas fa-tree text-success me-2"></i> Cigna</div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="insurance-logo-box"><i class="fas fa-shield-alt text-info me-2"></i> UnitedHealth</div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="insurance-logo-box"><i class="fas fa-hospital text-warning me-2"></i> Medicare</div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="insurance-logo-box"><i class="fas fa-credit-card text-secondary me-2"></i> HSA / FSA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PATIENT REVIEWS & TESTIMONIALS
+       ========================================================================= -->
+  <section class="py-5 testimonials-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-star text-warning"></i> Real Patient Stories</div>
+        <h2 class="section-title">Life Changing Allergy Freedom</h2>
+        <p class="section-subtitle">Discover how precision testing and custom immunotherapy changed everyday life for our patients.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card-custom">
+            <div class="d-flex text-warning mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="mb-4">
+              "I suffered from terrible spring pollen asthma for more than 14 years. After just 8 months on AllergiQ's custom allergy shots, I can hike outside during peak pollen season without a single sneeze!"
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=120&amp;h=120&amp;fit=crop" alt="Claire Davies" class="rounded-circle" style="width: 48px; height: 48px; object-fit: cover; object-position: center 30%; flex-shrink: 0;">
+              <div>
+                <h6 class="mb-0 text-capitalize">Claire Davies</h6>
+                <small class="text-muted">Cedar &amp; Grass Pollen Patient</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-custom">
+            <div class="d-flex text-warning mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="mb-4">
+              "My 7-year-old son was terrified of needles. Dr. Rostova started him on sublingual allergy drops. Taking daily drops under his tongue made his severe pet dander allergy virtually disappear."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=150" alt="David Miller" class="rounded-circle" style="width: 48px; height: 48px; object-fit: cover; object-position: center top; flex-shrink: 0;">
+              <div>
+                <h6 class="mb-0 text-capitalize">David Miller</h6>
+                <small class="text-muted">Parent of Pediatric Patient</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-custom">
+            <div class="d-flex text-warning mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="mb-4">
+              "The patient portal is revolutionary. Tracking my immunotherapy vial build-up phase, logging reactions, and booking my weekly shot appointments from my phone is effortless."
+            </p>
+            <div class="d-flex align-items-center gap-3">
+              <div class="rounded-circle overflow-hidden flex-shrink-0" style="width: 48px; height: 48px;">
+                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=120&amp;h=120&amp;fit=crop" alt="Samantha Wright" style="width: 100%; height: 100%; object-fit: cover; transform: scale(1.25) translateY(-4px);">
+              </div>
+              <div>
+                <h6 class="mb-0 text-capitalize">Samantha Wright</h6>
+                <small class="text-muted">SCIT Shot Program Patient</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: LATEST CLINICAL BLOG & RESEARCH INSIGHTS
+       ========================================================================= -->
+  <section class="py-5 insights-section" style="background-color: var(--bg-surface-subtle);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-book-reader"></i> Clinical Knowledge</div>
+        <h2 class="section-title">Latest Immunology Insights &amp; Patient Guides</h2>
+        <p class="section-subtitle">Stay informed with physician-authored medical articles and allergy mitigation strategies.</p>
+      </div>
+
+      <div class="row g-4" style="max-width: 1160px; margin-left: auto; margin-right: auto;">
+        <div class="col-md-4">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Blood testing">
+              <span class="blog-category-badge">Diagnostics</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fas fa-clock me-1"></i> 5 Min Read</span></div>
+              <h5 class="blog-title"><a href="blog-single.html">Understanding IgE vs IgG: Why Real Allergy Diagnostics Matter</a></h5>
+              <p class="small text-muted mb-3">Why commercial IgG food tests cause false alarms and why skin prick IgE tests are the clinical standard.</p>
+              <a href="blog-single.html" class="blog-read-more text-primary">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Medicine drops">
+              <span class="blog-category-badge">Immunotherapy</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fas fa-clock me-1"></i> 6 Min Read</span></div>
+              <h5 class="blog-title"><a href="blog-sublingual-vs-shots.html">Sublingual Drops vs Allergy Shots: Which Fits Your Routine?</a></h5>
+              <p class="small text-muted mb-3">A thorough comparison of in-clinic SCIT injections vs at-home sublingual oral drops (SLIT).</p>
+              <a href="blog-sublingual-vs-shots.html" class="blog-read-more text-primary">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Pediatric infant">
+              <span class="blog-category-badge">Pediatrics</span>
+            </div>
+            <div class="blog-body">
+              <div class="blog-meta"><span><i class="fas fa-clock me-1"></i> 7 Min Read</span></div>
+              <h5 class="blog-title"><a href="blog-early-peanut-introduction.html">Early Peanut Introduction: Guidelines for Infant Prevention</a></h5>
+              <p class="small text-muted mb-3">How early introduction of peanut proteins at 4-6 months reduces lifelong allergy risk by 80%.</p>
+              <a href="blog-early-peanut-introduction.html" class="blog-read-more text-primary">Read Article <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="badge-tag"><i class="fas fa-question-circle"></i> Got Questions?</div>
+          <h2 class="mb-3">Everything You Need to Know About Allergy Testing &amp; Shots</h2>
+          <p class="text-muted mb-4">
+            Have questions about preparation, insurance, pain levels, or shot frequency? Read our quick answers or call our clinical coordinators.
+          </p>
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fas fa-headset me-2"></i> Speak with a Coordinator
+          </a>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="accordion accordion-custom" id="faqAccordionHome">
+            <!-- FAQ 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Does skin prick allergy testing hurt?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordionHome">
+                <div class="accordion-body">
+                  No. Skin prick testing uses tiny plastic multi-test applicators that gently press against the surface of the skin without drawing blood. Most patients describe it as a light tickle or brief scratch. If you are allergic, small itchy mosquito-bite like bumps appear within 15 to 20 minutes and fade shortly after.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What is the difference between Allergy Shots (SCIT) and Drops (SLIT)?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordionHome">
+                <div class="accordion-body">
+                  Allergy shots (SCIT) are subcutaneous injections administered in the clinic on a weekly or bi-weekly basis. They cover a broader spectrum of simultaneous allergens. Sublingual drops (SLIT) are liquid extracts placed under the tongue daily at home, making them ideal for needle-averse patients or frequent travelers.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Do I need to stop antihistamines before my skin test?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordionHome">
+                <div class="accordion-body">
+                  Yes. Oral antihistamines (such as Zyrtec, Claritin, Allegra, or Benadryl) should be paused 5 to 7 days prior to testing because they suppress histamine skin wheal reactions. Nasal steroid sprays and asthma inhalers can generally be continued.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Are allergy tests and immunotherapy covered by insurance?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordionHome">
+                <div class="accordion-body">
+                  Yes! Skin prick diagnostics and subcutaneous allergy shots (SCIT) are recognized medical procedures covered by Medicare, Medicaid, and most major commercial insurance providers (Aetna, BlueCross BlueShield, Cigna, UnitedHealthcare).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CTA SECTION
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="p-5 text-center rounded-4 shadow-xl position-relative overflow-hidden" style="background: var(--primary-gradient); color: #ffffff;">
+        <h2 class="text-white mb-3">Ready to Breathe Easily and Live Allergy-Free?</h2>
+        <p class="text-white-50 max-w-700 mx-auto mb-4" style="font-size: 1.15rem;">
+          Schedule your comprehensive 20-minute skin prick test today or consult with our immunotherapy specialists.
+        </p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 flex-wrap cta-button-group">
+          <button class="btn btn-light text-primary btn-lg fw-bold" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <i class="fas fa-calendar-check me-2"></i> Book Testing Appointment
+          </button>
+          <a href="tel:8004562553" class="btn btn-outline-light btn-lg fw-bold">
+            <i class="fas fa-phone-alt me-2"></i> Call (800) 456-2553
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Col 1: Brand & Accreditation -->
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <div class="logo-icon">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <div>
+              <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+              <div class="brand-subtitle">CLINIC &amp; IMMUNOTHERAPY</div>
+            </div>
+          </a>
+          <p class="mb-3">
+            AllergiQ is a specialized center of excellence for precision allergy diagnostics, sublingual immunotherapy, and lifelong allergic asthma relief.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="footer-credential-pill"><i class="fas fa-shield-virus text-info"></i> CLIA &amp; AAAAI Accredited</span>
+            <span class="footer-credential-pill"><i class="fas fa-lock text-success"></i> HIPAA Encrypted EHR</span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (Matches strict nav) -->
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Clinical)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Immunotherapy)</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> About Us</a></li>
+            <li><a href="doctors.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Our Doctors</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> All Services</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pricing Plans</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Contact Clinic</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="col-6 col-lg-3">
+          <h5>Clinical Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-skin-prick.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-scit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-slit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-food-panels.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-pediatric.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy &amp; Eczema</a></li>
+            <li><a href="service-spirometry.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Informed & Contact -->
+        <div class="col-lg-3">
+          <h5>Stay Updated</h5>
+          <p class="small mb-3">Weekly local pollen alerts and clinical immunology bulletins.</p>
+          <form class="footer-newsletter-box mb-4" onsubmit="event.preventDefault(); window.showToast('Subscribed to Pollen &amp; Clinical Alerts!', 'success'); this.reset();">
+            <input type="email" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required="required" aria-label="Email address">
+            <button type="submit">Join</button>
+          </form>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> <span>742 Evergreen Medical Center, Suite 400</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:8004562553">(800) 456-2553</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:care@allergiq-clinic.com">care@allergiq-clinic.com</a></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+           2026 AllergiQ Clinic Template. Licensed clinical health &amp; precision immunotherapy.
+        </div>
+        <div class="d-flex gap-4 small">
+          <a href="#privacyPolicyModal" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <a href="#hipaaModal" data-bs-toggle="modal" data-bs-target="#hipaaModal" class="text-white-50 text-decoration-none">HIPAA Compliance</a>
+          <a href="#ehrPortalModal" data-bs-toggle="modal" data-bs-target="#ehrPortalModal" class="text-white-50 text-decoration-none">Patient EHR Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       BOOK APPOINTMENT MODAL (GLOBAL ACCESSIBLE)
+       ========================================================================= -->
+  <div class="modal fade" id="bookAppointmentModal" tabindex="-1" aria-labelledby="bookAppointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h4 class="modal-title mb-1" id="bookAppointmentModalLabel">Book Testing &amp; Immunotherapy Appointment</h4>
+            <small class="text-muted">Same-day appointments and weekend slots available</small>
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="appointment-booking-form">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Patient Full Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" name="patient_name" placeholder="e.g. Johnathan Doe" minlength="2" pattern="(?=.*[a-zA-Z].*[a-zA-Z])[a-zA-Z\s'.-]{2,}" title="Please enter at least 2 letters for the name" required="required">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" name="email" placeholder="john@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required="required">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                <input type="tel" class="form-control" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" title="Please enter a valid 10-digit phone number" required="required">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Patient Age Group</label>
+                <select class="form-select" required="">
+                  <option value="adult">Adult (18+)</option>
+                  <option value="teen">Adolescent (12 - 17)</option>
+                  <option value="pediatric">Pediatric (Under 12)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Preferred Clinical Specialist</label>
+                <select class="form-select" required="">
+                  <option value="any">First Available Board-Certified Doctor</option>
+                  <option value="vance">Dr. Marcus Vance, MD (Chief of Immunology)</option>
+                  <option value="rostova">Dr. Elena Rostova, MD (Pediatrics Lead)</option>
+                  <option value="reed">Dr. Julian Reed, FAAAI (Immunotherapy)</option>
+                  <option value="patel">Dr. Amara Patel, MD (Food &amp; Asthma)</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Requested Testing / Procedure</label>
+                <select class="form-select" required="">
+                  <option value="skin-test">Comprehensive Skin Prick Test (50+ Allergens)</option>
+                  <option value="scit-shot">Allergy Shots (SCIT) Dose / Consultation</option>
+                  <option value="slit-drops">Sublingual Allergy Drops (SLIT) Starter</option>
+                  <option value="food-panel">Food Allergen Component Resolved Panel</option>
+                  <option value="spirometry">Asthma Spirometry Evaluation</option>
+                  <option value="annual-review">Annual Immunotherapy Protocol Review</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Preferred Date</label>
+                <input type="date" class="form-control" required="">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Preferred Time Slot</label>
+                <select class="form-select" required="">
+                  <option value="morning">Morning (8:30 AM - 11:30 AM)</option>
+                  <option value="afternoon">Afternoon (12:00 PM - 3:30 PM)</option>
+                  <option value="evening">Late Afternoon (4:00 PM - 6:30 PM)</option>
+                  <option value="saturday">Saturday Priority Slot</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Known Allergies or Symptoms Notes (Optional)</label>
+                <textarea class="form-control" rows="2" placeholder="Briefly describe your symptoms, seasonal reactions, or medications currently taking..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary px-4">
+              <i class="fas fa-check-circle me-1"></i> Confirm &amp; Schedule Appointment
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Main JS -->
+  <script src="assets/js/main.js"></script>
+
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+    const brand = document.querySelector('.navbar-brand');
+    const mobileActions = document.querySelector('.mobile-login-btn')?.parentElement;
+    const login = document.querySelector('.mobile-login-btn');
+    const toggler = document.querySelector('.navbar-toggler');
+    const navContainer = document.querySelector('.navbar-custom > .container');
+    const results = {
+        container: navContainer ? {
+            width: navContainer.getBoundingClientRect().width,
+            height: navContainer.getBoundingClientRect().height,
+            clientWidth: navContainer.clientWidth,
+            display: getComputedStyle(navContainer).display,
+            flexWrap: getComputedStyle(navContainer).flexWrap
+        } : null,
+        brand: brand ? {
+            width: brand.getBoundingClientRect().width,
+            height: brand.getBoundingClientRect().height,
+            top: brand.getBoundingClientRect().top,
+            left: brand.getBoundingClientRect().left
+        } : null,
+        mobileActions: mobileActions ? {
+            width: mobileActions.getBoundingClientRect().width,
+            height: mobileActions.getBoundingClientRect().height,
+            top: mobileActions.getBoundingClientRect().top,
+            left: mobileActions.getBoundingClientRect().left,
+            display: getComputedStyle(mobileActions).display
+        } : null,
+        login: login ? {
+            width: login.getBoundingClientRect().width,
+            height: login.getBoundingClientRect().height,
+            top: login.getBoundingClientRect().top,
+            left: login.getBoundingClientRect().left,
+            display: getComputedStyle(login).display
+        } : null,
+        toggler: toggler ? {
+            width: toggler.getBoundingClientRect().width,
+            height: toggler.getBoundingClientRect().height,
+            top: toggler.getBoundingClientRect().top,
+            left: toggler.getBoundingClientRect().left,
+            display: getComputedStyle(toggler).display
+        } : null
+    };
+    const div = document.createElement('div');
+    div.id = 'layout-debug-output';
+    div.innerText = JSON.stringify(results, null, 2);
+    document.body.appendChild(div);
+});
+</script>
+
+
+
+<div id="allergiqGlobalModals">
+        <!-- Privacy Policy Modal -->
+        <div class="modal fade" id="privacyPolicyModal" tabindex="-1" aria-labelledby="privacyPolicyModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 shadow-lg">
+              <div class="modal-header border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="p-2 rounded-3 bg-primary-subtle text-primary" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-shield-alt fa-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="modal-title fw-bold mb-0" id="privacyPolicyModalLabel">AllergiQ Privacy Policy &amp; Clinical Data Notice</h5>
+                    <small class="text-muted">Effective: 2026 • Patient Confidentiality Standard</small>
+                  </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="alert alert-info d-flex align-items-center gap-3 mb-4" role="alert">
+                  <i class="fas fa-info-circle fa-lg flex-shrink-0"></i>
+                  <div class="small">
+                    Your clinical privacy is our highest priority. All allergy skin-prick results, serum IgE panels, and medical histories are encrypted under federal healthcare standards.
+                  </div>
+                </div>
+
+                <h6 class="fw-bold text-primary mb-2"><i class="fas fa-database me-2"></i>1. Information We Collect</h6>
+                <p class="small text-muted mb-3">
+                  We collect diagnostic information including environmental allergy profiles, food challenge histories, respiratory metrics (spirometry), health insurance credentials, and contact details necessary for safe immunotherapy administration.
+                </p>
+
+                <h6 class="fw-bold text-primary mb-2"><i class="fas fa-user-md me-2"></i>2. Clinical Utilization of Records</h6>
+                <p class="small text-muted mb-3">
+                  Your records are used strictly by our board-certified allergists and immunologists to customize sublingual (SLIT) or subcutaneous (SCIT) therapy doses, monitor anaphylaxis risks, and coordinate with your primary care provider.
+                </p>
+
+                <h6 class="fw-bold text-primary mb-2"><i class="fas fa-lock me-2"></i>3. Zero Commercial Disclosure Policy</h6>
+                <p class="small text-muted mb-3">
+                  AllergiQ Clinic does <strong>not</strong> sell, rent, or trade patient personal health data, genetic markers, or contact info to pharmaceutical advertisers or third-party marketers under any circumstance.
+                </p>
+
+                <h6 class="fw-bold text-primary mb-2"><i class="fas fa-file-contract me-2"></i>4. Patient EHR Rights</h6>
+                <p class="small text-muted mb-0">
+                  You have the legal right to inspect your electronic records, request corrections, obtain an export of your allergy panel in standardized CCDA/FHIR format, or revoke data-sharing authorizations at any time.
+                </p>
+              </div>
+              <div class="modal-footer border-top d-flex justify-content-between">
+                <button type="button" class="btn btn-outline-secondary btn-sm" onclick="if(window.showToast) window.showToast('Privacy Policy documentation sent to your registered email.', 'info')">
+                  <i class="fas fa-envelope me-1"></i> Email Me Copy
+                </button>
+                <button type="button" class="btn btn-primary btn-sm px-4 fw-semibold" data-bs-dismiss="modal">
+                  I Understand &amp; Agree
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HIPAA Compliance Modal -->
+        <div class="modal fade" id="hipaaModal" tabindex="-1" aria-labelledby="hipaaModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content border-0 shadow-lg">
+              <div class="modal-header border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="p-2 rounded-3 bg-success-subtle text-success" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-file-medical-alt fa-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="modal-title fw-bold mb-0" id="hipaaModalLabel">HIPAA Compliance &amp; Notice of Privacy Practices</h5>
+                    <small class="text-muted">45 CFR Parts 160 &amp; 164 • Protected Health Information (PHI)</small>
+                  </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="alert alert-success d-flex align-items-center gap-3 mb-4" role="alert">
+                  <i class="fas fa-shield-alt fa-lg flex-shrink-0"></i>
+                  <div class="small">
+                    AllergiQ Clinic maintains certified compliance with the Health Insurance Portability and Accountability Act (HIPAA) Security and Privacy Rules.
+                  </div>
+                </div>
+
+                <div class="row g-3 mb-4">
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded border bg-body-tertiary h-100">
+                      <h6 class="fw-bold mb-1"><i class="fas fa-key text-primary me-2"></i>256-Bit ePHI Encryption</h6>
+                      <p class="small text-muted mb-0">All patient diagnostic data is encrypted at rest (AES-256) and in transit (TLS 1.3) across all clinical workstations.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded border bg-body-tertiary h-100">
+                      <h6 class="fw-bold mb-1"><i class="fas fa-user-lock text-success me-2"></i>Role-Based Access Control</h6>
+                      <p class="small text-muted mb-0">Only credentialed clinical personnel directly treating your case have authorized access to your allergy charts.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded border bg-body-tertiary h-100">
+                      <h6 class="fw-bold mb-1"><i class="fas fa-history text-info me-2"></i>Immutable Audit Logs</h6>
+                      <p class="small text-muted mb-0">Every chart viewing, allergen order, and lab download is timestamped and logged in tamper-evident audit trails.</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="p-3 rounded border bg-body-tertiary h-100">
+                      <h6 class="fw-bold mb-1"><i class="fas fa-handshake text-warning me-2"></i>Signed BAAs in Place</h6>
+                      <p class="small text-muted mb-0">All reference laboratories and telehealth cloud providers hold signed Business Associate Agreements.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <h6 class="fw-bold mb-2">Office of Clinical Compliance</h6>
+                <p class="small text-muted mb-0">
+                  For official HIPAA inquiries, records requests, or verification:
+                  <br>Email: <a href="mailto:compliance@allergiq-clinic.com" class="text-primary">compliance@allergiq-clinic.com</a> • Phone: <a href="tel:8004562553" class="text-primary">(800) 456-ALLERGY</a>
+                </p>
+              </div>
+              <div class="modal-footer border-top">
+                <button type="button" class="btn btn-success btn-sm px-4 fw-semibold" data-bs-dismiss="modal">
+                  <i class="fas fa-check me-1"></i> Acknowledge HIPAA Practices
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Patient EHR Portal Modal -->
+        <div class="modal fade" id="ehrPortalModal" tabindex="-1" aria-labelledby="ehrPortalModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-0 shadow-lg">
+              <div class="modal-header border-bottom">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="p-2 rounded-3 bg-info-subtle text-info" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-hospital-user fa-lg"></i>
+                  </div>
+                  <div>
+                    <h5 class="modal-title fw-bold mb-0" id="ehrPortalModalLabel">AllergiQ Patient EHR Portal</h5>
+                    <small class="text-muted">Secure Electronic Health Records &amp; Telehealth Gateway</small>
+                  </div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-4">
+                <div class="row g-4 align-items-center">
+                  <div class="col-md-7">
+                    <h6 class="fw-bold text-primary mb-3">24/7 Digital Health Access</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2 mb-4">
+                      <li class="d-flex align-items-center gap-2 small">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span><strong>Instant Lab Results:</strong> View IgE Component panels &amp; wheal sizes</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2 small">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span><strong>Immunotherapy Tracker:</strong> Monitor allergy shot buildup &amp; sublingual doses</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2 small">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span><strong>Direct Provider Messaging:</strong> Encrypted chats with your clinical care team</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-2 small">
+                        <i class="fas fa-check-circle text-success"></i>
+                        <span><strong>Prescription Refills:</strong> Auto-renew epinephrine autoinjectors &amp; drops</span>
+                      </li>
+                    </ul>
+
+                    <div class="d-flex flex-wrap gap-2">
+                      <a href="login.html" class="btn btn-primary btn-sm px-3 fw-bold">
+                        <i class="fas fa-sign-in-alt me-1"></i> Patient Portal Sign In
+                      </a>
+                      <a href="dashboard.html" class="btn btn-outline-primary btn-sm px-3 fw-bold">
+                        <i class="fas fa-chart-line me-1"></i> View Live Demo EHR
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="p-3 rounded-3 border bg-body-tertiary text-center">
+                      <div class="mb-2">
+                        <i class="fas fa-user-lock text-primary" style="font-size: 2.2rem;"></i>
+                      </div>
+                      <h6 class="fw-bold mb-1">Need Portal Assistance?</h6>
+                      <p class="text-muted small mb-3">First time patient or need login support? Our navigators are available.</p>
+                      <div class="d-grid gap-2">
+                        <a href="tel:8004562553" class="btn btn-sm btn-outline-secondary">
+                          <i class="fas fa-phone-alt me-1"></i> (800) 456-ALLERGY
+                        </a>
+                        <a href="mailto:care@allergiq-clinic.com" class="btn btn-sm btn-outline-secondary">
+                          <i class="fas fa-envelope me-1"></i> care@allergiq-clinic.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer border-top justify-content-between">
+                <small class="text-muted"><i class="fas fa-shield-alt text-success me-1"></i> 256-Bit SSL Encrypted Healthcare Portal</small>
+                <button type="button" class="btn btn-secondary btn-sm px-3" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><div id="layout-debug-output">{<br>  "container": {<br>    "width": 496,<br>    "height": 50.796875,<br>    "clientWidth": 496,<br>    "display": "flex",<br>    "flexWrap": "wrap"<br>  },<br>  "brand": {<br>    "width": 179.5625,<br>    "height": 50.796875,<br>    "top": 14.09375,<br>    "left": 12<br>  },<br>  "mobileActions": {<br>    "width": 122.5625,<br>    "height": 33.84375,<br>    "top": 22.5625,<br>    "left": 361.4375,<br>    "display": "flex"<br>  },<br>  "login": {<br>    "width": 87.109375,<br>    "height": 33.84375,<br>    "top": 22.5625,<br>    "left": 361.4375,<br>    "display": "flex"<br>  },<br>  "toggler": {<br>    "width": 27.453125,<br>    "height": 28,<br>    "top": 25.484375,<br>    "left": 456.546875,<br>    "display": "block"<br>  }<br>}</div></body></html>

@@ -164,7 +164,8 @@ document.addEventListener('DOMContentLoaded', () => {
         test: 'Skin Prick Allergen Panel (40+ Environmental & Food)',
         desc: 'Based on your nasal, skin, and ocular symptoms, our comprehensive Skin Prick Test is recommended to pinpoint specific IgE triggers in under 20 minutes.',
         severity: 'Moderate - High Clinical Correlation',
-        badgeClass: 'bg-primary'
+        badgeClass: 'bg-primary',
+        url: 'service-skin-prick.html'
       };
 
       if (selectedSymptoms.includes('wheezing') || selectedSymptoms.includes('cough')) {
@@ -172,16 +173,19 @@ document.addEventListener('DOMContentLoaded', () => {
         recommendation.desc = 'Respiratory symptoms indicate potential allergic asthma. We recommend combined pulmonary spirometry and intradermal allergen testing.';
         recommendation.severity = 'Priority - Respiratory Protocol';
         recommendation.badgeClass = 'bg-danger';
+        recommendation.url = 'service-spirometry.html';
       } else if (selectedSymptoms.includes('food') || selectedSymptoms.includes('stomach')) {
         recommendation.test = 'Component-Resolved Diagnostics (CRD) & Food IgE Testing';
         recommendation.desc = 'Gastrointestinal and systemic reactions require specific protein-level food allergen screening and oral challenge evaluation.';
         recommendation.severity = 'Specific Food Panel';
         recommendation.badgeClass = 'bg-warning text-dark';
+        recommendation.url = 'service-food-panels.html';
       } else if (selectedSymptoms.length >= 4) {
         recommendation.test = 'Comprehensive Immunotherapy Evaluation (SCIT / SLIT)';
         recommendation.desc = 'Multi-symptom chronic allergies are prime candidates for long-term desensitization via allergy shots or sublingual drops.';
         recommendation.severity = 'Candidate for Immunotherapy';
         recommendation.badgeClass = 'bg-success';
+        recommendation.url = 'service-scit.html';
       }
 
       if (resultTitle) resultTitle.textContent = recommendation.test;
@@ -189,6 +193,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (resultBadge) {
         resultBadge.textContent = recommendation.severity;
         resultBadge.className = `badge ${recommendation.badgeClass} px-3 py-2`;
+      }
+      const testDetailsLink = document.getElementById('resultTestDetailsLink');
+      if (testDetailsLink && recommendation.url) {
+        testDetailsLink.href = recommendation.url;
       }
 
       resultCard.style.display = 'block';

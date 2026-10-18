@@ -1,0 +1,151 @@
+template = '''<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+/* 1. Hamburger menu OVERLAY so it does not move/push the hero section */
+@media (max-width: 991.98px) {
+  .navbar-custom {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+  }
+  .navbar-custom > .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  .navbar-custom .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #0b1322;
+    border-bottom: 1px solid #1e293b;
+    box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.75);
+    padding: 1.25rem 1.5rem 1.5rem;
+    max-height: calc(100vh - var(--header-height));
+    overflow-y: auto;
+  }
+  /* 2. Properly align theme and RTL icons in mobile menu */
+  .navbar-custom .navbar-collapse .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 1.25rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .navbar-custom .navbar-collapse .btn-theme-toggle,
+  .navbar-custom .navbar-collapse .btn-rtl-toggle {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ffffff;
+    border-radius: var(--radius-md);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .navbar-custom .navbar-collapse .btn-theme-toggle:hover,
+  .navbar-custom .navbar-collapse .btn-rtl-toggle:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+  }
+  /* 3. Remove duplicate Login CTA from hamburger menu (since it is already in navbar) */
+  .navbar-custom .navbar-collapse .header-actions .btn-light-soft {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-custom .navbar-brand {
+    font-size: 1.05rem;
+    gap: 0.45rem;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+  .navbar-custom .logo-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+  .navbar-custom .brand-name {
+    font-size: 1.05rem;
+  }
+  .navbar-custom .brand-subtitle {
+    font-size: 0.46rem;
+    letter-spacing: 0.02em;
+  }
+  .mobile-login-btn {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.72rem !important;
+  }
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-shield-virus"></i></div>
+        <div>
+          <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+          <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+        </div>
+      </a>
+      <div class="d-flex align-items-center gap-2 d-lg-none">
+        <a href="login.html" class="btn btn-light-soft btn-sm mobile-login-btn" aria-label="Login">
+          <i class="fas fa-user-circle me-1"></i> Login
+        </a>
+        <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+          <i class="fas fa-bars fa-lg text-primary"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse show" id="navCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+        </ul>
+        <div class="header-actions">
+          <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL">
+            <span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span>
+          </button>
+          <a href="login.html" class="btn btn-light-soft btn-sm">
+            <i class="fas fa-user-circle me-1"></i> Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div style="padding: 3rem 1.5rem; background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);">
+    <div class="badge bg-primary text-white mb-2">Dedicated to Allergy Freedom</div>
+    <h1 style="color: #0f172a; font-weight: 800;">About AllergiQ Clinic & Institute</h1>
+    <p style="color: #475569;">Pioneering precision immunological diagnostics since 2012.</p>
+  </div>
+</body>
+</html>
+'''
+
+with open('test_variant_a.html', 'w', encoding='utf-8') as f:
+    f.write(template)
+print('Wrote test_variant_a.html')

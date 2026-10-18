@@ -122,20 +122,27 @@
     <main class="dashboard-main">
       <!-- Topbar -->
       <header class="dashboard-topbar">
-        <div class="d-flex align-items-center gap-3">
-          <button class="btn btn-light d-lg-none" id="sidebarToggleBtn" type="button" onclick="var sb=document.getElementById('dashboardSidebar'); var bd=document.getElementById('sidebarBackdrop'); sb.classList.toggle('show'); bd.classList.toggle('show', sb.classList.contains('show'));">
+        <div class="d-flex align-items-center gap-2 gap-md-3 min-w-0 flex-shrink-1">
+          <button class="btn btn-light d-lg-none flex-shrink-0" id="sidebarToggleBtn" type="button" aria-label="Toggle navigation menu" onclick="var sb=document.getElementById('dashboardSidebar'); var bd=document.getElementById('sidebarBackdrop'); sb.classList.toggle('show'); bd.classList.toggle('show', sb.classList.contains('show'));">
             <i class="fas fa-bars"></i>
           </button>
-          <div>
-            <h5 class="mb-0">Patient Clinical EHR Dashboard</h5>
-            <small class="text-muted d-none d-sm-block">Immunotherapy Protocol � Dr. Marcus Vance, MD</small>
+          <!-- Mobile & Tablet Logo (displayed in header when sidebar is collapsed at <992px) -->
+          <a class="navbar-brand d-lg-none me-1 flex-shrink-0 text-decoration-none" href="index.html" aria-label="AllergiQ Home">
+            <div class="logo-icon" style="width: 34px; height: 34px; font-size: 0.95rem;"><i class="fas fa-shield-virus"></i></div>
+          </a>
+          <div class="min-w-0 text-truncate">
+            <h5 class="mb-0 text-truncate dashboard-topbar-title">Patient Clinical EHR Dashboard</h5>
+            <small class="text-muted d-block text-truncate">Immunotherapy Protocol &diams; Dr. Marcus Vance, MD</small>
           </div>
         </div>
 
-        <div class="d-flex align-items-center gap-3">
-          <!-- Back to Website Link -->
-          <a href="index.html" class="btn btn-outline-primary btn-sm d-none d-md-inline-flex">
+        <div class="d-flex align-items-center gap-2 gap-xl-3 flex-shrink-0 ms-auto">
+          <!-- Back to Website Link: Full label on xl (>=1200px), compact icon button on md-lg (768px-1199px) -->
+          <a href="index.html" class="btn btn-outline-primary btn-sm d-none d-xl-inline-flex align-items-center" title="Public Website">
             <i class="fas fa-globe me-1"></i> Public Website
+          </a>
+          <a href="index.html" class="btn btn-outline-primary btn-sm d-none d-md-inline-flex d-xl-none" title="Public Website" aria-label="Public Website">
+            <i class="fas fa-globe"></i>
           </a>
 
           <!-- Theme Toggle -->
@@ -150,7 +157,7 @@
 
           <!-- Notifications -->
           <div class="dropdown">
-            <button class="btn btn-light position-relative p-2 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="btn btn-light position-relative p-2 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
               <i class="fas fa-bell text-muted"></i>
               <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
             </button>
@@ -163,8 +170,8 @@
           </div>
 
           <!-- Quick Book CTA -->
-          <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
-            <i class="fas fa-calendar-plus me-1"></i> <span class="book-text">Book Shot Slot</span>
+          <button class="btn btn-primary btn-sm text-nowrap flex-shrink-0" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <i class="fas fa-calendar-plus me-1"></i> <span class="book-text d-none d-sm-inline">Book Slot</span>
           </button>
         </div>
       </header>
@@ -247,7 +254,7 @@
               <h4 class="mb-1">Immunotherapy Desensitization Protocol</h4>
               <p class="text-muted small mb-0">Patient: Sarah Jenkins � Prescribed by Dr. Julian Reed, FAAAI</p>
             </div>
-            <div class="d-flex gap-2">
+            <div class="d-flex flex-column flex-sm-row gap-2 cta-button-group">
               <button class="btn btn-outline-primary btn-sm btn-download-report" data-test="Immunotherapy Shot Protocol Log (PDF)">
                 <i class="fas fa-file-pdf me-1"></i> Export Shot Log (PDF)
               </button>

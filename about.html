@@ -115,7 +115,7 @@
           <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL">
             <span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span>
           </button>
-          <a href="login.html" class="btn btn-light-soft btn-sm d-none d-sm-inline-flex">
+          <a href="login.html" class="btn btn-light-soft btn-sm d-inline-flex align-items-center">
             <i class="fas fa-user-circle me-1"></i> Login
           </a>
         </div>
@@ -150,17 +150,6 @@
         <div class="col-lg-6">
           <div class="position-relative">
             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="AllergiQ Modern Medical Center" class="rounded-4 shadow-xl w-100" style="height: 440px; object-fit: cover;">
-            <div class="p-3 bg-white text-dark rounded-3 shadow-lg position-absolute bottom-0 start-0 m-4 border">
-              <div class="d-flex align-items-center gap-3">
-                <div class="kpi-icon primary" style="width: 48px; height: 48px; font-size: 1.3rem;">
-                  <i class="fas fa-award"></i>
-                </div>
-                <div>
-                  <div class="fw-bold">14+ Years of Clinical Excellence</div>
-                  <small class="text-muted">Over 25,000 Successful Patient Outcomes</small>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -192,7 +181,7 @@
             </div>
           </div>
 
-          <div class="d-flex gap-3">
+          <div class="d-flex flex-column flex-sm-row gap-3 cta-button-group">
             <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
               <i class="fas fa-calendar-check me-1"></i> Meet with an Allergist
             </button>
@@ -277,33 +266,33 @@
         <p class="section-subtitle">A legacy of scientific innovation, patient-first care, and community health.</p>
       </div>
 
-      <div class="row g-4">
-        <div class="col-md-3">
-          <div class="card-custom text-center">
-            <div class="h2 text-primary fw-bold mb-2">2012</div>
-            <h5>Clinic Founded</h5>
-            <p class="small text-muted mb-0">Started by Dr. Marcus Vance with 2 examination rooms and a focus on pediatric allergy relief.</p>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2012</div>
+            <h5 class="milestone-title">Clinic Founded</h5>
+            <p class="small text-muted mb-0 milestone-desc">Started by Dr. Marcus Vance with 2 examination rooms and a focus on pediatric allergy relief.</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card-custom text-center">
-            <div class="h2 text-primary fw-bold mb-2">2016</div>
-            <h5>CLIA Lab Accredited</h5>
-            <p class="small text-muted mb-0">Established on-site sterile compounding cleanrooms for sublingual antigen preparation.</p>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2016</div>
+            <h5 class="milestone-title">CLIA Lab Accredited</h5>
+            <p class="small text-muted mb-0 milestone-desc">Established on-site sterile compounding cleanrooms for sublingual antigen preparation.</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card-custom text-center">
-            <div class="h2 text-primary fw-bold mb-2">2021</div>
-            <h5>Digital Health Launch</h5>
-            <p class="small text-muted mb-0">Launched the AllergiQ Patient Portal and at-home blood testing kits for statewide telehealth.</p>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2021</div>
+            <h5 class="milestone-title">Digital Health Launch</h5>
+            <p class="small text-muted mb-0 milestone-desc">Launched the AllergiQ Patient Portal and at-home blood testing kits for statewide telehealth.</p>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card-custom text-center">
-            <div class="h2 text-primary fw-bold mb-2">2026</div>
-            <h5>25,000+ Relieved</h5>
-            <p class="small text-muted mb-0">Recognized as a regional Center of Excellence for immunotherapy and biologic asthma care.</p>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2026</div>
+            <h5 class="milestone-title">25,000+ Relieved</h5>
+            <p class="small text-muted mb-0 milestone-desc">Recognized as a regional Center of Excellence for immunotherapy and biologic asthma care.</p>
           </div>
         </div>
       </div>
@@ -405,12 +394,12 @@
               <div class="col-sm-6"><small><i class="fas fa-check text-success me-1"></i> Emergency Action Plan templates</small></div>
             </div>
           </div>
-          <div class="col-lg-5">
-            <div class="d-flex flex-nowrap gap-2 justify-content-lg-end">
-              <a href="contact.html" class="btn btn-primary">
+          <div class="col-lg-5 text-lg-end">
+            <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 justify-content-lg-end justify-content-start align-items-stretch align-items-sm-center cta-button-group">
+              <a href="contact.html" class="btn btn-primary px-3 px-xl-4 text-nowrap">
                 <i class="fas fa-envelope me-2"></i> Partner With Us
               </a>
-              <a href="services.html" class="btn btn-outline-primary">
+              <a href="services.html" class="btn btn-outline-primary px-3 px-xl-4 text-nowrap">
                 <i class="fas fa-stethoscope me-2"></i> Explore Our Services
               </a>
             </div>
@@ -510,12 +499,12 @@
         <div class="col-6 col-lg-3">
           <h5>Clinical Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+            <li><a href="service-skin-prick.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-scit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-slit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-food-panels.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-pediatric.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-spirometry.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
           </ul>
         </div>
 

@@ -127,7 +127,7 @@
           </button>
 
           <!-- Patient Portal Link -->
-          <a href="login.html" class="btn btn-light-soft btn-sm d-none d-sm-inline-flex">
+          <a href="login.html" class="btn btn-light-soft btn-sm d-inline-flex align-items-center">
             <i class="fas fa-user-circle me-1"></i> Login
           </a>
         </div>
@@ -153,11 +153,11 @@
               Say goodbye to weekly doctor visits and painful shots. Get tested with our CLIA-certified at-home IgE blood kit, consult 1-on-1 with an allergist via telehealth, and receive custom sublingual allergy drops directly to your doorstep.
             </p>
 
-            <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="d-flex flex-wrap gap-3 mb-4 hero-cta-group">
               <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
                 <i class="fas fa-box me-2"></i> Get Your At-Home Kit ($49)
               </button>
-              <a href="dashboard.html" class="btn btn-outline-primary btn-lg">
+              <a href="dashboard.html" class="btn btn-outline-primary btn-lg" aria-label="Explore the interactive patient dashboard and protocol tracker">
                 <i class="fas fa-desktop me-2"></i> Explore Patient Dashboard
               </a>
             </div>
@@ -266,7 +266,7 @@
             <p class="text-muted mb-4">
               Traditional in-clinic shots require weekly office copays ($35 x 48 = $1,680), gas and travel time (48 hours), plus lost work productivity. AllergiQ Sublingual Drops provide equal or superior clinical efficacy for a flat $79/month.
             </p>
-            <div class="d-flex gap-3">
+            <div class="d-flex flex-column flex-sm-row gap-3 cta-button-group">
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
                 Order Test Kit ($49)
               </button>
@@ -430,29 +430,29 @@
         <p class="section-subtitle">One finger-prick blood sample screens for all major North American and global aeroallergens.</p>
       </div>
 
-      <div class="row g-3">
-        <div class="col-6 col-md-3">
-          <div class="p-3 bg-card border rounded-3">
-            <div class="fw-bold text-primary mb-1"><i class="fas fa-tree me-1"></i> Trees (12)</div>
-            <small class="text-muted d-block">Oak, Birch, Cedar, Pine, Elm, Maple, Ash, Willow, Walnut, Cypress</small>
+      <div class="row g-3 align-items-stretch molecular-panel-row">
+        <div class="col-6 col-md-3 d-flex">
+          <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
+            <div class="card-title-text text-primary"><i class="fas fa-tree me-1"></i> Trees (12)</div>
+            <small class="card-desc-text">Oak, Birch, Cedar, Pine, Elm, Maple, Ash, Willow, Cypress</small>
           </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 bg-card border rounded-3">
-            <div class="fw-bold text-success mb-1"><i class="fas fa-seedling me-1"></i> Grasses (8)</div>
-            <small class="text-muted d-block">Timothy, Bermuda, Kentucky Blue, Rye, Bahia, Orchard, Sweet Vernal</small>
+        <div class="col-6 col-md-3 d-flex">
+          <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
+            <div class="card-title-text text-success"><i class="fas fa-seedling me-1"></i> Grasses (8)</div>
+            <small class="card-desc-text">Timothy, Bermuda, Bluegrass, Rye, Bahia, Orchard Grass</small>
           </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 bg-card border rounded-3">
-            <div class="fw-bold text-danger mb-1"><i class="fas fa-cannabis me-1"></i> Weeds (10)</div>
-            <small class="text-muted d-block">Short Ragweed, Giant Ragweed, Mugwort, Plantain, Pigweed, Nettle</small>
+        <div class="col-6 col-md-3 d-flex">
+          <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
+            <div class="card-title-text text-danger"><i class="fas fa-cannabis me-1"></i> Weeds (10)</div>
+            <small class="card-desc-text">Ragweed, Mugwort, Plantain, Pigweed, Nettle, Sorrel</small>
           </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="p-3 bg-card border rounded-3">
-            <div class="fw-bold text-warning mb-1"><i class="fas fa-paw me-1"></i> Indoor & Dander (10)</div>
-            <small class="text-muted d-block">Cat (Fel d 1), Dog (Can f 1), Dust Mites (Der p 1), Mold (Alternaria, Cladosporium)</small>
+        <div class="col-6 col-md-3 d-flex">
+          <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
+            <div class="card-title-text text-warning"><i class="fas fa-paw me-1"></i> Indoor (10)</div>
+            <small class="card-desc-text">Cat Dander, Dog Dander, Dust Mites, Cockroach, Mold</small>
           </div>
         </div>
       </div>
@@ -533,64 +533,64 @@
 
       <div class="row g-4 align-items-stretch">
         <!-- Tier 1 -->
-        <div class="col-lg-4">
-          <div class="pricing-card">
+        <div class="col-lg-4 d-flex">
+          <div class="pricing-card w-100 d-flex flex-column h-100">
             <h4>Diagnostic Test Kit</h4>
-            <p class="text-muted small">Comprehensive IgE blood allergen panel</p>
-            <div class="pricing-price">
+            <p class="text-muted small mb-0" style="min-height: 44px;">Comprehensive IgE blood allergen panel</p>
+            <div class="pricing-price my-3" style="font-size: 2.3rem;">
               $49 <span class="period">/ one-time</span>
             </div>
-            <ul class="pricing-features">
-              <li><i class="fas fa-check fa-check text-success"></i> At-home finger-prick collection kit</li>
+            <ul class="pricing-features flex-grow-1 my-3">
+              <li><i class="fas fa-check text-success"></i> At-home finger-prick collection kit</li>
               <li><i class="fas fa-check text-success"></i> 40+ Environmental & food triggers</li>
               <li><i class="fas fa-check text-success"></i> Prepaid 2-day lab return shipping</li>
               <li><i class="fas fa-check text-success"></i> Digital lab report in portal</li>
               <li class="disabled"><i class="fas fa-times"></i> Ongoing antigen drop supply</li>
             </ul>
-            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
               Order Test Kit Only
             </button>
           </div>
         </div>
 
         <!-- Tier 2 (Featured) -->
-        <div class="col-lg-4">
-          <div class="pricing-card featured">
+        <div class="col-lg-4 d-flex">
+          <div class="pricing-card featured w-100 d-flex flex-column h-100">
             <span class="popular-badge">Most Popular</span>
             <h4>Immunotherapy Care Plan</h4>
-            <p class="text-muted small">Complete doctor-led desensitization program</p>
-            <div class="pricing-price text-primary">
+            <p class="text-muted small mb-0" style="min-height: 44px;">Complete doctor-led desensitization program</p>
+            <div class="pricing-price text-primary my-3" style="font-size: 2.3rem;">
               $79 <span class="period">/ month</span>
             </div>
-            <ul class="pricing-features">
+            <ul class="pricing-features flex-grow-1 my-3">
               <li><i class="fas fa-check text-success"></i> Custom sublingual drops shipped quarterly</li>
               <li><i class="fas fa-check text-success"></i> Unlimited telehealth doctor messaging</li>
               <li><i class="fas fa-check text-success"></i> Digital dose tracker & streak alerts</li>
               <li><i class="fas fa-check text-success"></i> Free dose adjustments & escalation</li>
               <li><i class="fas fa-check text-success"></i> HSA / FSA Card reimbursement</li>
             </ul>
-            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <button class="btn btn-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
               Start Free Doctor Consultation
             </button>
           </div>
         </div>
 
         <!-- Tier 3 -->
-        <div class="col-lg-4">
-          <div class="pricing-card">
+        <div class="col-lg-4 d-flex">
+          <div class="pricing-card w-100 d-flex flex-column h-100">
             <h4>Family Immunity Bundle</h4>
-            <p class="text-muted small">Multi-patient home coverage for parents & kids</p>
-            <div class="pricing-price">
+            <p class="text-muted small mb-0" style="min-height: 44px;">Multi-patient home coverage for parents & kids</p>
+            <div class="pricing-price my-3" style="font-size: 2.3rem;">
               $139 <span class="period">/ month</span>
             </div>
-            <ul class="pricing-features">
+            <ul class="pricing-features flex-grow-1 my-3">
               <li><i class="fas fa-check text-success"></i> Covers up to 3 family members</li>
               <li><i class="fas fa-check text-success"></i> Pediatric specialist access included</li>
               <li><i class="fas fa-check text-success"></i> Priority 24/7 allergy hotline</li>
               <li><i class="fas fa-check text-success"></i> Free emergency action plan letters</li>
               <li><i class="fas fa-check text-success"></i> Dedicated care coordinator</li>
             </ul>
-            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <button class="btn btn-outline-primary w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
               Choose Family Plan
             </button>
           </div>
@@ -744,12 +744,12 @@
         <div class="col-6 col-lg-3">
           <h5>Clinical Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+            <li><a href="service-skin-prick.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-scit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-slit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-food-panels.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-pediatric.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-spirometry.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
           </ul>
         </div>
 

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>About Us - AllergiQ Allergy Testing & Immunotherapy Clinic</title>
+  <meta name="description" content="Learn about AllergiQ Clinic, our board-certified allergists, our mission for lifelong allergy relief, and our CLIA-accredited diagnostic laboratories.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+  <!-- =========================================================================
+       MAIN NAVIGATION BAR
+       Strict Menu Requirement:
+       - Home (Dropdown: Home 1 & Home 2)
+       - About (No dropdown - ACTIVE)
+       - Services (No dropdown)
+       - Blog (No dropdown)
+       - Contact (No dropdown)
+       ========================================================================= -->
+  <nav class="navbar navbar-expand-lg navbar-custom" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-icon"><i class="fas fa-shield-virus"></i></div>
+        <div>
+          <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+          <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse">
+        <i class="fas fa-bars fa-lg text-primary"></i>
+      </button>
+
+      <div class="collapse navbar-collapse show" id="navbarMainCollapse">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <!-- Home Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Home <i class="fas fa-chevron-down ms-1" style="font-size: 0.75rem;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="index.html">
+                  <span class="fw-semibold d-block">Home 1 - Clinical Landing</span>
+                  <small class="text-muted">Allergy Relief & In-Clinic Diagnostics</small>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="home-2.html">
+                  <span class="fw-semibold d-block">Home 2 - Immunotherapy SaaS</span>
+                  <small class="text-muted">Digital Shot Schedules & Telehealth Niche</small>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- About (No Dropdown - Active) -->
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About</a>
+          </li>
+
+          <!-- Doctors (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="doctors.html">Doctors</a>
+          </li>
+
+          <!-- Services (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+
+          <!-- Pricing (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+
+          <!-- Blog (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+
+          <!-- Contact (No Dropdown) -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+          <!-- Dashboard (No Dropdown - Patient EHR) -->
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+          </li>
+        </ul>
+
+        <div class="header-actions">
+          <button class="btn-theme-toggle" id="themeToggle" type="button" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL">
+            <span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span>
+          </button>
+          <a href="login.html" class="btn btn-light-soft btn-sm d-inline-flex align-items-center">
+            <i class="fas fa-user-circle me-1"></i> Login
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       PAGE HEADER / BREADCRUMB
+       ========================================================================= -->
+  <section class="page-hero-section" style="background-image: url('https://images.unsplash.com/photo-1504813184591-01572f98c85f?auto=format&fit=crop&w=1920&q=80');">
+    <div class="container text-center">
+      <div class="badge-tag mb-2"><i class="fas fa-hospital-user"></i> Dedicated To Allergy Freedom</div>
+      <h1 class="mb-2">About AllergiQ Clinic & Institute</h1>
+      <p class="text-muted mx-auto max-w-700" style="font-size: 1.15rem;">
+        Pioneering precision immunological diagnostics, pediatric care, and targeted desensitization since 2012.
+      </p>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center mb-0 mt-3">
+          <li class="breadcrumb-item active" aria-current="page">About Us</li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MISSION, VISION & CORE VALUES
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="AllergiQ Modern Medical Center" class="rounded-4 shadow-xl w-100" style="height: 440px; object-fit: cover;">
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="badge-tag"><i class="fas fa-heartbeat"></i> Our Medical Mission</div>
+          <h2 class="mb-3">We Do Not Just Treat Symptoms. We Cure Sensitivities.</h2>
+          <p class="text-muted mb-4">
+            At AllergiQ, we believe that no one should have their life restricted by airborne pollen, pet dander, food allergies, or recurring allergic asthma. Our clinic unites fellowship-trained allergists, certified nurses, and cutting-edge molecular diagnostics to deliver personalized, permanent immune tolerance.
+          </p>
+
+          <div class="row g-3 mb-4">
+            <div class="col-sm-6">
+              <div class="p-3 rounded-3 border" style="background-color: var(--bg-card);">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fas fa-microscope text-primary fa-lg"></i>
+                  <h6 class="mb-0">Precision Diagnostics</h6>
+                </div>
+                <small class="text-muted">Component-level IgE testing isolating exact molecular allergen proteins.</small>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="p-3 rounded-3 border" style="background-color: var(--bg-card);">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <i class="fas fa-shield-alt text-success fa-lg"></i>
+                  <h6 class="mb-0">Custom Immunotherapy</h6>
+                </div>
+                <small class="text-muted">Compounded antigen serums tailored to each patient's exact sensitivity.</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex flex-column flex-sm-row gap-3 cta-button-group">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+              <i class="fas fa-calendar-check me-1"></i> Meet with an Allergist
+            </button>
+            <a href="services.html" class="btn btn-outline-primary">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: CLINICAL SUITES & VIRTUAL TOUR GALLERY
+       ========================================================================= -->
+  <section class="py-5 facilities-section" style="background-color: var(--bg-surface-subtle);" id="facilitiesSection">
+    <div class="container" style="max-width: 1080px;">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-clinic-medical"></i> Our Facilities</div>
+        <h2 class="section-title">Engineered for Clinical Safety & Comfort</h2>
+        <p class="section-subtitle">Take a look inside our sterile compounding laboratory, diagnostic suites, and pediatric wings.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="card-custom p-0 overflow-hidden d-flex flex-column w-100 h-100">
+            <div class="facility-img-wrap">
+              <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Diagnostic Suite" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <h5 class="mb-1">Diagnostic Exam Suites</h5>
+              <p class="small text-muted mb-0">Ergonomic skin testing suites designed for rapid, comfortable 20-minute allergen panel evaluations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="card-custom p-0 overflow-hidden d-flex flex-column w-100 h-100">
+            <div class="facility-img-wrap">
+              <img src="assets/images/facility-cleanroom.jpg" alt="Sterile Compounding Cleanroom Laboratory" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <h5 class="mb-1">Sterile Compounding Cleanroom</h5>
+              <p class="small text-muted mb-0">USP 797 compliant HEPA-filtered cleanrooms where custom antigen extract vials are prepared daily.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="card-custom p-0 overflow-hidden d-flex flex-column w-100 h-100">
+            <div class="facility-img-wrap">
+              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80" alt="Observation Lounge" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <h5 class="mb-1">Post-Shot Relaxation Lounge</h5>
+              <p class="small text-muted mb-0">High-speed Wi-Fi, refreshments, and dedicated RN monitoring for the required 30-minute safety wait.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="card-custom p-0 overflow-hidden d-flex flex-column w-100 h-100">
+            <div class="facility-img-wrap">
+              <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80" alt="Pediatric Wing" class="w-100 h-100" style="object-fit: cover;" loading="lazy">
+            </div>
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <h5 class="mb-1">Pediatric Play &amp; Care Wing</h5>
+              <p class="small text-muted mb-0">Child life distraction games, gentle nurses, and courage rewards to eliminate pediatric needle anxiety.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CLINIC HISTORY & MILESTONES
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-history"></i> Milestones</div>
+        <h2 class="section-title">Our Clinical Journey & Milestones</h2>
+        <p class="section-subtitle">A legacy of scientific innovation, patient-first care, and community health.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2012</div>
+            <h5 class="milestone-title">Clinic Founded</h5>
+            <p class="small text-muted mb-0 milestone-desc">Started by Dr. Marcus Vance with 2 examination rooms and a focus on pediatric allergy relief.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2016</div>
+            <h5 class="milestone-title">CLIA Lab Accredited</h5>
+            <p class="small text-muted mb-0 milestone-desc">Established on-site sterile compounding cleanrooms for sublingual antigen preparation.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2021</div>
+            <h5 class="milestone-title">Digital Health Launch</h5>
+            <p class="small text-muted mb-0 milestone-desc">Launched the AllergiQ Patient Portal and at-home blood testing kits for statewide telehealth.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 d-flex">
+          <div class="card-custom text-center w-100 h-100 d-flex flex-column milestone-card">
+            <div class="h2 text-primary fw-bold mb-2 milestone-year">2026</div>
+            <h5 class="milestone-title">25,000+ Relieved</h5>
+            <p class="small text-muted mb-0 milestone-desc">Recognized as a regional Center of Excellence for immunotherapy and biologic asthma care.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       COMPLETE MEDICAL BOARD
+       ========================================================================= -->
+  <section class="py-5 medical-leadership-section" style="background-color: var(--bg-surface-subtle);" id="leadershipSection">
+    <div class="container" style="max-width: 1080px;">
+      <div class="section-header text-center">
+        <div class="badge-tag"><i class="fas fa-user-md"></i> Medical Leadership</div>
+        <h2 class="section-title">Board-Certified Allergists & Immunologists</h2>
+        <p class="section-subtitle">Our fellowship-trained physicians are active members of the AAAAI and ACAAI.</p>
+      </div>
+
+      <div class="row g-4 align-items-stretch">
+        <!-- Dr Vance -->
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="doctor-card w-100 d-flex flex-column h-100">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Dr. Marcus Vance" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-body d-flex flex-column flex-grow-1">
+              <div class="doctor-specialty">Founder & Chief of Immunology</div>
+              <h5 class="mb-1">Dr. Marcus Vance, MD</h5>
+              <p class="small text-muted mb-3">Johns Hopkins Medicine  16 Yrs Exp</p>
+              <button class="btn btn-outline-primary btn-sm w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">Book Consult</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr Rostova -->
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="doctor-card w-100 d-flex flex-column h-100">
+            <div class="doctor-img-wrapper">
+              <img src="assets/images/doctor-elena-rostova.jpg" alt="Dr. Elena Rostova, MD" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-body d-flex flex-column flex-grow-1">
+              <div class="doctor-specialty">Pediatric Allergy Specialist</div>
+              <h5 class="mb-1">Dr. Elena Rostova, MD</h5>
+              <p class="small text-muted mb-3">Harvard Medical School  12 Yrs Exp</p>
+              <button class="btn btn-outline-primary btn-sm w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">Book Consult</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr Reed -->
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="doctor-card w-100 d-flex flex-column h-100">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80" alt="Dr. Julian Reed" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-body d-flex flex-column flex-grow-1">
+              <div class="doctor-specialty">SCIT Protocol Director</div>
+              <h5 class="mb-1">Dr. Julian Reed, FAAAI</h5>
+              <p class="small text-muted mb-3">Stanford University  14 Yrs Exp</p>
+              <button class="btn btn-outline-primary btn-sm w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">Book Consult</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dr Patel -->
+        <div class="col-md-6 col-lg-3 d-flex">
+          <div class="doctor-card w-100 d-flex flex-column h-100">
+            <div class="doctor-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Dr. Amara Patel" class="doctor-img" loading="lazy">
+            </div>
+            <div class="doctor-body d-flex flex-column flex-grow-1">
+              <div class="doctor-specialty">Food Allergy & Anaphylaxis</div>
+              <h5 class="mb-1">Dr. Amara Patel, MD</h5>
+              <p class="small text-muted mb-3">Columbia University  10 Yrs Exp</p>
+              <button class="btn btn-outline-primary btn-sm w-100 mt-auto" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">Book Consult</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       NEW SECTION: COMMUNITY OUTREACH & SCHOOL ALLERGY INITIATIVE
+       ========================================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <div class="card-custom p-4 p-lg-5 border-primary shadow-lg">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="badge-tag"><i class="fas fa-hands-helping"></i> Community Mission</div>
+            <h3 class="mb-2">The AllergiQ School & Youth Anaphylaxis Project</h3>
+            <p class="text-muted mb-4">
+              We provide free auto-injector training, emergency stock epinephrine action kits, and food allergy safety seminars to over 250 local public and private schools.
+            </p>
+            <div class="row g-2">
+              <div class="col-sm-6"><small><i class="fas fa-check text-success me-1"></i> 1,200+ School nurses certified</small></div>
+              <div class="col-sm-6"><small><i class="fas fa-check text-success me-1"></i> Free community pollen monitors</small></div>
+              <div class="col-sm-6"><small><i class="fas fa-check text-success me-1"></i> Annual charity pediatric screening</small></div>
+              <div class="col-sm-6"><small><i class="fas fa-check text-success me-1"></i> Emergency Action Plan templates</small></div>
+            </div>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 justify-content-lg-end justify-content-start align-items-stretch align-items-sm-center cta-button-group">
+              <a href="contact.html" class="btn btn-primary px-3 px-xl-4 text-nowrap">
+                <i class="fas fa-envelope me-2"></i> Partner With Us
+              </a>
+              <a href="services.html" class="btn btn-outline-primary px-3 px-xl-4 text-nowrap">
+                <i class="fas fa-stethoscope me-2"></i> Explore Our Services
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ACCREDITATIONS & CLINICAL CERTIFICATIONS
+       ========================================================================= -->
+  <section class="py-5" style="background-color: var(--bg-surface-subtle);">
+    <div class="container text-center mb-5">
+      <h4 class="mb-5 text-muted">Accredited by Leading Medical &amp; Laboratory Boards</h4>
+      <div class="row align-items-center justify-content-center g-4">
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-card rounded-3 border">
+            <i class="fas fa-microscope text-primary fa-2x mb-2"></i>
+            <div class="fw-bold">CLIA Certified</div>
+            <small class="text-muted">High-Complexity Laboratory</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-card rounded-3 border">
+            <i class="fas fa-shield-virus text-success fa-2x mb-2"></i>
+            <div class="fw-bold">AAAAI Fellow</div>
+            <small class="text-muted">American Academy of Allergy</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-card rounded-3 border">
+            <i class="fas fa-stethoscope text-info fa-2x mb-2"></i>
+            <div class="fw-bold">ACAAI Member</div>
+            <small class="text-muted">Allergy, Asthma & Immunology</small>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="p-3 bg-card rounded-3 border">
+            <i class="fas fa-lock text-warning fa-2x mb-2"></i>
+            <div class="fw-bold">HIPAA Compliant</div>
+            <small class="text-muted">Encrypted Patient Records</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="row g-4 g-lg-5">
+        <!-- Col 1: Brand & Accreditation -->
+        <div class="col-lg-4">
+          <a class="footer-brand" href="index.html">
+            <div class="logo-icon">
+              <i class="fas fa-shield-virus"></i>
+            </div>
+            <div>
+              <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+              <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+            </div>
+          </a>
+          <p class="mb-3">
+            AllergiQ is a specialized center of excellence for precision allergy diagnostics, sublingual immunotherapy, and lifelong allergic asthma relief.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="footer-credential-pill"><i class="fas fa-shield-virus text-info"></i> CLIA & AAAAI Accredited</span>
+            <span class="footer-credential-pill"><i class="fas fa-lock text-success"></i> HIPAA Encrypted EHR</span>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Twitter" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (Matches strict nav) -->
+        <div class="col-6 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Clinical)</a></li>
+            <li><a href="home-2.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Home (Immunotherapy)</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> About Us</a></li>
+            <li><a href="doctors.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Our Doctors</a></li>
+            <li><a href="services.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> All Services</a></li>
+            <li><a href="pricing.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pricing Plans</a></li>
+            <li><a href="blog.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Blog</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Contact Clinic</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Clinical Services -->
+        <div class="col-6 col-lg-3">
+          <h5>Clinical Services</h5>
+          <ul class="footer-links">
+            <li><a href="service-skin-prick.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-scit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-slit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-food-panels.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-pediatric.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-spirometry.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Stay Informed & Contact -->
+        <div class="col-lg-3">
+          <h5>Stay Updated</h5>
+          <p class="small mb-3">Weekly local pollen alerts and clinical immunology bulletins.</p>
+          <form class="footer-newsletter-box mb-4" onsubmit="event.preventDefault(); window.showToast('Subscribed to Pollen & Clinical Alerts!', 'success'); this.reset();">
+            <input type="email" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required aria-label="Email address">
+            <button type="submit">Join</button>
+          </form>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> <span>742 Evergreen Medical Center, Suite 400</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone-alt"></i> <a href="tel:8004562553">(800) 456-2553</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:care@allergiq-clinic.com">care@allergiq-clinic.com</a></div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div>
+           2026 AllergiQ Clinic Template. Licensed clinical health & precision immunotherapy.
+        </div>
+        <div class="d-flex gap-4 small">
+          <a href="#privacyPolicyModal" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal" class="text-white-50 text-decoration-none">Privacy Policy</a>
+          <a href="#hipaaModal" data-bs-toggle="modal" data-bs-target="#hipaaModal" class="text-white-50 text-decoration-none">HIPAA Compliance</a>
+          <a href="#ehrPortalModal" data-bs-toggle="modal" data-bs-target="#ehrPortalModal" class="text-white-50 text-decoration-none">Patient EHR Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Appointment Modal -->
+  <div class="modal fade" id="bookAppointmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Book Consultation with Our Board</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="appointment-booking-form">
+          <div class="modal-body">
+            <div class="row g-3">
+              <div class="col-md-6"><label class="form-label">Name <span class="text-danger">*</span></label><input type="text" class="form-control" name="name" placeholder="Your Name" minlength="2" pattern="(?=.*[a-zA-Z].*[a-zA-Z])[a-zA-Z\s'.-]{2,}" title="Please enter at least 2 letters for the name" required></div>
+              <div class="col-md-6"><label class="form-label">Email Address <span class="text-danger">*</span></label><input type="email" class="form-control" name="email" placeholder="yourname@gmail.com" pattern="[a-zA-Z0-9._%+\-]+@[gG][mM][aA][iI][lL]\.[cC][oO][mM]" title="Please enter a valid Gmail address ending with @gmail.com" required></div>
+              <div class="col-md-6"><label class="form-label">Phone Number <span class="text-danger">*</span></label><input type="tel" class="form-control" name="phone" placeholder="10-digit number" pattern="[0-9]{10}" minlength="10" maxlength="10" inputmode="numeric" title="Please enter a valid 10-digit phone number" required></div>
+              <div class="col-md-6"><label class="form-label">Specialist</label><select class="form-select"><option>Dr. Marcus Vance</option><option>Dr. Elena Rostova</option><option>Dr. Julian Reed</option><option>Dr. Amara Patel</option></select></div>
+              <div class="col-md-6"><label class="form-label">Date</label><input type="date" class="form-control" required></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Schedule Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

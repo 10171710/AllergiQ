@@ -90,7 +90,7 @@
           <button class="btn-rtl-toggle" id="rtlToggle" type="button" aria-label="Toggle RTL">
             <span class="rtl-label fw-bold" style="font-size: 0.78rem;">RTL</span>
           </button>
-          <a href="login.html" class="btn btn-light-soft btn-sm d-none d-sm-inline-flex">
+          <a href="login.html" class="btn btn-light-soft btn-sm d-inline-flex align-items-center">
             <i class="fas fa-user-circle me-1"></i> Login
           </a>
         </div>
@@ -358,7 +358,7 @@
         <div class="row align-items-center g-5">
           <div class="col-lg-5">
             <div class="position-relative rounded-4 overflow-hidden shadow-lg">
-              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Marcus Vance" class="w-100" style="height: 420px; object-fit: cover;">
+              <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&crop=faces,top&w=800&q=80" alt="Dr. Marcus Vance" class="w-100 leadership-spotlight-img" style="height: 420px; object-fit: cover; object-position: center 12%;">
               <div class="position-absolute bottom-0 start-0 w-100 p-3 text-white" style="background: linear-gradient(transparent, rgba(15,23,42,0.9));">
                 <div class="fw-bold">Dr. Marcus Vance, MD, PhD, FAAAI</div>
                 <small class="text-white-50">Chief Medical Officer  45+ Peer-Reviewed Studies</small>
@@ -394,7 +394,7 @@
               </div>
             </div>
 
-            <div class="d-flex gap-3 flex-wrap">
+            <div class="d-flex flex-column flex-sm-row gap-3 flex-wrap cta-button-group">
               <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
                 <i class="fas fa-calendar-check me-2"></i> Request Consultation
               </button>
@@ -456,7 +456,7 @@
     <div class="container">
       <div class="card-custom p-4 p-lg-5 shadow-lg border-primary" style="background: radial-gradient(circle at top right, var(--primary-light), transparent 70%);">
         <div class="row align-items-center g-4">
-          <div class="col-lg-8">
+          <div class="col-lg-6 col-xl-7">
             <div class="badge-tag"><i class="fas fa-hospital-user"></i> For Referring Providers</div>
             <h3 class="mb-2">Are You a Primary Care Physician or Pediatrician?</h3>
             <p class="text-muted mb-4">
@@ -478,12 +478,12 @@
             </div>
           </div>
 
-          <div class="col-lg-4 text-lg-end">
-            <div class="d-flex flex-nowrap gap-2 justify-content-lg-end">
-              <button class="btn btn-primary" onclick="window.showToast('Physician referral submitted online. Our provider team will respond within 24 hours.', 'success');">
+          <div class="col-lg-6 col-xl-5 text-lg-end">
+            <div class="d-flex flex-column flex-sm-row flex-wrap gap-2 justify-content-lg-end justify-content-start align-items-stretch align-items-sm-center cta-button-group">
+              <button class="btn btn-primary px-3 px-xl-4 text-nowrap" onclick="window.showToast('Physician referral submitted online. Our provider team will respond within 24 hours.', 'success');">
                 <i class="fas fa-file-medical me-2"></i> Submit Referral
               </button>
-              <button class="btn btn-outline-primary" onclick="window.showToast('Physician referral form downloaded. Submit it via encrypted fax or EHR with your patient details.', 'success');">
+              <button class="btn btn-outline-primary px-3 px-xl-4 text-nowrap" onclick="window.showToast('Physician referral form downloaded. Submit it via encrypted fax or EHR with your patient details.', 'success');">
                 <i class="fas fa-download me-2"></i> Download Form
               </button>
             </div>
@@ -624,12 +624,12 @@
         <div class="col-6 col-lg-3">
           <h5>Clinical Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+            <li><a href="service-skin-prick.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-scit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-slit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-food-panels.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-pediatric.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-spirometry.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
           </ul>
         </div>
 

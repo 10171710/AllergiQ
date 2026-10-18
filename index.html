@@ -49,8 +49,8 @@
         </div>
       </a>
 
-      <!-- Mobile Toggle Button -->
-      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- Mobile Navbar Toggler for <992px -->
+      <button class="navbar-toggler border-0 shadow-none p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainCollapse" aria-controls="navbarMainCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars fa-lg text-primary"></i>
       </button>
 
@@ -127,7 +127,7 @@
           </button>
 
           <!-- Patient Portal Link -->
-          <a href="login.html" class="btn btn-light-soft btn-sm d-none d-sm-inline-flex">
+          <a href="login.html" class="btn btn-light-soft btn-sm d-inline-flex align-items-center">
             <i class="fas fa-user-circle me-1"></i> Login
           </a>
         </div>
@@ -154,11 +154,11 @@
               Experience long-term relief from seasonal allergies, allergic asthma, and food sensitivities. Our board-certified allergists provide 50+ allergen skin prick testing with same-day results and custom-formulated desensitization programs.
             </p>
 
-            <div class="d-flex flex-wrap gap-3 mb-4">
+            <div class="d-flex flex-wrap gap-3 mb-4 hero-cta-group">
               <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
                 <i class="fas fa-calendar-alt me-2"></i> Schedule Skin Testing
               </button>
-              <a href="#symptomCheckerSection" class="btn btn-outline-primary btn-lg">
+              <a href="#symptomCheckerSection" class="btn btn-outline-primary btn-lg" aria-label="Try our free online allergy symptom checker">
                 <i class="fas fa-stethoscope me-2"></i> Free Symptom Checker
               </a>
             </div>
@@ -468,14 +468,18 @@
       </div>
 
       <div class="row g-4">
-        <!-- Service 1: Skin Prick Testing -->
+        <!-- Service 1: Skin Prick Diagnostics -->
         <div class="col-md-6 col-lg-4">
           <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
             <div class="service-card-img">
-              <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=600&q=80" alt="Clinical skin prick allergy diagnostic testing on patient arm" class="w-100 h-100" loading="lazy">
+              <a href="service-skin-prick.html" class="d-block w-100 h-100" aria-label="Skin Prick Diagnostics">
+                <img src="https://images.pexels.com/photos/6823478/pexels-photo-6823478.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Clinical skin prick allergy diagnostic testing on patient arm" class="w-100 h-100" loading="lazy">
+              </a>
             </div>
             <div class="p-4 d-flex flex-column flex-grow-1">
-              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">Skin Prick Diagnostics</h4>
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-skin-prick.html" style="color: inherit; text-decoration: none;">Skin Prick Diagnostics</a>
+              </h4>
               <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
                 The gold-standard test evaluating 50+ airborne and food allergens. Gentle, scratch-free applicators with visible results in 15 to 20 minutes.
               </p>
@@ -483,7 +487,7 @@
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Immediate IgE wheal measurement</li>
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Pollen, dust mites, pet dander, molds</li>
               </ul>
-              <a href="service-details.html" class="fw-bold text-primary mt-auto">
+              <a href="service-skin-prick.html" class="fw-bold text-primary mt-auto">
                 Learn Procedure Steps <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
@@ -494,10 +498,14 @@
         <div class="col-md-6 col-lg-4">
           <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
             <div class="service-card-img">
-              <img src="https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=600&q=80" alt="Targeted allergen immunotherapy injection and vial preparation" class="w-100 h-100" loading="lazy">
+              <a href="service-scit.html" class="d-block w-100 h-100" aria-label="Allergy Shots (SCIT)">
+                <img src="https://images.pexels.com/photos/8413212/pexels-photo-8413212.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Targeted allergen immunotherapy injection and vial preparation" class="w-100 h-100" loading="lazy">
+              </a>
             </div>
             <div class="p-4 d-flex flex-column flex-grow-1">
-              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">Allergy Shots (SCIT)</h4>
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-scit.html" style="color: inherit; text-decoration: none;">Allergy Shots (SCIT)</a>
+              </h4>
               <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
                 Targeted allergen immunotherapy injections formulated to your unique sensitivity profile. Builds lasting tolerance over 3 to 5 years.
               </p>
@@ -505,7 +513,7 @@
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Build-up & maintenance dosing</li>
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Trackable in Patient Portal</li>
               </ul>
-              <a href="service-details.html" class="fw-bold text-primary mt-auto">
+              <a href="service-scit.html" class="fw-bold text-primary mt-auto">
                 View Shot Protocols <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
@@ -516,10 +524,14 @@
         <div class="col-md-6 col-lg-4">
           <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
             <div class="service-card-img">
-              <img src="assets/images/service-slit-drops.jpg" alt="Sublingual allergy immunotherapy liquid drops bottle with pipette dropper" class="w-100 h-100" loading="lazy">
+              <a href="service-slit.html" class="d-block w-100 h-100" aria-label="Sublingual Allergy Drops (SLIT)">
+                <img src="https://images.pexels.com/photos/10819538/pexels-photo-10819538.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sublingual allergy drops dispensed from a dropper" class="w-100 h-100" loading="lazy">
+              </a>
             </div>
             <div class="p-4 d-flex flex-column flex-grow-1">
-              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">Sublingual Allergy Drops (SLIT)</h4>
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-slit.html" style="color: inherit; text-decoration: none;">Sublingual Allergy Drops (SLIT)</a>
+              </h4>
               <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
                 Needle-free drops or dissolving tablets under the tongue. Convenient home-based immunotherapy for children and adults.
               </p>
@@ -527,21 +539,25 @@
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Take comfortably at home</li>
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Zero needle anxiety for kids</li>
               </ul>
-              <a href="service-details.html" class="fw-bold text-primary mt-auto">
+              <a href="service-slit.html" class="fw-bold text-primary mt-auto">
                 Explore Sublingual Drops <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 4: Food Allergy & Patch Testing -->
+        <!-- Service 4: Food Allergen & Patch Testing -->
         <div class="col-md-6 col-lg-4">
           <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
             <div class="service-card-img">
-              <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=600&q=80" alt="Molecular food allergy component diagnostic assay testing" class="w-100 h-100" loading="lazy">
+              <a href="service-food-panels.html" class="d-block w-100 h-100" aria-label="Food Allergen & Patch Testing">
+                <img src="assets/images/service-food-panels.jpg" alt="Molecular food allergy component diagnostic assay testing" class="w-100 h-100" loading="lazy">
+              </a>
             </div>
             <div class="p-4 d-flex flex-column flex-grow-1">
-              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">Food Allergen & Patch Testing</h4>
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-food-panels.html" style="color: inherit; text-decoration: none;">Food Allergen & Patch Testing</a>
+              </h4>
               <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
                 Component-resolved diagnostics for peanuts, tree nuts, dairy, seafood, gluten, 48-hour patch testing for dermatitis and chemical triggers.
               </p>
@@ -549,21 +565,25 @@
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Oral food challenges under MD care</li>
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Comprehensive avoidance action plans</li>
               </ul>
-              <a href="service-details.html" class="fw-bold text-primary mt-auto">
+              <a href="service-food-panels.html" class="fw-bold text-primary mt-auto">
                 Food Allergy Protocols <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
           </div>
         </div>
 
-        <!-- Service 5: Pediatric Allergy & Asthma -->
+        <!-- Service 5: Pediatric Allergy Care -->
         <div class="col-md-6 col-lg-4">
           <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
             <div class="service-card-img">
-              <img src="assets/images/service-pediatric-allergy.jpg" alt="Pediatric allergist doctor consulting and examining young child in pediatric clinic" class="w-100 h-100" loading="lazy">
+              <a href="service-pediatric.html" class="d-block w-100 h-100" aria-label="Pediatric Allergy Care">
+                <img src="https://images.pexels.com/photos/7447009/pexels-photo-7447009.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pediatric allergist doctor consulting and examining young child in pediatric clinic" class="w-100 h-100" loading="lazy">
+              </a>
             </div>
             <div class="p-4 d-flex flex-column flex-grow-1">
-              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">Pediatric Allergy Care</h4>
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-pediatric.html" style="color: inherit; text-decoration: none;">Pediatric Allergy Care</a>
+              </h4>
               <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
                 Child-friendly allergy specialists trained to deliver gentle prick diagnostics, eczema management, and childhood peanut desensitization.
               </p>
@@ -571,7 +591,7 @@
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Tear-free applicators & kid rewards</li>
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>School action plan paperwork</li>
               </ul>
-              <a href="service-details.html" class="fw-bold text-primary mt-auto">
+              <a href="service-pediatric.html" class="fw-bold text-primary mt-auto">
                 Pediatric Care Details <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
@@ -582,10 +602,14 @@
         <div class="col-md-6 col-lg-4">
           <div class="card-custom d-flex flex-column h-100 p-0 overflow-hidden">
             <div class="service-card-img">
-              <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=600&q=80" alt="Pulmonary spirometry respiratory airway and asthma testing" class="w-100 h-100" loading="lazy">
+              <a href="service-spirometry.html" class="d-block w-100 h-100" aria-label="Spirometry & Asthma Testing">
+                <img src="https://images.pexels.com/photos/29702935/pexels-photo-29702935.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Pulmonary spirometry respiratory airway and asthma testing" class="w-100 h-100" loading="lazy">
+              </a>
             </div>
             <div class="p-4 d-flex flex-column flex-grow-1">
-              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">Spirometry & Asthma Testing</h4>
+              <h4 class="mb-1" style="font-size: 1.12rem; white-space: nowrap; line-height: 1.25; margin-bottom: 0.35rem;">
+                <a href="service-spirometry.html" style="color: inherit; text-decoration: none;">Spirometry & Asthma Testing</a>
+              </h4>
               <p class="mb-3" style="min-height: 5.75rem; line-height: 1.55;">
                 Advanced lung function measurement evaluating airway responsiveness, exercise-induced asthma, and environmental allergic triggers.
               </p>
@@ -593,7 +617,7 @@
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Instant FEV1 / FVC lung capacity curve</li>
                 <li class="mb-1"><i class="fas fa-check text-success me-2"></i>Biologic therapy evaluation (Xolair/Dupixent)</li>
               </ul>
-              <a href="service-details.html" class="fw-bold text-primary mt-auto">
+              <a href="service-spirometry.html" class="fw-bold text-primary mt-auto">
                 Asthma Diagnostics <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
@@ -620,66 +644,66 @@
         <p class="section-subtitle">Real medical transformations achieved through AllergiQ's precision immunotherapy.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 align-items-stretch">
         <!-- Case 1: Claire D. -->
-        <div class="col-md-4">
-          <div class="case-study-card d-flex flex-column h-100">
+        <div class="col-md-4 d-flex">
+          <div class="case-study-card w-100 d-flex flex-column h-100">
             <div class="case-study-img" style="height: 210px; width: 100%; overflow: hidden; position: relative;">
               <img src="assets/images/case-study-claire.jpg" alt="Patient Claire D. - Aeroallergen SCIT Desensitization" class="w-100 h-100" style="object-fit: cover; object-position: center 25%;" loading="lazy">
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1">
-              <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="p-4 d-flex flex-column flex-grow-1 case-study-body">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1 case-study-meta">
                 <span class="badge bg-primary">Aeroallergen SCIT</span>
-                <small class="text-muted">Age 32  Female</small>
+                <small class="text-muted text-nowrap">Age 32 &bull; Female</small>
               </div>
-              <h5 class="mb-2">Claire D. - Severe Spring Tree Pollen Asthma</h5>
-              <div class="mb-3">
-                <div class="mb-1"><span class="badge-before me-2">Before</span> Daily high-dose steroid inhalers & outdoor confinement</div>
+              <h5 class="mb-2 case-study-title">Claire D. - Severe Spring Tree Pollen Asthma</h5>
+              <div class="mb-3 case-study-outcomes flex-grow-1">
+                <div class="mb-2"><span class="badge-before me-2">Before</span> Daily high-dose steroid inhalers & outdoor confinement</div>
                 <div><span class="badge-after me-2">After 14 Mo</span> Zero rescue inhaler use; completed 10K marathon in April</div>
               </div>
-              <small class="text-muted d-block border-top pt-2 mt-auto"><strong>Supervising MD:</strong> Dr. Marcus Vance, MD</small>
+              <small class="text-muted d-block border-top pt-2 mt-auto case-study-doctor"><strong>Supervising MD:</strong> Dr. Marcus Vance, MD</small>
             </div>
           </div>
         </div>
 
         <!-- Case 2: Liam M. -->
-        <div class="col-md-4">
-          <div class="case-study-card d-flex flex-column h-100">
+        <div class="col-md-4 d-flex">
+          <div class="case-study-card w-100 d-flex flex-column h-100">
             <div class="case-study-img" style="height: 210px; width: 100%; overflow: hidden; position: relative;">
               <img src="assets/images/case-study-liam.jpg" alt="Patient Liam M. - Pediatric SLIT Drops Desensitization with rescue cat" class="w-100 h-100" style="object-fit: cover; object-position: center 15%;" loading="lazy">
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1">
-              <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="p-4 d-flex flex-column flex-grow-1 case-study-body">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1 case-study-meta">
                 <span class="badge bg-primary">Pediatric SLIT Drops</span>
-                <small class="text-muted">Age 8  Male</small>
+                <small class="text-muted text-nowrap">Age 8 &bull; Male</small>
               </div>
-              <h5 class="mb-2">Liam M. - Severe Cat Dander & Eczema</h5>
-              <div class="mb-3">
-                <div class="mb-1"><span class="badge-before me-2">Before</span> Wheezing within 10 mins of entering homes with pets</div>
+              <h5 class="mb-2 case-study-title">Liam M. - Severe Cat Dander & Eczema</h5>
+              <div class="mb-3 case-study-outcomes flex-grow-1">
+                <div class="mb-2"><span class="badge-before me-2">Before</span> Wheezing within 10 mins of entering homes with pets</div>
                 <div><span class="badge-after me-2">After 9 Mo</span> Family adopted rescue cat; skin clear with daily oral drops</div>
               </div>
-              <small class="text-muted d-block border-top pt-2 mt-auto"><strong>Supervising MD:</strong> Dr. Elena Rostova, MD</small>
+              <small class="text-muted d-block border-top pt-2 mt-auto case-study-doctor"><strong>Supervising MD:</strong> Dr. Elena Rostova, MD</small>
             </div>
           </div>
         </div>
 
         <!-- Case 3: Robert K. -->
-        <div class="col-md-4">
-          <div class="case-study-card d-flex flex-column h-100">
+        <div class="col-md-4 d-flex">
+          <div class="case-study-card w-100 d-flex flex-column h-100">
             <div class="case-study-img" style="height: 210px; width: 100%; overflow: hidden; position: relative;">
               <img src="assets/images/case-study-robert.jpg" alt="Patient Robert K. - Component Food OIT Peanut Desensitization" class="w-100 h-100" style="object-fit: cover; object-position: center 25%;" loading="lazy">
             </div>
-            <div class="p-4 d-flex flex-column flex-grow-1">
-              <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="p-4 d-flex flex-column flex-grow-1 case-study-body">
+              <div class="d-flex justify-content-between align-items-center mb-2 flex-wrap gap-1 case-study-meta">
                 <span class="badge bg-primary">Component Food OIT</span>
-                <small class="text-muted">Age 24  Male</small>
+                <small class="text-muted text-nowrap">Age 24 &bull; Male</small>
               </div>
-              <h5 class="mb-2">Robert K. - Anaphylactic Peanut Allergy</h5>
-              <div class="mb-3">
-                <div class="mb-1"><span class="badge-before me-2">Before</span> IgE Ara h 2 > 100 kU/L; severe accidental ingestion terror</div>
+              <h5 class="mb-2 case-study-title">Robert K. - Anaphylactic Peanut Allergy</h5>
+              <div class="mb-3 case-study-outcomes flex-grow-1">
+                <div class="mb-2"><span class="badge-before me-2">Before</span> IgE Ara h 2 > 100 kU/L; severe accidental ingestion terror</div>
                 <div><span class="badge-after me-2">After 18 Mo</span> Built tolerance to 8 whole peanuts bite-proof threshold</div>
               </div>
-              <small class="text-muted d-block border-top pt-2 mt-auto"><strong>Supervising MD:</strong> Dr. Amara Patel, MD</small>
+              <small class="text-muted d-block border-top pt-2 mt-auto case-study-doctor"><strong>Supervising MD:</strong> Dr. Amara Patel, MD</small>
             </div>
           </div>
         </div>
@@ -722,15 +746,15 @@
           </div>
 
           <div class="col-lg-4">
-            <div class="d-flex align-items-center gap-3 justify-content-lg-end">
-              <select class="form-select w-auto bg-white border-0 shadow-sm" id="pollenCitySelect" style="font-size: 0.9rem;">
+            <div class="d-flex flex-column flex-sm-row align-items-stretch align-items-sm-center gap-2 gap-sm-3 justify-content-lg-end">
+              <select class="form-select w-auto pollen-city-select shadow-sm" id="pollenCitySelect" style="font-size: 0.9rem;">
                 <option value="new-york">New York, NY</option>
                 <option value="london">London, UK</option>
                 <option value="tokyo">Tokyo, JP</option>
                 <option value="dubai">Dubai, UAE</option>
                 <option value="sydney">Sydney, AU</option>
               </select>
-              <a href="services.html" class="btn btn-light text-primary fw-bold btn-sm">
+              <a href="services.html" class="pollen-cta-btn">
                 Get Protected <i class="fas fa-arrow-right ms-1"></i>
               </a>
             </div>
@@ -806,11 +830,11 @@
               <p id="resultTestDescription" class="mb-3 text-muted">
                 Based on your symptom profile, an immediate skin prick evaluation will identify specific environmental and airborne antibody responses in 20 minutes.
               </p>
-              <div class="d-flex gap-2">
+              <div class="d-flex flex-column flex-sm-row gap-2 cta-button-group">
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
                   <i class="fas fa-calendar-check me-1"></i> Book This Test Now
                 </button>
-                <a href="service-details.html" class="btn btn-outline-primary btn-sm">Read Test Details</a>
+                <a href="service-skin-prick.html" id="resultTestDetailsLink" class="btn btn-outline-primary btn-sm">Read Test Details</a>
               </div>
             </div>
           </div>
@@ -1295,7 +1319,7 @@
         <p class="text-white-50 max-w-700 mx-auto mb-4" style="font-size: 1.15rem;">
           Schedule your comprehensive 20-minute skin prick test today or consult with our immunotherapy specialists.
         </p>
-        <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3 flex-wrap cta-button-group">
           <button class="btn btn-light text-primary btn-lg fw-bold" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
             <i class="fas fa-calendar-check me-2"></i> Book Testing Appointment
           </button>
@@ -1358,12 +1382,12 @@
         <div class="col-6 col-lg-3">
           <h5>Clinical Services</h5>
           <ul class="footer-links">
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
-            <li><a href="service-details.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
+            <li><a href="service-skin-prick.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Skin Prick Diagnostics (50+ IgE)</a></li>
+            <li><a href="service-scit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Allergy Shots (SCIT Protocol)</a></li>
+            <li><a href="service-slit.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Sublingual Drops (SLIT Therapy)</a></li>
+            <li><a href="service-food-panels.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Food Component Allergy Panels</a></li>
+            <li><a href="service-pediatric.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pediatric Allergy & Eczema</a></li>
+            <li><a href="service-spirometry.html"><i class="fas fa-chevron-right text-primary me-1" style="font-size: 0.7rem;"></i> Pulmonary Spirometry Evaluation</a></li>
           </ul>
         </div>
 
