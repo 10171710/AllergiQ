@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
 
@@ -136,116 +136,99 @@
   </nav>
 
   <!-- =========================================================================
-       HERO SECTION - DIGITAL SAAS / TELEHEALTH IMMUNOTHERAPY
+       HERO SECTION - CENTERED DIGITAL PRODUCT HERO (HOME 2)
+       Deliberately different from Home 1: instead of a left-copy / right-form
+       split, this hero stacks centred copy above a full-width "app window"
+       product showcase. Background photo is the original Home 2 hero image,
+       darkened by the .hero-digital::before scrim for text contrast.
        ========================================================================= -->
-  <section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80');">
+  <section class="hero-section hero-digital" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80');">
     <div class="container">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7">
-          <div class="hero-content">
-            <div class="badge-tag badge-accent">
-              <i class="fas fa-bolt"></i> Modern Telehealth Immunotherapy
-            </div>
-            <h1 class="hero-title">
-              Permanent Allergy Relief, <span class="text-gradient">Shipped to Your Door</span> & Tracked Digitally.
-            </h1>
-            <p class="hero-subtitle">
-              Say goodbye to weekly doctor visits and painful shots. Get tested with our CLIA-certified at-home IgE blood kit, consult 1-on-1 with an allergist via telehealth, and receive custom sublingual allergy drops directly to your doorstep.
-            </p>
+      <!-- Centred headline block -->
+      <div class="hero-digital-copy">
+        <div class="badge-tag badge-accent">
+          <i class="fas fa-bolt"></i> Modern Telehealth Immunotherapy
+        </div>
+        <h1 class="hero-title hero-digital-title">
+          Permanent Allergy Relief, <span class="text-gradient">Shipped to Your Door</span> &amp; Tracked Digitally.
+        </h1>
+        <p class="hero-subtitle hero-digital-subtitle">
+          Say goodbye to weekly doctor visits and painful shots. Test at home with our CLIA-certified IgE blood kit, consult one-on-one with a board-certified allergist, and receive custom sublingual drops on your doorstep.
+        </p>
 
-            <div class="d-flex flex-wrap gap-3 mb-4 hero-cta-group">
-              <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
-                <i class="fas fa-box me-2"></i> Get Your At-Home Kit ($49)
-              </button>
-              <a href="dashboard.html" class="btn btn-outline-primary btn-lg" aria-label="Explore the interactive patient dashboard and protocol tracker">
-                <i class="fas fa-desktop me-2"></i> Explore Patient Dashboard
-              </a>
-            </div>
-
-            <!-- Value Props -->
-            <div class="row g-3 mt-2">
-              <div class="col-sm-6">
-                <div class="d-flex align-items-center gap-2">
-                  <i class="fas fa-check-circle text-success fa-lg"></i>
-                  <span class="fw-semibold">No needles  Under-the-tongue drops</span>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex align-items-center gap-2">
-                  <i class="fas fa-check-circle text-success fa-lg"></i>
-                  <span class="fw-semibold">Mobile dosage & vial progression app</span>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex align-items-center gap-2">
-                  <i class="fas fa-check-circle text-success fa-lg"></i>
-                  <span class="fw-semibold">Unlimited Telehealth allergist messaging</span>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="d-flex align-items-center gap-2">
-                  <i class="fas fa-check-circle text-success fa-lg"></i>
-                  <span class="fw-semibold">HSA / FSA & Insurance eligible</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="hero-cta-group justify-content-center">
+          <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <i class="fas fa-box me-2"></i> Get Your At-Home Kit ($49)
+          </button>
+          <a href="dashboard.html" class="btn btn-outline-primary btn-lg" aria-label="Explore the interactive patient dashboard and protocol tracker">
+            <i class="fas fa-desktop me-2"></i> Explore Patient Dashboard
+          </a>
         </div>
 
-        <!-- Hero App Interface Preview -->
-        <div class="col-lg-5">
-          <div class="card-custom p-4 shadow-xl border-primary" style="background: var(--bg-surface);">
-            <!-- App Header Mockup -->
-            <div class="d-flex justify-content-between align-items-center pb-3 mb-3 border-bottom">
-              <div class="d-flex align-items-center gap-2">
-                <div class="kpi-icon primary" style="width: 36px; height: 36px; font-size: 0.9rem;">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <div>
-                  <div class="fw-bold" style="font-size: 0.9rem;">AllergiQ App Live Demo</div>
-                  <small class="text-muted">Immunotherapy Protocol Tracker</small>
-                </div>
-              </div>
-              <span class="badge bg-success">Active Protocol</span>
-            </div>
+        <ul class="hero-digital-trust">
+          <li><i class="fas fa-check-circle"></i> No needles or injections</li>
+          <li><i class="fas fa-check-circle"></i> Free 2-day lab shipping</li>
+          <li><i class="fas fa-check-circle"></i> HSA / FSA eligible</li>
+        </ul>
+      </div>
 
-            <!-- Patient Dose Progress Box -->
-            <div class="p-3 rounded-3 mb-3" style="background-color: var(--bg-surface-subtle); border: 1px solid var(--border-color);">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="fw-bold" style="font-size: 0.85rem;">Vial 3 - Escalation Phase</span>
-                <span class="text-primary fw-bold" style="font-size: 0.85rem;">78% Adherence</span>
+      <!-- Product showcase: app window mockup -->
+      <div class="hero-device">
+        <div class="hero-device-window">
+          <div class="hero-device-bar">
+            <span class="hero-device-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="hero-device-url"><i class="fas fa-lock"></i> app.allergiq.com/protocol</span>
+            <span class="badge bg-success hero-device-status">Active Protocol</span>
+          </div>
+
+          <div class="hero-device-body">
+            <!-- Panel 1: protocol progression -->
+            <div class="hero-device-panel">
+              <div class="hero-device-panel-head">
+                <span>Vial 3 &middot; Escalation</span>
+                <strong class="text-primary">78%</strong>
               </div>
               <div class="progress" style="height: 8px;">
                 <div class="progress-bar bg-primary" role="progressbar" style="width: 78%;" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
-              <div class="d-flex justify-content-between text-muted mt-2" style="font-size: 0.75rem;">
+              <div class="hero-device-meta">
                 <span>Dose #42 of 60</span>
-                <span>Next Refill: In 14 Days</span>
+                <span>Refill in 14 days</span>
               </div>
+              <ul class="hero-device-vials">
+                <li class="is-done"><i class="fas fa-check-circle"></i> Vial 1 &middot; Complete</li>
+                <li class="is-done"><i class="fas fa-check-circle"></i> Vial 2 &middot; Complete</li>
+                <li class="is-current"><i class="fas fa-circle-dot"></i> Vial 3 &middot; In progress</li>
+              </ul>
             </div>
 
-            <!-- Interactive Dose Log Simulator -->
-            <div class="p-3 rounded-3 mb-3 border" style="background: var(--bg-card);">
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="fw-bold text-main" style="font-size: 0.9rem;">Today's Daily Dose:</div>
-                <span class="badge bg-primary-subtle text-primary">3 Drops Under Tongue</span>
+            <!-- Panel 2: daily dose log -->
+            <div class="hero-device-panel">
+              <div class="hero-device-panel-head">
+                <span>Today's dose</span>
+                <span class="badge bg-primary-subtle text-primary">3 drops</span>
               </div>
-              <p class="small text-muted mb-3">Hold drops for 2 minutes before swallowing. No food/drink for 15 mins.</p>
+              <p class="hero-device-note">Hold under the tongue for 2 minutes, then swallow. No food or drink for 15 minutes. Try to take your dose at the same time every day so it becomes part of your routine. Message your care team if you miss a dose or need to adjust your schedule.</p>
               <button class="btn btn-success btn-sm w-100 py-2 fw-bold" onclick="window.showToast('Great job! Today\'s immunotherapy dose recorded in your streak.', 'success'); this.classList.remove('btn-success'); this.classList.add('btn-secondary'); this.innerHTML='<i class=\'fas fa-check-circle me-1\'></i> Dose Completed Today';">
-                <i class="fas fa-check me-1"></i> Log Today's Dose (Streak: 48 Days)
+                <i class="fas fa-check me-1"></i> Log Dose (48-day streak)
               </button>
             </div>
 
-            <!-- Quick Telehealth Message Teaser -->
-            <div class="d-flex align-items-center justify-content-between pt-2">
-              <div class="d-flex align-items-center gap-2">
-                <img src="assets/images/doctor-elena-rostova.jpg" alt="Dr. Elena Rostova, MD" class="rounded-circle" style="width: 32px; height: 32px; object-fit: cover;">
-                <div class="small">
-                  <span class="fw-bold d-block">Dr. Elena Rostova</span>
-                  <span class="text-success" style="font-size: 0.75rem;"><i class="fas fa-circle me-1" style="font-size: 6px;"></i>Online for consult</span>
+            <!-- Panel 3: allergist messaging -->
+            <div class="hero-device-panel">
+              <div class="hero-device-panel-head">
+                <span>Your allergist</span>
+                <span class="hero-device-online"><i class="fas fa-circle"></i> Online</span>
+              </div>
+              <div class="hero-device-doctor">
+                <img src="assets/images/doctor-elena-rostova.jpg" alt="Dr. Elena Rostova, MD" class="rounded-circle">
+                <div>
+                  <span class="fw-bold d-block">Dr. Elena Rostova, MD</span>
+                  <small class="text-muted">Typically replies in 2 hours</small>
                 </div>
               </div>
-              <a href="dashboard.html" class="btn btn-light-soft btn-sm">Message MD</a>
+              <p class="hero-device-note">Unlimited secure messaging with your care team is included in every plan.</p>
+              <a href="dashboard.html" class="btn btn-light-soft btn-sm w-100">Message Dr. Rostova</a>
             </div>
           </div>
         </div>
@@ -422,7 +405,7 @@
   <!-- =========================================================================
        NEW SECTION: 40+ TESTED ALLERGEN BIOMARKERS GRID
        ========================================================================= -->
-  <section class="py-5">
+  <section class="py-5" id="molecularPanel">
     <div class="container">
       <div class="section-header text-center">
         <div class="badge-tag"><i class="fas fa-vials"></i> Molecular Panel</div>
@@ -433,26 +416,46 @@
       <div class="row g-3 align-items-stretch molecular-panel-row">
         <div class="col-6 col-md-3 d-flex">
           <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
-            <div class="card-title-text text-primary"><i class="fas fa-tree me-1"></i> Trees (12)</div>
-            <small class="card-desc-text">Oak, Birch, Cedar, Pine, Elm, Maple, Ash, Willow, Cypress</small>
+            <div class="allergen-panel-media">
+              <img src="assets/images/allergen-trees.jpg" alt="Oak and birch tree catkins releasing airborne pollen" loading="lazy">
+            </div>
+            <div class="allergen-panel-body">
+              <div class="card-title-text text-primary">Trees (12)</div>
+              <small class="card-desc-text">Oak, Birch, Cedar, Pine, Elm, Maple, Ash, Willow, Cypress</small>
+            </div>
           </div>
         </div>
         <div class="col-6 col-md-3 d-flex">
           <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
-            <div class="card-title-text text-success"><i class="fas fa-seedling me-1"></i> Grasses (8)</div>
-            <small class="card-desc-text">Timothy, Bermuda, Bluegrass, Rye, Bahia, Orchard Grass</small>
+            <div class="allergen-panel-media">
+              <img src="assets/images/allergen-grasses.jpg" alt="Timothy and Bermuda grass seed heads in a summer meadow" loading="lazy">
+            </div>
+            <div class="allergen-panel-body">
+              <div class="card-title-text text-success">Grasses (8)</div>
+              <small class="card-desc-text">Timothy, Bermuda, Bluegrass, Rye, Bahia, Orchard Grass</small>
+            </div>
           </div>
         </div>
         <div class="col-6 col-md-3 d-flex">
           <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
-            <div class="card-title-text text-danger"><i class="fas fa-cannabis me-1"></i> Weeds (10)</div>
-            <small class="card-desc-text">Ragweed, Mugwort, Plantain, Pigweed, Nettle, Sorrel</small>
+            <div class="allergen-panel-media">
+              <img src="assets/images/allergen-weeds.jpg" alt="Ragweed and nettle weeds flowering along a roadside" loading="lazy">
+            </div>
+            <div class="allergen-panel-body">
+              <div class="card-title-text text-danger">Weeds (10)</div>
+              <small class="card-desc-text">Ragweed, Mugwort, Plantain, Pigweed, Nettle, Sorrel</small>
+            </div>
           </div>
         </div>
         <div class="col-6 col-md-3 d-flex">
           <div class="allergen-panel-card border rounded-3 w-100 d-flex flex-column">
-            <div class="card-title-text text-warning"><i class="fas fa-paw me-1"></i> Indoor (10)</div>
-            <small class="card-desc-text">Cat Dander, Dog Dander, Dust Mites, Cockroach, Mold</small>
+            <div class="allergen-panel-media">
+              <img src="assets/images/allergen-indoor.jpg" alt="Cat and dog dander plus household dust mite allergens" loading="lazy">
+            </div>
+            <div class="allergen-panel-body">
+              <div class="card-title-text text-warning">Indoor (10)</div>
+              <small class="card-desc-text">Cat Dander, Dog Dander, Dust Mites, Cockroach, Mold</small>
+            </div>
           </div>
         </div>
       </div>

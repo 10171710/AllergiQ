@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Shot Schedules - AllergiQ Immunotherapy EHR</title>
+  <meta name="description" content="AllergiQ shot schedules: immunotherapy desensitization protocol, dose log, epinephrine tracker and cold-chain vial delivery.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- =======================================================================
+         DASHBOARD SIDEBAR
+         ======================================================================= -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+      <!-- Sidebar Header -->
+      <div class="dashboard-sidebar-header">
+        <a class="navbar-brand mb-0" href="index.html">
+          <div class="logo-icon"><i class="fas fa-shield-virus"></i></div>
+          <div>
+            <span class="brand-name">Allergi<span class="brand-dot">Q</span></span>
+            <div class="brand-subtitle">CLINIC & IMMUNOTHERAPY</div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sidebar Menu Body -->
+      <div class="dashboard-sidebar-body">
+        <div class="sidebar-menu-header">Patient Health Record</div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="dashboard.html" class="sidebar-menu-link">
+              <i class="fas fa-columns"></i>
+              <span>Patient Overview</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="dashboard-schedules.html" class="sidebar-menu-link active">
+              <i class="fas fa-syringe"></i>
+              <span>Shot Schedules</span>
+              <span class="badge bg-primary">Vial 3</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="dashboard-results.html" class="sidebar-menu-link">
+              <i class="fas fa-file-medical-alt"></i>
+              <span>Test Results & IgE</span>
+              <span class="badge bg-success">Ready</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="dashboard-messages.html" class="sidebar-menu-link">
+              <i class="fas fa-comments"></i>
+              <span>Doctor Messages</span>
+              <span class="badge bg-danger">2 New</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sidebar-menu-header mt-3">Admin &amp; Practice Management</div>
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="dashboard-analytics.html" class="sidebar-menu-link">
+              <i class="fas fa-chart-line"></i>
+              <span>Clinic Analytics</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="dashboard-orders.html" class="sidebar-menu-link">
+              <i class="fas fa-receipt"></i>
+              <span>Orders & Insurance</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="dashboard-users.html" class="sidebar-menu-link">
+              <i class="fas fa-users-cog"></i>
+              <span>Patient Directory</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="dashboard-sidebar-footer">
+        <div class="d-flex align-items-center gap-3">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Sarah Jenkins" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+          <div class="overflow-hidden">
+            <div class="fw-bold text-truncate" style="font-size: 0.9rem;">Sarah Jenkins</div>
+            <small class="text-muted d-block" style="font-size: 0.75rem;">ID: #ALQ-9482</small>
+          </div>
+          <a href="login.html" class="text-muted ms-auto" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar Backdrop (mobile drawer) -->
+    <div class="dashboard-sidebar-backdrop" id="sidebarBackdrop" onclick="document.getElementById('dashboardSidebar').classList.remove('show'); this.classList.remove('show');" aria-hidden="true"></div>
+
+    <!-- =======================================================================
+         DASHBOARD MAIN CONTENT
+         ======================================================================= -->
+    <main class="dashboard-main">
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="d-flex align-items-center gap-2 gap-md-3 min-w-0 flex-shrink-1">
+          <button class="btn btn-light d-lg-none flex-shrink-0" id="sidebarToggleBtn" type="button" aria-label="Toggle navigation menu" onclick="var sb=document.getElementById('dashboardSidebar'); var bd=document.getElementById('sidebarBackdrop'); sb.classList.toggle('show'); bd.classList.toggle('show', sb.classList.contains('show'));">
+            <i class="fas fa-bars"></i>
+          </button>
+          <!-- Mobile & Tablet Logo (displayed in header when sidebar is collapsed at <992px) -->
+          <a class="navbar-brand d-lg-none me-1 flex-shrink-0 text-decoration-none" href="index.html" aria-label="AllergiQ Home">
+            <div class="logo-icon" style="width: 34px; height: 34px; font-size: 0.95rem;"><i class="fas fa-shield-virus"></i></div>
+          </a>
+          <div class="min-w-0 text-truncate">
+            <h5 class="mb-0 text-truncate dashboard-topbar-title">Shot Schedules &amp; Dose Tracking</h5>
+            <small class="text-muted d-block text-truncate">Vial 3 (Yellow) &diams; Dose 14 of 16</small>
+          </div>
+        </div>
+
+        <div class="d-flex align-items-center gap-2 gap-xl-3 flex-shrink-0 ms-auto">
+          <!-- Theme Toggle -->
+          <button class="btn-theme-toggle" type="button" aria-label="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <!-- RTL Switcher -->
+          <button class="btn-rtl-toggle" type="button" aria-label="Toggle RTL">
+            <span class="rtl-label fw-bold" style="font-size: 0.75rem;">RTL</span>
+          </button>
+
+          <!-- Notifications -->
+          <div class="dropdown">
+            <button class="btn btn-light position-relative p-2 rounded-circle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Notifications">
+              <i class="fas fa-bell text-muted"></i>
+              <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-lg p-2" style="min-width: 280px;">
+              <li class="dropdown-header fw-bold">Recent Notifications</li>
+              <li><a class="dropdown-item small" href="#"><i class="fas fa-check-circle text-success me-2"></i>Lab Result PDF ready for download</a></li>
+              <li><a class="dropdown-item small" href="#"><i class="fas fa-syringe text-primary me-2"></i>Upcoming Shot Dose: Thursday 10:30 AM</a></li>
+              <li><a class="dropdown-item small" href="#"><i class="fas fa-envelope text-info me-2"></i>Dr. Reed replied to your message</a></li>
+            </ul>
+          </div>
+
+          <!-- Quick Book CTA -->
+          <button class="btn btn-primary btn-sm text-nowrap flex-shrink-0" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+            <i class="fas fa-calendar-plus me-1"></i> <span class="book-text d-none d-sm-inline">Book Slot</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dashboard Content Body -->
+      <div class="dashboard-content">
+        <!-- Immunotherapy Progress Tracker Widget -->
+        <div class="shot-tracker-box mb-4" id="shotScheduleSection">
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+              <h4 class="mb-1">Immunotherapy Desensitization Protocol</h4>
+              <p class="text-muted small mb-0">Patient: Sarah Jenkins &mdash; Prescribed by Dr. Julian Reed, FAAAI</p>
+            </div>
+            <div class="d-flex flex-column flex-sm-row gap-2 cta-button-group">
+              <button class="btn btn-outline-primary btn-sm btn-download-report" data-test="Immunotherapy Shot Protocol Log (PDF)">
+                <i class="fas fa-file-pdf me-1"></i> Export Shot Log (PDF)
+              </button>
+              <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
+                <i class="fas fa-calendar-plus me-1"></i> Reschedule Dose
+              </button>
+            </div>
+          </div>
+
+          <!-- Step Progress Visualizer -->
+          <div class="d-flex justify-content-between position-relative py-3 mb-4">
+            <!-- Node 1 -->
+            <div class="shot-step-node completed">
+              <div class="shot-step-circle"><i class="fas fa-check"></i></div>
+              <div class="fw-bold" style="font-size: 0.85rem;">Vial 1: Silver</div>
+              <small class="text-muted">1:10,000 Dilution</small>
+              <span class="badge bg-success-subtle text-success mt-1">Completed</span>
+              <div class="shot-progress-line"></div>
+            </div>
+
+            <!-- Node 2 -->
+            <div class="shot-step-node completed">
+              <div class="shot-step-circle"><i class="fas fa-check"></i></div>
+              <div class="fw-bold" style="font-size: 0.85rem;">Vial 2: Blue</div>
+              <small class="text-muted">1:1,000 Dilution</small>
+              <span class="badge bg-success-subtle text-success mt-1">Completed</span>
+              <div class="shot-progress-line"></div>
+            </div>
+
+            <!-- Node 3 (Active) -->
+            <div class="shot-step-node active">
+              <div class="shot-step-circle">3</div>
+              <div class="fw-bold text-primary" style="font-size: 0.85rem;">Vial 3: Yellow</div>
+              <small class="text-muted">1:100 Dilution</small>
+              <span class="badge bg-warning text-dark mt-1">Dose 14 of 16</span>
+              <div class="shot-progress-line"></div>
+            </div>
+
+            <!-- Node 4 (Target) -->
+            <div class="shot-step-node">
+              <div class="shot-step-circle">4</div>
+              <div class="fw-bold" style="font-size: 0.85rem;">Vial 4: Red (Maintenance)</div>
+              <small class="text-muted">1:1 Full Strength</small>
+              <span class="badge bg-secondary-subtle text-muted mt-1">Starts Dec 2026</span>
+            </div>
+          </div>
+
+          <!-- Dose Log Table -->
+          <h5 class="mt-4 mb-3">Recent Injections & Reactions Log</h5>
+          <div class="table-responsive">
+            <table class="table-custom">
+              <thead>
+                <tr>
+                  <th>Dose #</th>
+                  <th>Date & Time</th>
+                  <th>Vial & Volume</th>
+                  <th>Administered By</th>
+                  <th>Arm Site</th>
+                  <th>Local Reaction (Wheal)</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fw-bold">#14</td>
+                  <td>Oct 08, 2026 &mdash; 10:45 AM</td>
+                  <td>Vial 3 (Yellow) &mdash; 0.50 mL</td>
+                  <td>Nurse Claire B., RN</td>
+                  <td>Right Arm Sub-Q</td>
+                  <td><span class="badge bg-success-subtle text-success">< 5mm (Normal)</span></td>
+                  <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#13</td>
+                  <td>Oct 01, 2026 &mdash; 11:15 AM</td>
+                  <td>Vial 3 (Yellow) &mdash; 0.40 mL</td>
+                  <td>Nurse Claire B., RN</td>
+                  <td>Left Arm Sub-Q</td>
+                  <td><span class="badge bg-success-subtle text-success">< 5mm (Normal)</span></td>
+                  <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+                <tr>
+                  <td class="fw-bold">#12</td>
+                  <td>Sep 24, 2026 &mdash; 09:30 AM</td>
+                  <td>Vial 3 (Yellow) &mdash; 0.30 mL</td>
+                  <td>Nurse Mark T., RN</td>
+                  <td>Right Arm Sub-Q</td>
+                  <td><span class="badge bg-warning-subtle text-warning">8mm (Mild Itch)</span></td>
+                  <td><span class="badge bg-success">Verified</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- NEW SECTION 1: EpiPen & Rescue Device Expiration & Safety Tracker -->
+        <div class="row g-4 mb-4">
+          <!-- Left: Auto-Injector Tracker -->
+          <div class="col-lg-6">
+            <div class="card-custom p-4 h-100 border-warning">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="kpi-icon warning" style="width: 44px; height: 44px;"><i class="fas fa-prescription-bottle-alt"></i></div>
+                  <div>
+                    <h5 class="mb-0">Emergency Auto-Injector Safety Tracker</h5>
+                    <small class="text-muted">Prescription Epinephrine 0.3mg 2-Pak (Auto-Refill Synced)</small>
+                  </div>
+                </div>
+                <span class="badge bg-success-subtle text-success"><i class="fas fa-shield-check me-1"></i>Active / In-Date</span>
+              </div>
+
+              <div class="p-3 rounded-3 mb-3" style="background: var(--bg-surface-subtle); border-left: 4px solid var(--accent-color);">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <div class="fw-bold text-main">EpiPen&reg; 0.3 mg Two-Pack (Lot #EP-49821)</div>
+                  <span class="badge bg-warning text-dark">Expires in 118 Days</span>
+                </div>
+                <div class="d-flex justify-content-between small text-muted mb-2">
+                  <span>Expiration Date: <strong>Feb 05, 2027</strong></span>
+                  <span>Storage Temp: <strong>71.4&deg;F (Safe Range 68&deg;-77&deg;F)</strong></span>
+                </div>
+                <div class="progress" style="height: 6px;">
+                  <div class="progress-bar bg-warning" role="progressbar" style="width: 68%;"></div>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <small class="text-muted"><i class="fas fa-sync-alt me-1"></i>Auto-refill queued with Walgreens Pharmacy #4021</small>
+                <button class="btn btn-outline-warning btn-sm" onclick="window.showToast('Prescription renewal request submitted to Dr. Vance.', 'info');">
+                  <i class="fas fa-file-prescription me-1"></i> Request Early Refill
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Cold-Chain Antigen Serum Batch Monitor -->
+          <div class="col-lg-6">
+            <div class="card-custom p-4 h-100 border-info">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="kpi-icon info" style="width: 44px; height: 44px;"><i class="fas fa-snowflake"></i></div>
+                  <div>
+                    <h5 class="mb-0">Antigen Vial Batch & Cold-Chain Delivery</h5>
+                    <small class="text-muted">USP 797 Cleanroom Compounded Serum (Vial 4 - Maintenance)</small>
+                  </div>
+                </div>
+                <span class="badge bg-info-subtle text-info"><i class="fas fa-truck-loading me-1"></i>FedEx In Transit</span>
+              </div>
+
+              <div class="p-3 rounded-3 mb-3" style="background: var(--bg-surface-subtle);">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <span class="fw-bold text-main">FedEx Cold-Pak Tracking #7948-2940-1192</span>
+                  <span class="text-primary fw-bold small">ETA: Tomorrow 11:00 AM</span>
+                </div>
+                <div class="small text-muted mb-2">Compounded at AllergiQ Central Sterile Lab &mdash; Insulated dry-ice vessel</div>
+                
+                <div class="d-flex align-items-center justify-content-between small text-muted">
+                  <span><i class="fas fa-check-circle text-success me-1"></i>Compounded Oct 07</span>
+                  <span><i class="fas fa-check-circle text-success me-1"></i>Sterility Passed</span>
+                  <span><i class="fas fa-plane text-primary me-1"></i>Departed Hub</span>
+                  <span class="text-muted"><i class="fas fa-clinic-medical me-1"></i>Clinic Delivery</span>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                <small class="text-muted"><i class="fas fa-certificate text-success me-1"></i>CLIA & FDA Standardized Extract Certified</small>
+                <button class="btn btn-outline-primary btn-sm" onclick="window.showToast('Vial 4 certificate of sterile analysis downloaded.', 'success');">
+                  <i class="fas fa-certificate me-1"></i> Cleanroom Certificate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Book Shot Appointment Modal -->
+  <div class="modal fade" id="bookAppointmentModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Schedule Next Immunotherapy Injection</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="appointment-booking-form">
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Protocol Stage</label>
+              <input type="text" class="form-control" value="Vial 3 (Yellow) - Dose 15 (0.50 mL)" readonly>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Select Clinic Location</label>
+              <select class="form-select">
+                <option>Main Center: 742 Evergreen Medical Center, Suite 400</option>
+                <option>Downtown Suite: 105 Innovation Blvd</option>
+              </select>
+            </div>
+            <div class="row g-2 mb-3">
+              <div class="col-6">
+                <label class="form-label">Date</label>
+                <input type="date" class="form-control" required>
+              </div>
+              <div class="col-6">
+                <label class="form-label">Time</label>
+                <select class="form-select">
+                  <option>10:30 AM</option>
+                  <option>11:00 AM</option>
+                  <option>02:30 PM</option>
+                  <option>04:00 PM</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Confirm Slot</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

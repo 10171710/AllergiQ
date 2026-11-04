@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Patient & Clinic Dashboard - AllergiQ Immunotherapy EHR</title>
-  <meta name="description" content="AllergiQ Patient & Clinic Portal: Track immunotherapy shot schedules, view 50+ allergen IgE test results, and message your allergist.">
+  <title>Patient Overview - AllergiQ Immunotherapy EHR</title>
+  <meta name="description" content="AllergiQ patient overview: immunotherapy progress, upcoming shots, protective IgG4 titers and active sensitivities.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -24,7 +24,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
 
@@ -49,27 +49,27 @@
         <div class="sidebar-menu-header">Patient Health Record</div>
         <ul class="sidebar-menu">
           <li class="sidebar-menu-item">
-            <a href="#overviewSection" class="sidebar-menu-link active">
+            <a href="dashboard.html" class="sidebar-menu-link active">
               <i class="fas fa-columns"></i>
               <span>Patient Overview</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="#shotScheduleSection" class="sidebar-menu-link">
+            <a href="dashboard-schedules.html" class="sidebar-menu-link">
               <i class="fas fa-syringe"></i>
               <span>Shot Schedules</span>
               <span class="badge bg-primary">Vial 3</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="#testResultsSection" class="sidebar-menu-link">
+            <a href="dashboard-results.html" class="sidebar-menu-link">
               <i class="fas fa-file-medical-alt"></i>
               <span>Test Results & IgE</span>
               <span class="badge bg-success">Ready</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="#messagesSection" class="sidebar-menu-link">
+            <a href="dashboard-messages.html" class="sidebar-menu-link">
               <i class="fas fa-comments"></i>
               <span>Doctor Messages</span>
               <span class="badge bg-danger">2 New</span>
@@ -77,30 +77,28 @@
           </li>
         </ul>
 
-        <div class="sidebar-menu-header mt-3">Admin & Practice Management</div>
+        <div class="sidebar-menu-header mt-3">Admin &amp; Practice Management</div>
         <ul class="sidebar-menu">
           <li class="sidebar-menu-item">
-            <a href="#adminAnalyticsSection" class="sidebar-menu-link">
+            <a href="dashboard-analytics.html" class="sidebar-menu-link">
               <i class="fas fa-chart-line"></i>
               <span>Clinic Analytics</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="#ordersSection" class="sidebar-menu-link">
+            <a href="dashboard-orders.html" class="sidebar-menu-link">
               <i class="fas fa-receipt"></i>
               <span>Orders & Insurance</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="#usersSection" class="sidebar-menu-link">
+            <a href="dashboard-users.html" class="sidebar-menu-link">
               <i class="fas fa-users-cog"></i>
               <span>Patient Directory</span>
             </a>
           </li>
         </ul>
       </div>
-
-      <!-- Sidebar Footer -->
       <div class="dashboard-sidebar-footer">
         <div class="d-flex align-items-center gap-3">
           <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Sarah Jenkins" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
@@ -137,14 +135,6 @@
         </div>
 
         <div class="d-flex align-items-center gap-2 gap-xl-3 flex-shrink-0 ms-auto">
-          <!-- Back to Website Link: Full label on xl (>=1200px), compact icon button on md-lg (768px-1199px) -->
-          <a href="index.html" class="btn btn-outline-primary btn-sm d-none d-xl-inline-flex align-items-center" title="Public Website">
-            <i class="fas fa-globe me-1"></i> Public Website
-          </a>
-          <a href="index.html" class="btn btn-outline-primary btn-sm d-none d-md-inline-flex d-xl-none" title="Public Website" aria-label="Public Website">
-            <i class="fas fa-globe"></i>
-          </a>
-
           <!-- Theme Toggle -->
           <button class="btn-theme-toggle" type="button" aria-label="Toggle Theme">
             <i class="fas fa-moon"></i>
@@ -203,7 +193,7 @@
               </div>
               <div class="text-muted small mb-1">Next In-Clinic Shot</div>
               <div class="kpi-value" style="font-size: 1.4rem;">Thu, Oct 15</div>
-              <small class="text-muted">10:30 AM � Suite 400</small>
+              <small class="text-muted">10:30 AM &mdash; Suite 400</small>
             </div>
           </div>
 
@@ -216,7 +206,7 @@
               </div>
               <div class="text-muted small mb-1">Current Antigen Vial</div>
               <div class="kpi-value" style="font-size: 1.4rem;">Vial 3 (Yellow)</div>
-              <small class="text-muted">1:100 Dilution � Dose 14/16</small>
+              <small class="text-muted">1:100 Dilution &mdash; Dose 14/16</small>
             </div>
           </div>
 
@@ -247,555 +237,78 @@
           </div>
         </div>
 
-        <!-- Immunotherapy Progress Tracker Widget -->
-        <div class="shot-tracker-box mb-4" id="shotScheduleSection">
-          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
-            <div>
-              <h4 class="mb-1">Immunotherapy Desensitization Protocol</h4>
-              <p class="text-muted small mb-0">Patient: Sarah Jenkins � Prescribed by Dr. Julian Reed, FAAAI</p>
-            </div>
-            <div class="d-flex flex-column flex-sm-row gap-2 cta-button-group">
-              <button class="btn btn-outline-primary btn-sm btn-download-report" data-test="Immunotherapy Shot Protocol Log (PDF)">
-                <i class="fas fa-file-pdf me-1"></i> Export Shot Log (PDF)
-              </button>
-              <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">
-                <i class="fas fa-calendar-plus me-1"></i> Reschedule Dose
-              </button>
-            </div>
-          </div>
-
-          <!-- Step Progress Visualizer -->
-          <div class="d-flex justify-content-between position-relative py-3 mb-4">
-            <!-- Node 1 -->
-            <div class="shot-step-node completed">
-              <div class="shot-step-circle"><i class="fas fa-check"></i></div>
-              <div class="fw-bold" style="font-size: 0.85rem;">Vial 1: Silver</div>
-              <small class="text-muted">1:10,000 Dilution</small>
-              <span class="badge bg-success-subtle text-success mt-1">Completed</span>
-              <div class="shot-progress-line"></div>
-            </div>
-
-            <!-- Node 2 -->
-            <div class="shot-step-node completed">
-              <div class="shot-step-circle"><i class="fas fa-check"></i></div>
-              <div class="fw-bold" style="font-size: 0.85rem;">Vial 2: Blue</div>
-              <small class="text-muted">1:1,000 Dilution</small>
-              <span class="badge bg-success-subtle text-success mt-1">Completed</span>
-              <div class="shot-progress-line"></div>
-            </div>
-
-            <!-- Node 3 (Active) -->
-            <div class="shot-step-node active">
-              <div class="shot-step-circle">3</div>
-              <div class="fw-bold text-primary" style="font-size: 0.85rem;">Vial 3: Yellow</div>
-              <small class="text-muted">1:100 Dilution</small>
-              <span class="badge bg-warning text-dark mt-1">Dose 14 of 16</span>
-              <div class="shot-progress-line"></div>
-            </div>
-
-            <!-- Node 4 (Target) -->
-            <div class="shot-step-node">
-              <div class="shot-step-circle">4</div>
-              <div class="fw-bold" style="font-size: 0.85rem;">Vial 4: Red (Maintenance)</div>
-              <small class="text-muted">1:1 Full Strength</small>
-              <span class="badge bg-secondary-subtle text-muted mt-1">Starts Dec 2026</span>
-            </div>
-          </div>
-
-          <!-- Dose Log Table -->
-          <h5 class="mt-4 mb-3">Recent Injections & Reactions Log</h5>
-          <div class="table-responsive">
-            <table class="table-custom">
-              <thead>
-                <tr>
-                  <th>Dose #</th>
-                  <th>Date & Time</th>
-                  <th>Vial & Volume</th>
-                  <th>Administered By</th>
-                  <th>Arm Site</th>
-                  <th>Local Reaction (Wheal)</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="fw-bold">#14</td>
-                  <td>Oct 08, 2026 � 10:45 AM</td>
-                  <td>Vial 3 (Yellow) � 0.50 mL</td>
-                  <td>Nurse Claire B., RN</td>
-                  <td>Right Arm Sub-Q</td>
-                  <td><span class="badge bg-success-subtle text-success">< 5mm (Normal)</span></td>
-                  <td><span class="badge bg-success">Verified</span></td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">#13</td>
-                  <td>Oct 01, 2026 � 11:15 AM</td>
-                  <td>Vial 3 (Yellow) � 0.40 mL</td>
-                  <td>Nurse Claire B., RN</td>
-                  <td>Left Arm Sub-Q</td>
-                  <td><span class="badge bg-success-subtle text-success">< 5mm (Normal)</span></td>
-                  <td><span class="badge bg-success">Verified</span></td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">#12</td>
-                  <td>Sep 24, 2026 � 09:30 AM</td>
-                  <td>Vial 3 (Yellow) � 0.30 mL</td>
-                  <td>Nurse Mark T., RN</td>
-                  <td>Right Arm Sub-Q</td>
-                  <td><span class="badge bg-warning-subtle text-warning">8mm (Mild Itch)</span></td>
-                  <td><span class="badge bg-success">Verified</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- 2 Interactive Charts Row -->
-        <div class="row g-4 mb-4" id="testResultsSection">
-          <!-- Chart 1: Antibody Desensitization Curve -->
-          <div class="col-lg-6">
-            <div class="card-custom p-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                  <h5 class="mb-1">Antibody Titer Progress Curve</h5>
-                  <small class="text-muted">IgE Reactivity (Drop) vs Protective IgG4 (Rise)</small>
-                </div>
-                <span class="badge bg-primary-subtle text-primary">Lab Bio-Telemetry</span>
-              </div>
-              <div style="height: 280px; position: relative;">
-                <canvas id="igeChart"></canvas>
-              </div>
-            </div>
-          </div>
-
-          <!-- Chart 2: Allergen Sensitivity Wheal Profile -->
-          <div class="col-lg-6">
-            <div class="card-custom p-4">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                  <h5 class="mb-1">Skin Wheal Size Desensitization</h5>
-                  <small class="text-muted">Baseline (Red) vs Current Month 12 (Green) in mm</small>
-                </div>
-                <span class="badge bg-success-subtle text-success">-74% Reactivity</span>
-              </div>
-              <div style="height: 280px; position: relative;">
-                <canvas id="allergenProfileChart"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lab Test Results History Table -->
+        <!-- Quick Access Shortcuts -->
         <div class="card-custom p-4 mb-4">
           <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
             <div>
-              <h5 class="mb-1">Diagnostic Laboratory Test Reports</h5>
-              <small class="text-muted">CLIA Accredited Bio-Assays and Component IgE Panels</small>
+              <div class="badge-tag mb-1"><i class="fas fa-bolt"></i> Quick Access</div>
+              <h5 class="mb-1">Patient Record Shortcuts</h5>
+              <small class="text-muted">Jump straight to any part of Sarah Jenkins&rsquo; immunotherapy record</small>
             </div>
-            <button class="btn btn-outline-primary btn-sm btn-download-report" data-test="Complete Patient Allergy EHR History">
-              <i class="fas fa-file-pdf me-1"></i> Download All Records (PDF)
-            </button>
+            <span class="badge bg-primary-subtle text-primary">6 Modules</span>
           </div>
-
-          <div class="table-responsive">
-            <table class="table-custom">
-              <thead>
-                <tr>
-                  <th>Test Code</th>
-                  <th>Panel Description</th>
-                  <th>Testing Date</th>
-                  <th>Supervising MD</th>
-                  <th>Total IgE Level</th>
-                  <th>Reaction Class</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="fw-bold">#SPT-8821</td>
-                  <td>50-Allergen Environmental Skin Prick Diagnostic</td>
-                  <td>Sep 15, 2026</td>
-                  <td>Dr. Marcus Vance, MD</td>
-                  <td>420 kU/L</td>
-                  <td><span class="badge bg-danger">Class IV (High)</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="SPT-8821 Skin Prick Report">
-                      <i class="fas fa-download me-1"></i> PDF
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">#CRD-3194</td>
-                  <td>Component-Resolved Food IgE (Peanut/Nuts/Milk)</td>
-                  <td>Jun 20, 2026</td>
-                  <td>Dr. Amara Patel, MD</td>
-                  <td>85 kU/L</td>
-                  <td><span class="badge bg-warning text-dark">Class II (Moderate)</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="CRD-3194 Component Food Report">
-                      <i class="fas fa-download me-1"></i> PDF
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">#SP-4011</td>
-                  <td>Pulmonary Spirometry & Airway Challenge</td>
-                  <td>Feb 10, 2026</td>
-                  <td>Dr. Julian Reed, FAAAI</td>
-                  <td>FEV1 92%</td>
-                  <td><span class="badge bg-success">Normal Range</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="SP-4011 Spirometry Chart">
-                      <i class="fas fa-download me-1"></i> PDF
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- NEW SECTION 1: EpiPen & Rescue Device Expiration & Safety Tracker -->
-        <div class="row g-4 mb-4">
-          <!-- Left: Auto-Injector Tracker -->
-          <div class="col-lg-6">
-            <div class="card-custom p-4 h-100 border-warning">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="kpi-icon warning" style="width: 44px; height: 44px;"><i class="fas fa-prescription-bottle-alt"></i></div>
-                  <div>
-                    <h5 class="mb-0">Emergency Auto-Injector Safety Tracker</h5>
-                    <small class="text-muted">Prescription Epinephrine 0.3mg 2-Pak (Auto-Refill Synced)</small>
-                  </div>
-                </div>
-                <span class="badge bg-success-subtle text-success"><i class="fas fa-shield-check me-1"></i>Active / In-Date</span>
-              </div>
-
-              <div class="p-3 rounded-3 mb-3" style="background: var(--bg-surface-subtle); border-left: 4px solid var(--accent-color);">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                  <div class="fw-bold text-main">EpiPen� 0.3 mg Two-Pack (Lot #EP-49821)</div>
-                  <span class="badge bg-warning text-dark">Expires in 118 Days</span>
-                </div>
-                <div class="d-flex justify-content-between small text-muted mb-2">
-                  <span>Expiration Date: <strong>Feb 05, 2027</strong></span>
-                  <span>Storage Temp: <strong>71.4�F (Safe Range 68�-77�F)</strong></span>
-                </div>
-                <div class="progress" style="height: 6px;">
-                  <div class="progress-bar bg-warning" role="progressbar" style="width: 68%;"></div>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                <small class="text-muted"><i class="fas fa-sync-alt me-1"></i>Auto-refill queued with Walgreens Pharmacy #4021</small>
-                <button class="btn btn-outline-warning btn-sm" onclick="window.showToast('Prescription renewal request submitted to Dr. Vance.', 'info');">
-                  <i class="fas fa-file-prescription me-1"></i> Request Early Refill
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Cold-Chain Antigen Serum Batch Monitor -->
-          <div class="col-lg-6">
-            <div class="card-custom p-4 h-100 border-info">
-              <div class="d-flex justify-content-between align-items-start mb-3">
-                <div class="d-flex align-items-center gap-3">
-                  <div class="kpi-icon info" style="width: 44px; height: 44px;"><i class="fas fa-snowflake"></i></div>
-                  <div>
-                    <h5 class="mb-0">Antigen Vial Batch & Cold-Chain Delivery</h5>
-                    <small class="text-muted">USP 797 Cleanroom Compounded Serum (Vial 4 - Maintenance)</small>
-                  </div>
-                </div>
-                <span class="badge bg-info-subtle text-info"><i class="fas fa-truck-loading me-1"></i>FedEx In Transit</span>
-              </div>
-
-              <div class="p-3 rounded-3 mb-3" style="background: var(--bg-surface-subtle);">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                  <span class="fw-bold text-main">FedEx Cold-Pak Tracking #7948-2940-1192</span>
-                  <span class="text-primary fw-bold small">ETA: Tomorrow 11:00 AM</span>
-                </div>
-                <div class="small text-muted mb-2">Compounded at AllergiQ Central Sterile Lab � Insulated dry-ice vessel</div>
-                
-                <div class="d-flex align-items-center justify-content-between small text-muted">
-                  <span><i class="fas fa-check-circle text-success me-1"></i>Compounded Oct 07</span>
-                  <span><i class="fas fa-check-circle text-success me-1"></i>Sterility Passed</span>
-                  <span><i class="fas fa-plane text-primary me-1"></i>Departed Hub</span>
-                  <span class="text-muted"><i class="fas fa-clinic-medical me-1"></i>Clinic Delivery</span>
-                </div>
-              </div>
-
-              <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                <small class="text-muted"><i class="fas fa-certificate text-success me-1"></i>CLIA & FDA Standardized Extract Certified</small>
-                <button class="btn btn-outline-primary btn-sm" onclick="window.showToast('Vial 4 certificate of sterile analysis downloaded.', 'success');">
-                  <i class="fas fa-certificate me-1"></i> Cleanroom Certificate
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- NEW SECTION 2: Pre-Testing Antihistamine Restriction Timer & Medication Matrix -->
-        <div class="card-custom p-4 mb-4">
-          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-            <div>
-              <h5 class="mb-1"><i class="fas fa-capsules text-primary me-2"></i>Pre-Testing Antihistamine Clearance Schedule</h5>
-              <small class="text-muted">To ensure skin prick validity, stop the following medications prior to upcoming diagnostic appointments.</small>
-            </div>
-            <span class="badge bg-success"><i class="fas fa-clock me-1"></i>System Active</span>
-          </div>
-
           <div class="row g-3">
-            <div class="col-md-3">
-              <div class="p-3 rounded-3 border bg-card text-center">
-                <div class="fw-bold text-danger mb-1">Zyrtec / Cetirizine</div>
-                <div class="badge bg-danger-subtle text-danger mb-2">Stop 5 Days Prior</div>
-                <small class="text-muted d-block">H1 Antagonist blocker</small>
-                <span class="badge bg-success-subtle text-success mt-2"><i class="fas fa-check me-1"></i>Cleared (No active dose)</span>
-              </div>
+            <div class="col-sm-6 col-xl-4 d-flex">
+              <a href="dashboard-schedules.html" class="dashboard-shortcut">
+                <div class="kpi-icon primary"><i class="fas fa-syringe"></i></div>
+                <div class="min-w-0">
+                  <div class="shortcut-title">Shot Schedules</div>
+                  <p class="shortcut-desc mb-0">Vial 3 &middot; Dose 14 of 16</p>
+                </div>
+                <i class="fas fa-arrow-right ms-auto align-self-center text-muted small"></i>
+              </a>
             </div>
-            <div class="col-md-3">
-              <div class="p-3 rounded-3 border bg-card text-center">
-                <div class="fw-bold text-danger mb-1">Claritin / Loratadine</div>
-                <div class="badge bg-danger-subtle text-danger mb-2">Stop 5 Days Prior</div>
-                <small class="text-muted d-block">2nd Gen Antihistamine</small>
-                <span class="badge bg-success-subtle text-success mt-2"><i class="fas fa-check me-1"></i>Cleared (No active dose)</span>
-              </div>
+            <div class="col-sm-6 col-xl-4 d-flex">
+              <a href="dashboard-results.html" class="dashboard-shortcut">
+                <div class="kpi-icon accent"><i class="fas fa-file-medical-alt"></i></div>
+                <div class="min-w-0">
+                  <div class="shortcut-title">Test Results &amp; IgE</div>
+                  <p class="shortcut-desc mb-0">50+ allergens &middot; 3 reports</p>
+                </div>
+                <i class="fas fa-arrow-right ms-auto align-self-center text-muted small"></i>
+              </a>
             </div>
-            <div class="col-md-3">
-              <div class="p-3 rounded-3 border bg-card text-center">
-                <div class="fw-bold text-warning mb-1">Benadryl / Diphenhydramine</div>
-                <div class="badge bg-warning-subtle text-warning mb-2">Stop 3 Days Prior</div>
-                <small class="text-muted d-block">Short-acting sedative</small>
-                <span class="badge bg-success-subtle text-success mt-2"><i class="fas fa-check me-1"></i>Cleared (No active dose)</span>
-              </div>
+            <div class="col-sm-6 col-xl-4 d-flex">
+              <a href="dashboard-messages.html" class="dashboard-shortcut">
+                <div class="kpi-icon success"><i class="fas fa-comments"></i></div>
+                <div class="min-w-0">
+                  <div class="shortcut-title">Doctor Messages</div>
+                  <p class="shortcut-desc mb-0">2 unread &middot; Dr. Julian Reed</p>
+                </div>
+                <i class="fas fa-arrow-right ms-auto align-self-center text-muted small"></i>
+              </a>
             </div>
-            <div class="col-md-3">
-              <div class="p-3 rounded-3 border bg-card text-center">
-                <div class="fw-bold text-success mb-1">Flonase / Nasal Steroid</div>
-                <div class="badge bg-success-subtle text-success mb-2">Continue as Normal</div>
-                <small class="text-muted d-block">Does not affect skin histamine</small>
-                <span class="badge bg-info-subtle text-info mt-2"><i class="fas fa-info-circle me-1"></i>Safe to take daily</span>
-              </div>
+            <div class="col-sm-6 col-xl-4 d-flex">
+              <a href="dashboard-analytics.html" class="dashboard-shortcut">
+                <div class="kpi-icon warning"><i class="fas fa-chart-line"></i></div>
+                <div class="min-w-0">
+                  <div class="shortcut-title">Clinic Analytics</div>
+                  <p class="shortcut-desc mb-0">1,482 patients &middot; 96.4% adherence</p>
+                </div>
+                <i class="fas fa-arrow-right ms-auto align-self-center text-muted small"></i>
+              </a>
             </div>
-          </div>
-        </div>
-
-        <!-- NEW SECTION 3: Practice Admin & Clinical Adherence Telemetry (For Clinic Administrators) -->
-        <div class="card-custom p-4 mb-4" id="adminAnalyticsSection" style="background: radial-gradient(circle at top right, var(--primary-light), transparent 70%);">
-          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-            <div>
-              <div class="badge-tag mb-1"><i class="fas fa-chart-line"></i> Practice Intelligence</div>
-              <h5 class="mb-0">Practice-Wide Immunotherapy Telemetry & Adherence</h5>
-              <small class="text-muted">Real-time clinical metrics across 1,480+ active immunotherapy patients</small>
+            <div class="col-sm-6 col-xl-4 d-flex">
+              <a href="dashboard-orders.html" class="dashboard-shortcut">
+                <div class="kpi-icon primary"><i class="fas fa-receipt"></i></div>
+                <div class="min-w-0">
+                  <div class="shortcut-title">Orders &amp; Insurance</div>
+                  <p class="shortcut-desc mb-0">3 claims &middot; 2 reimbursed</p>
+                </div>
+                <i class="fas fa-arrow-right ms-auto align-self-center text-muted small"></i>
+              </a>
             </div>
-            <span class="badge bg-primary">AllergiQ EHR Engine v4.2</span>
-          </div>
-
-          <div class="row g-3">
-            <div class="col-6 col-md-3">
-              <div class="p-3 rounded-3 bg-card border text-center">
-                <div class="h3 fw-bold text-primary mb-0">1,482</div>
-                <small class="text-muted text-uppercase fw-semibold" style="font-size: 0.72rem;">Active Patients</small>
-                <div class="small text-success mt-1"><i class="fas fa-arrow-up me-1"></i>+14% this quarter</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="p-3 rounded-3 bg-card border text-center">
-                <div class="h3 fw-bold text-success mb-0">96.4%</div>
-                <small class="text-muted text-uppercase fw-semibold" style="font-size: 0.72rem;">Protocol Adherence</small>
-                <div class="small text-success mt-1"><i class="fas fa-shield-alt me-1"></i>Top 1% nationally</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="p-3 rounded-3 bg-card border text-center">
-                <div class="h3 fw-bold text-info mb-0">0.002%</div>
-                <small class="text-muted text-uppercase fw-semibold" style="font-size: 0.72rem;">Adverse Event Rate</small>
-                <div class="small text-muted mt-1">Zero anaphylaxis cases</div>
-              </div>
-            </div>
-            <div class="col-6 col-md-3">
-              <div class="p-3 rounded-3 bg-card border text-center">
-                <div class="h3 fw-bold text-warning mb-0">34,800+</div>
-                <small class="text-muted text-uppercase fw-semibold" style="font-size: 0.72rem;">Doses Administered</small>
-                <div class="small text-primary mt-1">Since 2018 founding</div>
-              </div>
+            <div class="col-sm-6 col-xl-4 d-flex">
+              <a href="dashboard-users.html" class="dashboard-shortcut">
+                <div class="kpi-icon accent"><i class="fas fa-users-cog"></i></div>
+                <div class="min-w-0">
+                  <div class="shortcut-title">Patient Directory</div>
+                  <p class="shortcut-desc mb-0">1,482 active patients</p>
+                </div>
+                <i class="fas fa-arrow-right ms-auto align-self-center text-muted small"></i>
+              </a>
             </div>
           </div>
-        </div>
-
-        <!-- Admin: Orders & Insurance Claims -->
-        <div class="card-custom p-4 mb-4" id="ordersSection">
-          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-            <div>
-              <div class="badge-tag mb-1"><i class="fas fa-receipt"></i> Billing &amp; Claims</div>
-              <h5 class="mb-1">Immunotherapy Orders &amp; Insurance Claims</h5>
-              <small class="text-muted">Vial dispensations, serum refills and payer reimbursement status</small>
-            </div>
-            <button class="btn btn-outline-primary btn-sm btn-download-report" data-test="Orders and Insurance Claims Ledger">
-              <i class="fas fa-file-invoice-dollar me-1"></i> Export Ledger (CSV)
-            </button>
-          </div>
-
-          <div class="table-responsive">
-            <table class="table-custom">
-              <thead>
-                <tr>
-                  <th>Order ID</th>
-                  <th>Item / Vial</th>
-                  <th>Payer</th>
-                  <th>Amount</th>
-                  <th>Claim Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="fw-bold">#ORD-58214</td>
-                  <td>Vial 4 — Grass Mix Extract (10 mL)</td>
-                  <td>BlueCross PPO</td>
-                  <td>$284.00</td>
-                  <td><span class="badge bg-success">Paid</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="ORD-58214 Invoice">
-                      <i class="fas fa-download me-1"></i> PDF
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">#ORD-58190</td>
-                  <td>Maintenance Serum Refill (5 mL)</td>
-                  <td>Aetna HMO</td>
-                  <td>$142.50</td>
-                  <td><span class="badge bg-warning text-dark">Pending</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="ORD-58190 Invoice">
-                      <i class="fas fa-download me-1"></i> PDF
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">#ORD-58122</td>
-                  <td>Auto-Injector Epinephrine (2-Pack)</td>
-                  <td>Self-Pay</td>
-                  <td>$98.00</td>
-                  <td><span class="badge bg-info-subtle text-info">Processing</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="ORD-58122 Invoice">
-                      <i class="fas fa-download me-1"></i> PDF
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Admin: Patient Directory -->
-        <div class="card-custom p-4 mb-4" id="usersSection">
-          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
-            <div>
-              <div class="badge-tag mb-1"><i class="fas fa-users-cog"></i> Practice Roster</div>
-              <h5 class="mb-1">Patient Directory</h5>
-              <small class="text-muted">Active immunotherapy patients under clinic supervision</small>
-            </div>
-            <button class="btn btn-outline-primary btn-sm btn-download-report" data-test="Patient Directory Export">
-              <i class="fas fa-user-plus me-1"></i> Add Patient
-            </button>
-          </div>
-
-          <div class="table-responsive">
-            <table class="table-custom">
-              <thead>
-                <tr>
-                  <th>Patient</th>
-                  <th>ID</th>
-                  <th>Protocol Vial</th>
-                  <th>Next Dose</th>
-                  <th>Status</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="fw-bold">Sarah Jenkins</td>
-                  <td>#ALQ-9482</td>
-                  <td>Vial 3 — Silver</td>
-                  <td>Oct 22, 2026</td>
-                  <td><span class="badge bg-success">On Track</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="Sarah Jenkins Chart">
-                      <i class="fas fa-folder-open me-1"></i> Chart
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">David Okafor</td>
-                  <td>#ALQ-7715</td>
-                  <td>Vial 5 — Gold</td>
-                  <td>Nov 03, 2026</td>
-                  <td><span class="badge bg-success">On Track</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="David Okafor Chart">
-                      <i class="fas fa-folder-open me-1"></i> Chart
-                    </button>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">Mei-Ling Chen</td>
-                  <td>#ALQ-6308</td>
-                  <td>Vial 2 — Bronze</td>
-                  <td>Oct 18, 2026</td>
-                  <td><span class="badge bg-warning text-dark">Missed Dose</span></td>
-                  <td>
-                    <button class="btn btn-light-soft btn-sm btn-download-report" data-test="Mei-Ling Chen Chart">
-                      <i class="fas fa-folder-open me-1"></i> Chart
-                    </button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Doctor Messaging Interface Section -->
-        <div class="card-custom p-4 mb-4" id="messagesSection">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <div class="d-flex align-items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=120&q=80" alt="Dr Reed" class="rounded-circle" style="width: 44px; height: 44px; object-fit: cover;">
-              <div>
-                <h6 class="mb-0">Dr. Julian Reed, FAAAI</h6>
-                <small class="text-success"><i class="fas fa-circle me-1" style="font-size: 7px;"></i>Active Now � Immunotherapy Director</small>
-              </div>
-            </div>
-            <span class="badge bg-primary-subtle text-primary">HIPAA Secure Telehealth Chat</span>
-          </div>
-
-          <!-- Message History Box -->
-          <div class="p-3 rounded-3 mb-3" style="background-color: var(--bg-surface-subtle); max-height: 220px; overflow-y: auto;">
-            <!-- Message from Doctor -->
-            <div class="d-flex gap-2 mb-3">
-              <div class="p-3 bg-white rounded-3 shadow-sm text-main" style="max-width: 80%;">
-                <div class="fw-bold text-primary small mb-1">Dr. Julian Reed</div>
-                <p class="small mb-0">Hi Sarah, I reviewed your wheal response log from Dose #14. The 4mm reaction is completely within expected parameters. You are approved to advance to Dose #15 next Thursday!</p>
-                <small class="text-muted" style="font-size: 0.7rem;">Yesterday at 4:15 PM</small>
-              </div>
-            </div>
-
-            <!-- Message from Patient -->
-            <div class="d-flex justify-content-end mb-2">
-              <div class="p-3 bg-primary text-white rounded-3 shadow-sm" style="max-width: 80%;">
-                <p class="small mb-0">Thank you Dr. Reed! I took 3 sublingual drops this morning as well with zero irritation. Looking forward to Thursday.</p>
-                <small class="text-white-50" style="font-size: 0.7rem;">Today at 8:30 AM</small>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Reply Form -->
-          <form class="contact-message-form d-flex gap-2">
-            <input type="text" class="form-control" placeholder="Type a message or question for Dr. Reed..." required>
-            <button type="submit" class="btn btn-primary px-4">
-              <i class="fas fa-paper-plane"></i>
-            </button>
-          </form>
         </div>
 
       </div>
